@@ -1,0 +1,874 @@
+{
+  "users": [
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "email": "test@example.com",
+      "password": "$2a$10$LISQB06MHh7k2298LoDcZu0JC.6BZ1LeXGyo0exs7d82T3sU4pqKS",
+      "full_name": "Test User",
+      "plan": "free",
+      "is_active": true,
+      "created_at": "2026-10-27T04:59:57.145Z"
+    },
+    {
+      "id": "user-free-001",
+      "email": "test-free@example.com",
+      "password": "$2b$10$2NynDYTTCkYfjmllY96pbOv8CTV36xrzHm8Oygz/KI97K0xVvFr2a",
+      "full_name": "Test User Free",
+      "plan": "free",
+      "is_active": true,
+      "created_at": "2026-10-28T03:38:34.764176Z"
+    },
+    {
+      "id": "user-pro-001",
+      "email": "test-pro@example.com",
+      "password": "$2b$10$2NynDYTTCkYfjmllY96pbOv8CTV36xrzHm8Oygz/KI97K0xVvFr2a",
+      "full_name": "Test User Pro",
+      "plan": "pro",
+      "is_active": true,
+      "created_at": "2026-10-28T03:38:34.764176Z"
+    },
+    {
+      "id": "user-business-001",
+      "email": "test-business@example.com",
+      "password": "$2b$10$2NynDYTTCkYfjmllY96pbOv8CTV36xrzHm8Oygz/KI97K0xVvFr2a",
+      "full_name": "Test User Business",
+      "plan": "business",
+      "is_active": true,
+      "created_at": "2026-10-28T03:38:34.764176Z"
+    },
+    {
+      "id": "b89475d8-45c0-4a52-8308-12db409788ae",
+      "email": "test-login@example.com",
+      "password": "$2a$10$Doe/kqyKzfB6yD5lohO03e5Z.BPpOJCiKOCNlYtxTtXYEQPwMRwaa",
+      "full_name": "Test Login",
+      "plan": "free",
+      "is_active": true,
+      "created_at": "2026-10-30T16:56:53.570Z"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-recipe-1",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"recipe-1\",\"nameRo\":\"Midnight Amber & Smoked Oud\",\"nameEn\":\"Midnight Amber & Smoked Oud\",\"waxType\":\"Ceară Soia Golden Wax 464 + 10% Cocos\",\"netWeightGrams\":220,\"jarDiameterMm\":74,\"fragranceName\":\"Ulei Premium Chihlimbar & Oud Afumat\",\"fragrancePercentage\":10,\"waxGrams\":198,\"fragranceGrams\":22,\"wickType\":\"TCR 27/16 (Bumbac cerat)\",\"meltTempC\":\"75°C - 80°C\",\"pourTempC\":\"54°C - 57°C\",\"cureDays\":14,\"burnTimeHours\":50,\"fragranceNotes\":{\"top\":\"Bergamotă afumată, Piper roz, Tămâie olibanum\",\"heart\":\"Chihlimbar negru, Lemn de cașmir, Rășină labdanum\",\"base\":\"Oud regal, Piele tăbăcită, Mușchi de stejar\"},\"clpWarningsRo\":\"Atenție. Conține Linalool, Cedrol, Ulei de Oud sintetizat. Poate provoca o reacție alergică cutanată. Nociv pentru mediul acvatic cu efecte pe termen lung.\",\"clpWarningsEn\":\"Warning. Contains Linalool, Cedrol, Oud accord. May cause an allergic skin reaction. Harmful to aquatic life with long lasting effects.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Un parfum aristocratic și misterios, ce îmbină notele balsamice de chihlimbar cu profunzimea somptuoasă a lemnului de oud. Ideal pentru seri sofisticate de toamnă și iarnă.\",\"descriptionEn\":\"An aristocratic, mysterious blend uniting balsamic amber facets with deep opulent agarwood. Ideal for intimate, sophisticated evenings.\",\"baseCost\":28.5,\"recommendedRetailPrice\":95,\"recommendedWholesalePrice\":58,\"tag\":\"luxury\",\"vesselType\":\"Borcan Sticlă Mată Neagră 250ml\"}",
+      "created_at": "2026-10-29T05:58:03.464Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-recipe-2",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"recipe-2\",\"nameRo\":\"Warm Vanilla Bean & Cashmere\",\"nameEn\":\"Warm Vanilla Bean & Cashmere\",\"waxType\":\"Ceară Naturală Soia C3\",\"netWeightGrams\":200,\"jarDiameterMm\":70,\"fragranceName\":\"Vanilie de Madagascar & Cașmir Mătăsos\",\"fragrancePercentage\":9,\"waxGrams\":182,\"fragranceGrams\":18,\"wickType\":\"Eco 8 (Fitil plat din bumbac și in)\",\"meltTempC\":\"72°C - 78°C\",\"pourTempC\":\"52°C - 55°C\",\"cureDays\":12,\"burnTimeHours\":45,\"fragranceNotes\":{\"top\":\"Flori de heliotrop, Zahăr caramelizat, Nucșoară fină\",\"heart\":\"Păstăi de vanilie bourbon, Orhidee albă, Lapte de migdale\",\"base\":\"Cașmir catifelat, Lemn de santal cald, Mosc auriu\"},\"clpWarningsRo\":\"Atenție. Conține Vanilină, Cumarină, Piperonal. Poate provoca o reacție alergică. Nu lăsați lumânarea aprinsă nesupravegheată.\",\"clpWarningsEn\":\"Warning. Contains Vanillin, Coumarin, Piperonal. May produce an allergic reaction. Never leave a burning candle unattended.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Un cocon de căldură și confort dulce. Note gurmande cremoase învăluite într-o senzație mătăsoasă de cașmir. Best-seller absolut pentru relaxare acasă.\",\"descriptionEn\":\"A cocoon of comfort and sweet warmth. Creamy gourmand facets wrapped in silky cashmere sensations. Best-seller for home relaxation.\",\"baseCost\":24,\"recommendedRetailPrice\":85,\"recommendedWholesalePrice\":50,\"tag\":\"relax\",\"vesselType\":\"Pahar Ceramic Alb Mat 220ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-recipe-3",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"recipe-3\",\"nameRo\":\"Lavender Fields & Wild Honey\",\"nameEn\":\"Lavender Fields & Wild Honey\",\"waxType\":\"Blend Rapiță & Ceară Albine (85/15)\",\"netWeightGrams\":180,\"jarDiameterMm\":68,\"fragranceName\":\"Lavandă de Provence & Miere Polifloră\",\"fragrancePercentage\":8.5,\"waxGrams\":164.7,\"fragranceGrams\":15.3,\"wickType\":\"TCR 24/12 (Bumbac împletit strâns)\",\"meltTempC\":\"70°C - 75°C\",\"pourTempC\":\"58°C - 62°C\",\"cureDays\":10,\"burnTimeHours\":40,\"fragranceNotes\":{\"top\":\"Lavandă sălbatică proaspătă, Eucalipt mentolat, Bergamotă\",\"heart\":\"Miere aurie de câmp, Mușețel roman, Frunze de salvie\",\"base\":\"Ceară de albine naturală, Boabe de tonka, Lemn de cedru\"},\"clpWarningsRo\":\"Atenție. Conține Ulei esențial de Lavandula Angustifolia, Linalyl Acetate. Poate declanșa o alergie cutanată.\",\"clpWarningsEn\":\"Warning. Contains Lavender oil, Linalyl acetate. May produce an allergic skin reaction. Keep away from drafts.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"O călătorie olfactivă printre colinele înflorite ale Provence-ului, îmblânzită de dulceața mierii pure. Excelentă pentru inducerea somnului odihnitor.\",\"descriptionEn\":\"An olfactory stroll through blooming Provencal fields sweetened with raw floral honey. Ideal for evening wind-down.\",\"baseCost\":23.5,\"recommendedRetailPrice\":80,\"recommendedWholesalePrice\":48,\"tag\":\"relax\",\"vesselType\":\"Borcan Sticlă Chihlimbar (Amber Jar) 200ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-recipe-4",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"recipe-4\",\"nameRo\":\"Spiced Pumpkin & Cinnamon Bark\",\"nameEn\":\"Spiced Pumpkin & Cinnamon Bark\",\"waxType\":\"Ceară Soia Golden Wax 464\",\"netWeightGrams\":250,\"jarDiameterMm\":78,\"fragranceName\":\"Plăcintă de Dovleac & Scorțișoară de Ceylon\",\"fragrancePercentage\":10,\"waxGrams\":225,\"fragranceGrams\":25,\"wickType\":\"TCR 30/18 sau Fitil de Lemn 15mm Booster\",\"meltTempC\":\"75°C - 80°C\",\"pourTempC\":\"55°C - 58°C\",\"cureDays\":14,\"burnTimeHours\":55,\"fragranceNotes\":{\"top\":\"Miez de dovleac copt, Coajă de portocală confiată\",\"heart\":\"Băț de scorțișoară măcinat, Cuișoare întregi, Ghimbir proaspăt\",\"base\":\"Zahăr brun brunet, Unt sărat, Vanilie caldă\"},\"clpWarningsRo\":\"Atenție. Conține Cinnamaldehyde, Eugenol, Isoeugenol. Poate provoca alergii cutanate. A nu se lăsa la îndemâna copiilor.\",\"clpWarningsEn\":\"Warning. Contains Cinnamaldehyde, Eugenol. May cause skin allergy. Keep out of reach of children.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Aroma nostalgică a sărbătorilor de toamnă. Note picante vibrante de scorțișoară, dovleac rumenit și nucșoară prăjită. Aduce căldură instantă în cămin.\",\"descriptionEn\":\"Nostalgic cozy autumn holiday spirit. Vibrant Ceylon cinnamon, baked pumpkin purée, and toasted nutmeg fill the room.\",\"baseCost\":31,\"recommendedRetailPrice\":110,\"recommendedWholesalePrice\":65,\"tag\":\"seasonal\",\"vesselType\":\"Pahar de Cupru / Teracotă Glazurată 300ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-recipe-5",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"recipe-5\",\"nameRo\":\"Eucalyptus, Mint & White Pine\",\"nameEn\":\"Eucalyptus, Mint & White Pine\",\"waxType\":\"Ceară Soia C3 Pură\",\"netWeightGrams\":190,\"jarDiameterMm\":68,\"fragranceName\":\"Eucalipt Glacial, Mentă Sălbatică & Pin Alb\",\"fragrancePercentage\":8,\"waxGrams\":174.8,\"fragranceGrams\":15.2,\"wickType\":\"Eco 6 (Bumbac organic fără plumb)\",\"meltTempC\":\"72°C - 76°C\",\"pourTempC\":\"50°C - 53°C\",\"cureDays\":7,\"burnTimeHours\":42,\"fragranceNotes\":{\"top\":\"Frunze de eucalipt zdrobite, Mentă creață, Lămâie verde\",\"heart\":\"Ace de pin siberian, Rozmarin montan, Ienupăr\",\"base\":\"Lemn de mesteacăn, Lichen de pădure, Rășină curată\"},\"clpWarningsRo\":\"Atenție. Conține Eucalyptol, d-Limonene, Alpha-Pinene. Poate provoca reacții alergice. Păstrați lumânarea la distanță de curenți de aer.\",\"clpWarningsEn\":\"Warning. Contains Eucalyptol, d-Limonene, Alpha-Pinene. Toxic to aquatic life with long lasting effects.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"O gură de aer pur din inima unei păduri nordice. Senzație revitalizantă ce limpezește mintea, perfectă pentru spații de birou și aromaterapie matinală.\",\"descriptionEn\":\"A breath of pure arctic forest air. Crisp revitalizing blend that clears mental clutter, ideal for desk and morning mindfulness.\",\"baseCost\":22,\"recommendedRetailPrice\":78,\"recommendedWholesalePrice\":45,\"tag\":\"fresh\",\"vesselType\":\"Recipient Sticlă Mată Verde Smarald 200ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-recipe-6",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"recipe-6\",\"nameRo\":\"Roasted Espresso & Tonka Bean\",\"nameEn\":\"Roasted Espresso & Tonka Bean\",\"waxType\":\"Blend Soia 464 + 15% Ceară de Albine\",\"netWeightGrams\":210,\"jarDiameterMm\":72,\"fragranceName\":\"Cafea Arabica Prăjită & Boabe de Tonka\",\"fragrancePercentage\":9.5,\"waxGrams\":190.05,\"fragranceGrams\":19.95,\"wickType\":\"Fitil Lemn Natural 13mm (Sunet de foc de lemne)\",\"meltTempC\":\"76°C - 82°C\",\"pourTempC\":\"57°C - 60°C\",\"cureDays\":14,\"burnTimeHours\":48,\"fragranceNotes\":{\"top\":\"Boabe de cafea proaspăt râșnite, Lichior de alune\",\"heart\":\"Espresso italian intens, Cacao neagră amară, Scorțișoară\",\"base\":\"Boabe de tonka venezuelene, Vanilie afumată, Caramel brun\"},\"clpWarningsRo\":\"Atenție. Conține Benzyl Benzoate, Cumarină. Poate provoca o reacție alergică pe piele. Tăiați fitilul de lemn la 3mm înainte de fiecare aprindere.\",\"clpWarningsEn\":\"Warning. Contains Benzyl Benzoate, Coumarin. Trim wooden wick to 3mm before relighting.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Atmosfera unei cafenele artizanale vieneze. Fitilul de lemn trosnește delicat în timp ce notele profunde de cafea prăjită și tonka învăluie camera.\",\"descriptionEn\":\"The warm ambiance of an artisan Viennese coffeehouse. The wooden wick crackles gently as rich dark roast notes fill the space.\",\"baseCost\":29,\"recommendedRetailPrice\":98,\"recommendedWholesalePrice\":59,\"tag\":\"signature\",\"vesselType\":\"Recipient Sticlă Maro Fumuriu 230ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-recipe-7",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"recipe-7\",\"nameRo\":\"Citrus Blossom & Sunlit Fig\",\"nameEn\":\"Citrus Blossom & Sunlit Fig\",\"waxType\":\"Ceară Pură de Cocos (Coconut Wax Blend)\",\"netWeightGrams\":190,\"jarDiameterMm\":69,\"fragranceName\":\"Flori de Portocal Neroli & Smochine Coapte\",\"fragrancePercentage\":8.5,\"waxGrams\":173.85,\"fragranceGrams\":16.15,\"wickType\":\"TCR 24/14 (Fitil din bumbac tratat special)\",\"meltTempC\":\"65°C - 70°C\",\"pourTempC\":\"48°C - 52°C\",\"cureDays\":10,\"burnTimeHours\":44,\"fragranceNotes\":{\"top\":\"Clementine solare, Mandarină verde, Petale de Neroli\",\"heart\":\"Smochine coapte la soare, Frunze verzi de смоchin, Iasomie albă\",\"base\":\"Lemn de cedru alb, Lapte de cocos discret, Mosc pur\"},\"clpWarningsRo\":\"Atenție. Conține Limonene, Geraniol, Citral, Linalool. Toxic pentru mediul acvatic cu efecte pe termen lung.\",\"clpWarningsEn\":\"Warning. Contains Limonene, Geraniol, Citral. May produce an allergic reaction. Keep away from flammable materials.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Luminos și efervescent precum coasta mediteraneană la răsărit. Un echilibru sublim între aciditatea citricelor nobile și rotunjimea dulce a smochinelor.\",\"descriptionEn\":\"Bright and luminous as the Mediterranean coast at dawn. A sublime equilibrium between fine citrus zest and lush ripe fig pulp.\",\"baseCost\":26.5,\"recommendedRetailPrice\":89,\"recommendedWholesalePrice\":54,\"tag\":\"fresh\",\"vesselType\":\"Pahar Sticlă Transparentă Cristal 210ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-recipe-8",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"recipe-8\",\"nameRo\":\"Tobacco Leaf & Aged Bourbon\",\"nameEn\":\"Tobacco Leaf & Aged Bourbon\",\"waxType\":\"Blend Soia & Cocos 50/50\",\"netWeightGrams\":230,\"jarDiameterMm\":76,\"fragranceName\":\"Frunze de Tutun Nobil & Bourbon de Butoi\",\"fragrancePercentage\":10,\"waxGrams\":207,\"fragranceGrams\":23,\"wickType\":\"TCR 27/18 (Bumbac împletit)\",\"meltTempC\":\"72°C - 77°C\",\"pourTempC\":\"53°C - 56°C\",\"cureDays\":14,\"burnTimeHours\":52,\"fragranceNotes\":{\"top\":\"Coajă de portocală uscată, Boabe de coriandru, Cognac\",\"heart\":\"Frunze de tutun blond uscat, Piele fină, Zahăr brun\",\"base\":\"Bourbon învechit în butoi de stejar, Patchouli nobil, Rășină benzoică\"},\"clpWarningsRo\":\"Atenție. Conține Eugenol, Coumarin, Patchouli extract. Poate provoca alergii cutanate. Nu așezați direct pe suprafețe sensibile la căldură.\",\"clpWarningsEn\":\"Warning. Contains Eugenol, Coumarin, Patchouli extract. Burn within sight on a heat resistant surface.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Inspirat de cluburile clasice de lectură din Londra și butoaiele de stejar afumat. Note calde, masculine, catifelate și profund seducătoare.\",\"descriptionEn\":\"Inspired by gentleman’s reading lounges and charred oak barrels. Deep, velvet, intoxicating warmth with undeniable prestige.\",\"baseCost\":30,\"recommendedRetailPrice\":105,\"recommendedWholesalePrice\":64,\"tag\":\"luxury\",\"vesselType\":\"Recipient Sticlă Negru Lucios cu Capac Auriu 260ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-recipe-9",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"recipe-9\",\"nameRo\":\"Rose Petals & Velvet Musk\",\"nameEn\":\"Rose Petals & Velvet Musk\",\"waxType\":\"Ceară Soia Golden Wax 464\",\"netWeightGrams\":180,\"jarDiameterMm\":67,\"fragranceName\":\"Trandafiri de Damasc & Mosc Catifelat\",\"fragrancePercentage\":8.5,\"waxGrams\":164.7,\"fragranceGrams\":15.3,\"wickType\":\"Eco 6 (Bumbac cerat cu soia)\",\"meltTempC\":\"72°C - 76°C\",\"pourTempC\":\"51°C - 54°C\",\"cureDays\":10,\"burnTimeHours\":40,\"fragranceNotes\":{\"top\":\"Bujor roz proaspăt, Piper roz, Bergamotă delicată\",\"heart\":\"Petale de trandafir de Damasc, Violetă dulce, Magnolia\",\"base\":\"Mosc pudrat, Lemn de cașmir, Rădăcină de iris\"},\"clpWarningsRo\":\"Atenție. Conține Citronellol, Geraniol, Nerol. Poate provoca o reacție alergică pe piele. A nu se lăsa aprinsă lângă materiale inflamabile.\",\"clpWarningsEn\":\"Warning. Contains Citronellol, Geraniol. May cause allergic reaction. Keep away from anything that can catch fire.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Eleganță florală pură, romantică și pudrată. Petale catifelate de trandafir nobil așezate pe o bază mătăsoasă de mosc cald și cașmir.\",\"descriptionEn\":\"Pure romantic floral sophistication. Opulent velvet Damascus rose petals lingering over powdery warm musk and cashmere.\",\"baseCost\":23,\"recommendedRetailPrice\":82,\"recommendedWholesalePrice\":49,\"tag\":\"relax\",\"vesselType\":\"Pahar Ceramic Roz Prăfuit 200ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-recipe-10",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"recipe-10\",\"nameRo\":\"Sea Salt & Coconut Driftwood\",\"nameEn\":\"Sea Salt & Coconut Driftwood\",\"waxType\":\"Ceară Soia C3 + Ceară Cocos (70/30)\",\"netWeightGrams\":200,\"jarDiameterMm\":70,\"fragranceName\":\"Flori de Sare Marină & Lemn de Naufragiu\",\"fragrancePercentage\":9,\"waxGrams\":182,\"fragranceGrams\":18,\"wickType\":\"Eco 8 (Bumbac organic)\",\"meltTempC\":\"70°C - 75°C\",\"pourTempC\":\"52°C - 55°C\",\"cureDays\":10,\"burnTimeHours\":45,\"fragranceNotes\":{\"top\":\"Aerosoli marini, Sare de mare cristalizată, Salvie albă\",\"heart\":\"Apă de cocos proaspătă, Alge marine subtile, Frangipani\",\"base\":\"Lemn de plajă erodat de sare, Nisip cald, Ambră cenușie vegetală\"},\"clpWarningsRo\":\"Atenție. Conține Benzyl Salicylate, Hexyl Cinnamal, Linalool. Nociv pentru mediul acvatic cu efecte pe termen lung.\",\"clpWarningsEn\":\"Warning. Contains Benzyl Salicylate, Hexyl Cinnamal. May cause an allergic reaction.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Briza revigorantă a oceanului și lemnul spălat de valuri uscat sub soarele amiezii. O prospețime minerală, caldă și reconfortantă.\",\"descriptionEn\":\"Invigorating sea breeze and mineral ocean salt over sun-bleached coastal driftwood and hints of fresh coconut water.\",\"baseCost\":25,\"recommendedRetailPrice\":88,\"recommendedWholesalePrice\":52,\"tag\":\"fresh\",\"vesselType\":\"Borcan Sticlă Mată Albastră Marină 220ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-free-001-recipe-1",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"recipe-1\",\"nameRo\":\"Midnight Amber & Smoked Oud\",\"nameEn\":\"Midnight Amber & Smoked Oud\",\"waxType\":\"Ceară Soia Golden Wax 464 + 10% Cocos\",\"netWeightGrams\":220,\"jarDiameterMm\":74,\"fragranceName\":\"Ulei Premium Chihlimbar & Oud Afumat\",\"fragrancePercentage\":10,\"waxGrams\":198,\"fragranceGrams\":22,\"wickType\":\"TCR 27/16 (Bumbac cerat)\",\"meltTempC\":\"75°C - 80°C\",\"pourTempC\":\"54°C - 57°C\",\"cureDays\":14,\"burnTimeHours\":50,\"fragranceNotes\":{\"top\":\"Bergamotă afumată, Piper roz, Tămâie olibanum\",\"heart\":\"Chihlimbar negru, Lemn de cașmir, Rășină labdanum\",\"base\":\"Oud regal, Piele tăbăcită, Mușchi de stejar\"},\"clpWarningsRo\":\"Atenție. Conține Linalool, Cedrol, Ulei de Oud sintetizat. Poate provoca o reacție alergică cutanată. Nociv pentru mediul acvatic cu efecte pe termen lung.\",\"clpWarningsEn\":\"Warning. Contains Linalool, Cedrol, Oud accord. May cause an allergic skin reaction. Harmful to aquatic life with long lasting effects.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Un parfum aristocratic și misterios, ce îmbină notele balsamice de chihlimbar cu profunzimea somptuoasă a lemnului de oud. Ideal pentru seri sofisticate de toamnă și iarnă.\",\"descriptionEn\":\"An aristocratic, mysterious blend uniting balsamic amber facets with deep opulent agarwood. Ideal for intimate, sophisticated evenings.\",\"baseCost\":28.5,\"recommendedRetailPrice\":95,\"recommendedWholesalePrice\":58,\"tag\":\"luxury\",\"vesselType\":\"Borcan Sticlă Mată Neagră 250ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-free-001-recipe-2",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"recipe-2\",\"nameRo\":\"Warm Vanilla Bean & Cashmere\",\"nameEn\":\"Warm Vanilla Bean & Cashmere\",\"waxType\":\"Ceară Naturală Soia C3\",\"netWeightGrams\":200,\"jarDiameterMm\":70,\"fragranceName\":\"Vanilie de Madagascar & Cașmir Mătăsos\",\"fragrancePercentage\":9,\"waxGrams\":182,\"fragranceGrams\":18,\"wickType\":\"Eco 8 (Fitil plat din bumbac și in)\",\"meltTempC\":\"72°C - 78°C\",\"pourTempC\":\"52°C - 55°C\",\"cureDays\":12,\"burnTimeHours\":45,\"fragranceNotes\":{\"top\":\"Flori de heliotrop, Zahăr caramelizat, Nucșoară fină\",\"heart\":\"Păstăi de vanilie bourbon, Orhidee albă, Lapte de migdale\",\"base\":\"Cașmir catifelat, Lemn de santal cald, Mosc auriu\"},\"clpWarningsRo\":\"Atenție. Conține Vanilină, Cumarină, Piperonal. Poate provoca o reacție alergică. Nu lăsați lumânarea aprinsă nesupravegheată.\",\"clpWarningsEn\":\"Warning. Contains Vanillin, Coumarin, Piperonal. May produce an allergic reaction. Never leave a burning candle unattended.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Un cocon de căldură și confort dulce. Note gurmande cremoase învăluite într-o senzație mătăsoasă de cașmir. Best-seller absolut pentru relaxare acasă.\",\"descriptionEn\":\"A cocoon of comfort and sweet warmth. Creamy gourmand facets wrapped in silky cashmere sensations. Best-seller for home relaxation.\",\"baseCost\":24,\"recommendedRetailPrice\":85,\"recommendedWholesalePrice\":50,\"tag\":\"relax\",\"vesselType\":\"Pahar Ceramic Alb Mat 220ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-free-001-recipe-3",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"recipe-3\",\"nameRo\":\"Lavender Fields & Wild Honey\",\"nameEn\":\"Lavender Fields & Wild Honey\",\"waxType\":\"Blend Rapiță & Ceară Albine (85/15)\",\"netWeightGrams\":180,\"jarDiameterMm\":68,\"fragranceName\":\"Lavandă de Provence & Miere Polifloră\",\"fragrancePercentage\":8.5,\"waxGrams\":164.7,\"fragranceGrams\":15.3,\"wickType\":\"TCR 24/12 (Bumbac împletit strâns)\",\"meltTempC\":\"70°C - 75°C\",\"pourTempC\":\"58°C - 62°C\",\"cureDays\":10,\"burnTimeHours\":40,\"fragranceNotes\":{\"top\":\"Lavandă sălbatică proaspătă, Eucalipt mentolat, Bergamotă\",\"heart\":\"Miere aurie de câmp, Mușețel roman, Frunze de salvie\",\"base\":\"Ceară de albine naturală, Boabe de tonka, Lemn de cedru\"},\"clpWarningsRo\":\"Atenție. Conține Ulei esențial de Lavandula Angustifolia, Linalyl Acetate. Poate declanșa o alergie cutanată.\",\"clpWarningsEn\":\"Warning. Contains Lavender oil, Linalyl acetate. May produce an allergic skin reaction. Keep away from drafts.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"O călătorie olfactivă printre colinele înflorite ale Provence-ului, îmblânzită de dulceața mierii pure. Excelentă pentru inducerea somnului odihnitor.\",\"descriptionEn\":\"An olfactory stroll through blooming Provencal fields sweetened with raw floral honey. Ideal for evening wind-down.\",\"baseCost\":23.5,\"recommendedRetailPrice\":80,\"recommendedWholesalePrice\":48,\"tag\":\"relax\",\"vesselType\":\"Borcan Sticlă Chihlimbar (Amber Jar) 200ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-free-001-recipe-4",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"recipe-4\",\"nameRo\":\"Spiced Pumpkin & Cinnamon Bark\",\"nameEn\":\"Spiced Pumpkin & Cinnamon Bark\",\"waxType\":\"Ceară Soia Golden Wax 464\",\"netWeightGrams\":250,\"jarDiameterMm\":78,\"fragranceName\":\"Plăcintă de Dovleac & Scorțișoară de Ceylon\",\"fragrancePercentage\":10,\"waxGrams\":225,\"fragranceGrams\":25,\"wickType\":\"TCR 30/18 sau Fitil de Lemn 15mm Booster\",\"meltTempC\":\"75°C - 80°C\",\"pourTempC\":\"55°C - 58°C\",\"cureDays\":14,\"burnTimeHours\":55,\"fragranceNotes\":{\"top\":\"Miez de dovleac copt, Coajă de portocală confiată\",\"heart\":\"Băț de scorțișoară măcinat, Cuișoare întregi, Ghimbir proaspăt\",\"base\":\"Zahăr brun brunet, Unt sărat, Vanilie caldă\"},\"clpWarningsRo\":\"Atenție. Conține Cinnamaldehyde, Eugenol, Isoeugenol. Poate provoca alergii cutanate. A nu se lăsa la îndemâna copiilor.\",\"clpWarningsEn\":\"Warning. Contains Cinnamaldehyde, Eugenol. May cause skin allergy. Keep out of reach of children.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Aroma nostalgică a sărbătorilor de toamnă. Note picante vibrante de scorțișoară, dovleac rumenit și nucșoară prăjită. Aduce căldură instantă în cămin.\",\"descriptionEn\":\"Nostalgic cozy autumn holiday spirit. Vibrant Ceylon cinnamon, baked pumpkin purée, and toasted nutmeg fill the room.\",\"baseCost\":31,\"recommendedRetailPrice\":110,\"recommendedWholesalePrice\":65,\"tag\":\"seasonal\",\"vesselType\":\"Pahar de Cupru / Teracotă Glazurată 300ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-free-001-recipe-5",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"recipe-5\",\"nameRo\":\"Eucalyptus, Mint & White Pine\",\"nameEn\":\"Eucalyptus, Mint & White Pine\",\"waxType\":\"Ceară Soia C3 Pură\",\"netWeightGrams\":190,\"jarDiameterMm\":68,\"fragranceName\":\"Eucalipt Glacial, Mentă Sălbatică & Pin Alb\",\"fragrancePercentage\":8,\"waxGrams\":174.8,\"fragranceGrams\":15.2,\"wickType\":\"Eco 6 (Bumbac organic fără plumb)\",\"meltTempC\":\"72°C - 76°C\",\"pourTempC\":\"50°C - 53°C\",\"cureDays\":7,\"burnTimeHours\":42,\"fragranceNotes\":{\"top\":\"Frunze de eucalipt zdrobite, Mentă creață, Lămâie verde\",\"heart\":\"Ace de pin siberian, Rozmarin montan, Ienupăr\",\"base\":\"Lemn de mesteacăn, Lichen de pădure, Rășină curată\"},\"clpWarningsRo\":\"Atenție. Conține Eucalyptol, d-Limonene, Alpha-Pinene. Poate provoca reacții alergice. Păstrați lumânarea la distanță de curenți de aer.\",\"clpWarningsEn\":\"Warning. Contains Eucalyptol, d-Limonene, Alpha-Pinene. Toxic to aquatic life with long lasting effects.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"O gură de aer pur din inima unei păduri nordice. Senzație revitalizantă ce limpezește mintea, perfectă pentru spații de birou și aromaterapie matinală.\",\"descriptionEn\":\"A breath of pure arctic forest air. Crisp revitalizing blend that clears mental clutter, ideal for desk and morning mindfulness.\",\"baseCost\":22,\"recommendedRetailPrice\":78,\"recommendedWholesalePrice\":45,\"tag\":\"fresh\",\"vesselType\":\"Recipient Sticlă Mată Verde Smarald 200ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-free-001-recipe-6",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"recipe-6\",\"nameRo\":\"Roasted Espresso & Tonka Bean\",\"nameEn\":\"Roasted Espresso & Tonka Bean\",\"waxType\":\"Blend Soia 464 + 15% Ceară de Albine\",\"netWeightGrams\":210,\"jarDiameterMm\":72,\"fragranceName\":\"Cafea Arabica Prăjită & Boabe de Tonka\",\"fragrancePercentage\":9.5,\"waxGrams\":190.05,\"fragranceGrams\":19.95,\"wickType\":\"Fitil Lemn Natural 13mm (Sunet de foc de lemne)\",\"meltTempC\":\"76°C - 82°C\",\"pourTempC\":\"57°C - 60°C\",\"cureDays\":14,\"burnTimeHours\":48,\"fragranceNotes\":{\"top\":\"Boabe de cafea proaspăt râșnite, Lichior de alune\",\"heart\":\"Espresso italian intens, Cacao neagră amară, Scorțișoară\",\"base\":\"Boabe de tonka venezuelene, Vanilie afumată, Caramel brun\"},\"clpWarningsRo\":\"Atenție. Conține Benzyl Benzoate, Cumarină. Poate provoca o reacție alergică pe piele. Tăiați fitilul de lemn la 3mm înainte de fiecare aprindere.\",\"clpWarningsEn\":\"Warning. Contains Benzyl Benzoate, Coumarin. Trim wooden wick to 3mm before relighting.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Atmosfera unei cafenele artizanale vieneze. Fitilul de lemn trosnește delicat în timp ce notele profunde de cafea prăjită și tonka învăluie camera.\",\"descriptionEn\":\"The warm ambiance of an artisan Viennese coffeehouse. The wooden wick crackles gently as rich dark roast notes fill the space.\",\"baseCost\":29,\"recommendedRetailPrice\":98,\"recommendedWholesalePrice\":59,\"tag\":\"signature\",\"vesselType\":\"Recipient Sticlă Maro Fumuriu 230ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-free-001-recipe-7",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"recipe-7\",\"nameRo\":\"Citrus Blossom & Sunlit Fig\",\"nameEn\":\"Citrus Blossom & Sunlit Fig\",\"waxType\":\"Ceară Pură de Cocos (Coconut Wax Blend)\",\"netWeightGrams\":190,\"jarDiameterMm\":69,\"fragranceName\":\"Flori de Portocal Neroli & Smochine Coapte\",\"fragrancePercentage\":8.5,\"waxGrams\":173.85,\"fragranceGrams\":16.15,\"wickType\":\"TCR 24/14 (Fitil din bumbac tratat special)\",\"meltTempC\":\"65°C - 70°C\",\"pourTempC\":\"48°C - 52°C\",\"cureDays\":10,\"burnTimeHours\":44,\"fragranceNotes\":{\"top\":\"Clementine solare, Mandarină verde, Petale de Neroli\",\"heart\":\"Smochine coapte la soare, Frunze verzi de смоchin, Iasomie albă\",\"base\":\"Lemn de cedru alb, Lapte de cocos discret, Mosc pur\"},\"clpWarningsRo\":\"Atenție. Conține Limonene, Geraniol, Citral, Linalool. Toxic pentru mediul acvatic cu efecte pe termen lung.\",\"clpWarningsEn\":\"Warning. Contains Limonene, Geraniol, Citral. May produce an allergic reaction. Keep away from flammable materials.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Luminos și efervescent precum coasta mediteraneană la răsărit. Un echilibru sublim între aciditatea citricelor nobile și rotunjimea dulce a smochinelor.\",\"descriptionEn\":\"Bright and luminous as the Mediterranean coast at dawn. A sublime equilibrium between fine citrus zest and lush ripe fig pulp.\",\"baseCost\":26.5,\"recommendedRetailPrice\":89,\"recommendedWholesalePrice\":54,\"tag\":\"fresh\",\"vesselType\":\"Pahar Sticlă Transparentă Cristal 210ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-free-001-recipe-8",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"recipe-8\",\"nameRo\":\"Tobacco Leaf & Aged Bourbon\",\"nameEn\":\"Tobacco Leaf & Aged Bourbon\",\"waxType\":\"Blend Soia & Cocos 50/50\",\"netWeightGrams\":230,\"jarDiameterMm\":76,\"fragranceName\":\"Frunze de Tutun Nobil & Bourbon de Butoi\",\"fragrancePercentage\":10,\"waxGrams\":207,\"fragranceGrams\":23,\"wickType\":\"TCR 27/18 (Bumbac împletit)\",\"meltTempC\":\"72°C - 77°C\",\"pourTempC\":\"53°C - 56°C\",\"cureDays\":14,\"burnTimeHours\":52,\"fragranceNotes\":{\"top\":\"Coajă de portocală uscată, Boabe de coriandru, Cognac\",\"heart\":\"Frunze de tutun blond uscat, Piele fină, Zahăr brun\",\"base\":\"Bourbon învechit în butoi de stejar, Patchouli nobil, Rășină benzoică\"},\"clpWarningsRo\":\"Atenție. Conține Eugenol, Coumarin, Patchouli extract. Poate provoca alergii cutanate. Nu așezați direct pe suprafețe sensibile la căldură.\",\"clpWarningsEn\":\"Warning. Contains Eugenol, Coumarin, Patchouli extract. Burn within sight on a heat resistant surface.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Inspirat de cluburile clasice de lectură din Londra și butoaiele de stejar afumat. Note calde, masculine, catifelate și profund seducătoare.\",\"descriptionEn\":\"Inspired by gentleman’s reading lounges and charred oak barrels. Deep, velvet, intoxicating warmth with undeniable prestige.\",\"baseCost\":30,\"recommendedRetailPrice\":105,\"recommendedWholesalePrice\":64,\"tag\":\"luxury\",\"vesselType\":\"Recipient Sticlă Negru Lucios cu Capac Auriu 260ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-free-001-recipe-9",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"recipe-9\",\"nameRo\":\"Rose Petals & Velvet Musk\",\"nameEn\":\"Rose Petals & Velvet Musk\",\"waxType\":\"Ceară Soia Golden Wax 464\",\"netWeightGrams\":180,\"jarDiameterMm\":67,\"fragranceName\":\"Trandafiri de Damasc & Mosc Catifelat\",\"fragrancePercentage\":8.5,\"waxGrams\":164.7,\"fragranceGrams\":15.3,\"wickType\":\"Eco 6 (Bumbac cerat cu soia)\",\"meltTempC\":\"72°C - 76°C\",\"pourTempC\":\"51°C - 54°C\",\"cureDays\":10,\"burnTimeHours\":40,\"fragranceNotes\":{\"top\":\"Bujor roz proaspăt, Piper roz, Bergamotă delicată\",\"heart\":\"Petale de trandafir de Damasc, Violetă dulce, Magnolia\",\"base\":\"Mosc pudrat, Lemn de cașmir, Rădăcină de iris\"},\"clpWarningsRo\":\"Atenție. Conține Citronellol, Geraniol, Nerol. Poate provoca o reacție alergică pe piele. A nu se lăsa aprinsă lângă materiale inflamabile.\",\"clpWarningsEn\":\"Warning. Contains Citronellol, Geraniol. May cause allergic reaction. Keep away from anything that can catch fire.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Eleganță florală pură, romantică și pudrată. Petale catifelate de trandafir nobil așezate pe o bază mătăsoasă de mosc cald și cașmir.\",\"descriptionEn\":\"Pure romantic floral sophistication. Opulent velvet Damascus rose petals lingering over powdery warm musk and cashmere.\",\"baseCost\":23,\"recommendedRetailPrice\":82,\"recommendedWholesalePrice\":49,\"tag\":\"relax\",\"vesselType\":\"Pahar Ceramic Roz Prăfuit 200ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-free-001-recipe-10",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"recipe-10\",\"nameRo\":\"Sea Salt & Coconut Driftwood\",\"nameEn\":\"Sea Salt & Coconut Driftwood\",\"waxType\":\"Ceară Soia C3 + Ceară Cocos (70/30)\",\"netWeightGrams\":200,\"jarDiameterMm\":70,\"fragranceName\":\"Flori de Sare Marină & Lemn de Naufragiu\",\"fragrancePercentage\":9,\"waxGrams\":182,\"fragranceGrams\":18,\"wickType\":\"Eco 8 (Bumbac organic)\",\"meltTempC\":\"70°C - 75°C\",\"pourTempC\":\"52°C - 55°C\",\"cureDays\":10,\"burnTimeHours\":45,\"fragranceNotes\":{\"top\":\"Aerosoli marini, Sare de mare cristalizată, Salvie albă\",\"heart\":\"Apă de cocos proaspătă, Alge marine subtile, Frangipani\",\"base\":\"Lemn de plajă erodat de sare, Nisip cald, Ambră cenușie vegetală\"},\"clpWarningsRo\":\"Atenție. Conține Benzyl Salicylate, Hexyl Cinnamal, Linalool. Nociv pentru mediul acvatic cu efecte pe termen lung.\",\"clpWarningsEn\":\"Warning. Contains Benzyl Salicylate, Hexyl Cinnamal. May cause an allergic reaction.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Briza revigorantă a oceanului și lemnul spălat de valuri uscat sub soarele amiezii. O prospețime minerală, caldă și reconfortantă.\",\"descriptionEn\":\"Invigorating sea breeze and mineral ocean salt over sun-bleached coastal driftwood and hints of fresh coconut water.\",\"baseCost\":25,\"recommendedRetailPrice\":88,\"recommendedWholesalePrice\":52,\"tag\":\"fresh\",\"vesselType\":\"Borcan Sticlă Mată Albastră Marină 220ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-pro-001-recipe-1",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"recipe-1\",\"nameRo\":\"Midnight Amber & Smoked Oud\",\"nameEn\":\"Midnight Amber & Smoked Oud\",\"waxType\":\"Ceară Soia Golden Wax 464 + 10% Cocos\",\"netWeightGrams\":220,\"jarDiameterMm\":74,\"fragranceName\":\"Ulei Premium Chihlimbar & Oud Afumat\",\"fragrancePercentage\":10,\"waxGrams\":198,\"fragranceGrams\":22,\"wickType\":\"TCR 27/16 (Bumbac cerat)\",\"meltTempC\":\"75°C - 80°C\",\"pourTempC\":\"54°C - 57°C\",\"cureDays\":14,\"burnTimeHours\":50,\"fragranceNotes\":{\"top\":\"Bergamotă afumată, Piper roz, Tămâie olibanum\",\"heart\":\"Chihlimbar negru, Lemn de cașmir, Rășină labdanum\",\"base\":\"Oud regal, Piele tăbăcită, Mușchi de stejar\"},\"clpWarningsRo\":\"Atenție. Conține Linalool, Cedrol, Ulei de Oud sintetizat. Poate provoca o reacție alergică cutanată. Nociv pentru mediul acvatic cu efecte pe termen lung.\",\"clpWarningsEn\":\"Warning. Contains Linalool, Cedrol, Oud accord. May cause an allergic skin reaction. Harmful to aquatic life with long lasting effects.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Un parfum aristocratic și misterios, ce îmbină notele balsamice de chihlimbar cu profunzimea somptuoasă a lemnului de oud. Ideal pentru seri sofisticate de toamnă și iarnă.\",\"descriptionEn\":\"An aristocratic, mysterious blend uniting balsamic amber facets with deep opulent agarwood. Ideal for intimate, sophisticated evenings.\",\"baseCost\":28.5,\"recommendedRetailPrice\":95,\"recommendedWholesalePrice\":58,\"tag\":\"luxury\",\"vesselType\":\"Borcan Sticlă Mată Neagră 250ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-pro-001-recipe-2",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"recipe-2\",\"nameRo\":\"Warm Vanilla Bean & Cashmere\",\"nameEn\":\"Warm Vanilla Bean & Cashmere\",\"waxType\":\"Ceară Naturală Soia C3\",\"netWeightGrams\":200,\"jarDiameterMm\":70,\"fragranceName\":\"Vanilie de Madagascar & Cașmir Mătăsos\",\"fragrancePercentage\":9,\"waxGrams\":182,\"fragranceGrams\":18,\"wickType\":\"Eco 8 (Fitil plat din bumbac și in)\",\"meltTempC\":\"72°C - 78°C\",\"pourTempC\":\"52°C - 55°C\",\"cureDays\":12,\"burnTimeHours\":45,\"fragranceNotes\":{\"top\":\"Flori de heliotrop, Zahăr caramelizat, Nucșoară fină\",\"heart\":\"Păstăi de vanilie bourbon, Orhidee albă, Lapte de migdale\",\"base\":\"Cașmir catifelat, Lemn de santal cald, Mosc auriu\"},\"clpWarningsRo\":\"Atenție. Conține Vanilină, Cumarină, Piperonal. Poate provoca o reacție alergică. Nu lăsați lumânarea aprinsă nesupravegheată.\",\"clpWarningsEn\":\"Warning. Contains Vanillin, Coumarin, Piperonal. May produce an allergic reaction. Never leave a burning candle unattended.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Un cocon de căldură și confort dulce. Note gurmande cremoase învăluite într-o senzație mătăsoasă de cașmir. Best-seller absolut pentru relaxare acasă.\",\"descriptionEn\":\"A cocoon of comfort and sweet warmth. Creamy gourmand facets wrapped in silky cashmere sensations. Best-seller for home relaxation.\",\"baseCost\":24,\"recommendedRetailPrice\":85,\"recommendedWholesalePrice\":50,\"tag\":\"relax\",\"vesselType\":\"Pahar Ceramic Alb Mat 220ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-pro-001-recipe-3",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"recipe-3\",\"nameRo\":\"Lavender Fields & Wild Honey\",\"nameEn\":\"Lavender Fields & Wild Honey\",\"waxType\":\"Blend Rapiță & Ceară Albine (85/15)\",\"netWeightGrams\":180,\"jarDiameterMm\":68,\"fragranceName\":\"Lavandă de Provence & Miere Polifloră\",\"fragrancePercentage\":8.5,\"waxGrams\":164.7,\"fragranceGrams\":15.3,\"wickType\":\"TCR 24/12 (Bumbac împletit strâns)\",\"meltTempC\":\"70°C - 75°C\",\"pourTempC\":\"58°C - 62°C\",\"cureDays\":10,\"burnTimeHours\":40,\"fragranceNotes\":{\"top\":\"Lavandă sălbatică proaspătă, Eucalipt mentolat, Bergamotă\",\"heart\":\"Miere aurie de câmp, Mușețel roman, Frunze de salvie\",\"base\":\"Ceară de albine naturală, Boabe de tonka, Lemn de cedru\"},\"clpWarningsRo\":\"Atenție. Conține Ulei esențial de Lavandula Angustifolia, Linalyl Acetate. Poate declanșa o alergie cutanată.\",\"clpWarningsEn\":\"Warning. Contains Lavender oil, Linalyl acetate. May produce an allergic skin reaction. Keep away from drafts.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"O călătorie olfactivă printre colinele înflorite ale Provence-ului, îmblânzită de dulceața mierii pure. Excelentă pentru inducerea somnului odihnitor.\",\"descriptionEn\":\"An olfactory stroll through blooming Provencal fields sweetened with raw floral honey. Ideal for evening wind-down.\",\"baseCost\":23.5,\"recommendedRetailPrice\":80,\"recommendedWholesalePrice\":48,\"tag\":\"relax\",\"vesselType\":\"Borcan Sticlă Chihlimbar (Amber Jar) 200ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-pro-001-recipe-4",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"recipe-4\",\"nameRo\":\"Spiced Pumpkin & Cinnamon Bark\",\"nameEn\":\"Spiced Pumpkin & Cinnamon Bark\",\"waxType\":\"Ceară Soia Golden Wax 464\",\"netWeightGrams\":250,\"jarDiameterMm\":78,\"fragranceName\":\"Plăcintă de Dovleac & Scorțișoară de Ceylon\",\"fragrancePercentage\":10,\"waxGrams\":225,\"fragranceGrams\":25,\"wickType\":\"TCR 30/18 sau Fitil de Lemn 15mm Booster\",\"meltTempC\":\"75°C - 80°C\",\"pourTempC\":\"55°C - 58°C\",\"cureDays\":14,\"burnTimeHours\":55,\"fragranceNotes\":{\"top\":\"Miez de dovleac copt, Coajă de portocală confiată\",\"heart\":\"Băț de scorțișoară măcinat, Cuișoare întregi, Ghimbir proaspăt\",\"base\":\"Zahăr brun brunet, Unt sărat, Vanilie caldă\"},\"clpWarningsRo\":\"Atenție. Conține Cinnamaldehyde, Eugenol, Isoeugenol. Poate provoca alergii cutanate. A nu se lăsa la îndemâna copiilor.\",\"clpWarningsEn\":\"Warning. Contains Cinnamaldehyde, Eugenol. May cause skin allergy. Keep out of reach of children.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Aroma nostalgică a sărbătorilor de toamnă. Note picante vibrante de scorțișoară, dovleac rumenit și nucșoară prăjită. Aduce căldură instantă în cămin.\",\"descriptionEn\":\"Nostalgic cozy autumn holiday spirit. Vibrant Ceylon cinnamon, baked pumpkin purée, and toasted nutmeg fill the room.\",\"baseCost\":31,\"recommendedRetailPrice\":110,\"recommendedWholesalePrice\":65,\"tag\":\"seasonal\",\"vesselType\":\"Pahar de Cupru / Teracotă Glazurată 300ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-pro-001-recipe-5",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"recipe-5\",\"nameRo\":\"Eucalyptus, Mint & White Pine\",\"nameEn\":\"Eucalyptus, Mint & White Pine\",\"waxType\":\"Ceară Soia C3 Pură\",\"netWeightGrams\":190,\"jarDiameterMm\":68,\"fragranceName\":\"Eucalipt Glacial, Mentă Sălbatică & Pin Alb\",\"fragrancePercentage\":8,\"waxGrams\":174.8,\"fragranceGrams\":15.2,\"wickType\":\"Eco 6 (Bumbac organic fără plumb)\",\"meltTempC\":\"72°C - 76°C\",\"pourTempC\":\"50°C - 53°C\",\"cureDays\":7,\"burnTimeHours\":42,\"fragranceNotes\":{\"top\":\"Frunze de eucalipt zdrobite, Mentă creață, Lămâie verde\",\"heart\":\"Ace de pin siberian, Rozmarin montan, Ienupăr\",\"base\":\"Lemn de mesteacăn, Lichen de pădure, Rășină curată\"},\"clpWarningsRo\":\"Atenție. Conține Eucalyptol, d-Limonene, Alpha-Pinene. Poate provoca reacții alergice. Păstrați lumânarea la distanță de curenți de aer.\",\"clpWarningsEn\":\"Warning. Contains Eucalyptol, d-Limonene, Alpha-Pinene. Toxic to aquatic life with long lasting effects.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"O gură de aer pur din inima unei păduri nordice. Senzație revitalizantă ce limpezește mintea, perfectă pentru spații de birou și aromaterapie matinală.\",\"descriptionEn\":\"A breath of pure arctic forest air. Crisp revitalizing blend that clears mental clutter, ideal for desk and morning mindfulness.\",\"baseCost\":22,\"recommendedRetailPrice\":78,\"recommendedWholesalePrice\":45,\"tag\":\"fresh\",\"vesselType\":\"Recipient Sticlă Mată Verde Smarald 200ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-pro-001-recipe-6",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"recipe-6\",\"nameRo\":\"Roasted Espresso & Tonka Bean\",\"nameEn\":\"Roasted Espresso & Tonka Bean\",\"waxType\":\"Blend Soia 464 + 15% Ceară de Albine\",\"netWeightGrams\":210,\"jarDiameterMm\":72,\"fragranceName\":\"Cafea Arabica Prăjită & Boabe de Tonka\",\"fragrancePercentage\":9.5,\"waxGrams\":190.05,\"fragranceGrams\":19.95,\"wickType\":\"Fitil Lemn Natural 13mm (Sunet de foc de lemne)\",\"meltTempC\":\"76°C - 82°C\",\"pourTempC\":\"57°C - 60°C\",\"cureDays\":14,\"burnTimeHours\":48,\"fragranceNotes\":{\"top\":\"Boabe de cafea proaspăt râșnite, Lichior de alune\",\"heart\":\"Espresso italian intens, Cacao neagră amară, Scorțișoară\",\"base\":\"Boabe de tonka venezuelene, Vanilie afumată, Caramel brun\"},\"clpWarningsRo\":\"Atenție. Conține Benzyl Benzoate, Cumarină. Poate provoca o reacție alergică pe piele. Tăiați fitilul de lemn la 3mm înainte de fiecare aprindere.\",\"clpWarningsEn\":\"Warning. Contains Benzyl Benzoate, Coumarin. Trim wooden wick to 3mm before relighting.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Atmosfera unei cafenele artizanale vieneze. Fitilul de lemn trosnește delicat în timp ce notele profunde de cafea prăjită și tonka învăluie camera.\",\"descriptionEn\":\"The warm ambiance of an artisan Viennese coffeehouse. The wooden wick crackles gently as rich dark roast notes fill the space.\",\"baseCost\":29,\"recommendedRetailPrice\":98,\"recommendedWholesalePrice\":59,\"tag\":\"signature\",\"vesselType\":\"Recipient Sticlă Maro Fumuriu 230ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-pro-001-recipe-7",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"recipe-7\",\"nameRo\":\"Citrus Blossom & Sunlit Fig\",\"nameEn\":\"Citrus Blossom & Sunlit Fig\",\"waxType\":\"Ceară Pură de Cocos (Coconut Wax Blend)\",\"netWeightGrams\":190,\"jarDiameterMm\":69,\"fragranceName\":\"Flori de Portocal Neroli & Smochine Coapte\",\"fragrancePercentage\":8.5,\"waxGrams\":173.85,\"fragranceGrams\":16.15,\"wickType\":\"TCR 24/14 (Fitil din bumbac tratat special)\",\"meltTempC\":\"65°C - 70°C\",\"pourTempC\":\"48°C - 52°C\",\"cureDays\":10,\"burnTimeHours\":44,\"fragranceNotes\":{\"top\":\"Clementine solare, Mandarină verde, Petale de Neroli\",\"heart\":\"Smochine coapte la soare, Frunze verzi de смоchin, Iasomie albă\",\"base\":\"Lemn de cedru alb, Lapte de cocos discret, Mosc pur\"},\"clpWarningsRo\":\"Atenție. Conține Limonene, Geraniol, Citral, Linalool. Toxic pentru mediul acvatic cu efecte pe termen lung.\",\"clpWarningsEn\":\"Warning. Contains Limonene, Geraniol, Citral. May produce an allergic reaction. Keep away from flammable materials.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Luminos și efervescent precum coasta mediteraneană la răsărit. Un echilibru sublim între aciditatea citricelor nobile și rotunjimea dulce a smochinelor.\",\"descriptionEn\":\"Bright and luminous as the Mediterranean coast at dawn. A sublime equilibrium between fine citrus zest and lush ripe fig pulp.\",\"baseCost\":26.5,\"recommendedRetailPrice\":89,\"recommendedWholesalePrice\":54,\"tag\":\"fresh\",\"vesselType\":\"Pahar Sticlă Transparentă Cristal 210ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-pro-001-recipe-8",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"recipe-8\",\"nameRo\":\"Tobacco Leaf & Aged Bourbon\",\"nameEn\":\"Tobacco Leaf & Aged Bourbon\",\"waxType\":\"Blend Soia & Cocos 50/50\",\"netWeightGrams\":230,\"jarDiameterMm\":76,\"fragranceName\":\"Frunze de Tutun Nobil & Bourbon de Butoi\",\"fragrancePercentage\":10,\"waxGrams\":207,\"fragranceGrams\":23,\"wickType\":\"TCR 27/18 (Bumbac împletit)\",\"meltTempC\":\"72°C - 77°C\",\"pourTempC\":\"53°C - 56°C\",\"cureDays\":14,\"burnTimeHours\":52,\"fragranceNotes\":{\"top\":\"Coajă de portocală uscată, Boabe de coriandru, Cognac\",\"heart\":\"Frunze de tutun blond uscat, Piele fină, Zahăr brun\",\"base\":\"Bourbon învechit în butoi de stejar, Patchouli nobil, Rășină benzoică\"},\"clpWarningsRo\":\"Atenție. Conține Eugenol, Coumarin, Patchouli extract. Poate provoca alergii cutanate. Nu așezați direct pe suprafețe sensibile la căldură.\",\"clpWarningsEn\":\"Warning. Contains Eugenol, Coumarin, Patchouli extract. Burn within sight on a heat resistant surface.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Inspirat de cluburile clasice de lectură din Londra și butoaiele de stejar afumat. Note calde, masculine, catifelate și profund seducătoare.\",\"descriptionEn\":\"Inspired by gentleman’s reading lounges and charred oak barrels. Deep, velvet, intoxicating warmth with undeniable prestige.\",\"baseCost\":30,\"recommendedRetailPrice\":105,\"recommendedWholesalePrice\":64,\"tag\":\"luxury\",\"vesselType\":\"Recipient Sticlă Negru Lucios cu Capac Auriu 260ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-pro-001-recipe-9",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"recipe-9\",\"nameRo\":\"Rose Petals & Velvet Musk\",\"nameEn\":\"Rose Petals & Velvet Musk\",\"waxType\":\"Ceară Soia Golden Wax 464\",\"netWeightGrams\":180,\"jarDiameterMm\":67,\"fragranceName\":\"Trandafiri de Damasc & Mosc Catifelat\",\"fragrancePercentage\":8.5,\"waxGrams\":164.7,\"fragranceGrams\":15.3,\"wickType\":\"Eco 6 (Bumbac cerat cu soia)\",\"meltTempC\":\"72°C - 76°C\",\"pourTempC\":\"51°C - 54°C\",\"cureDays\":10,\"burnTimeHours\":40,\"fragranceNotes\":{\"top\":\"Bujor roz proaspăt, Piper roz, Bergamotă delicată\",\"heart\":\"Petale de trandafir de Damasc, Violetă dulce, Magnolia\",\"base\":\"Mosc pudrat, Lemn de cașmir, Rădăcină de iris\"},\"clpWarningsRo\":\"Atenție. Conține Citronellol, Geraniol, Nerol. Poate provoca o reacție alergică pe piele. A nu se lăsa aprinsă lângă materiale inflamabile.\",\"clpWarningsEn\":\"Warning. Contains Citronellol, Geraniol. May cause allergic reaction. Keep away from anything that can catch fire.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Eleganță florală pură, romantică și pudrată. Petale catifelate de trandafir nobil așezate pe o bază mătăsoasă de mosc cald și cașmir.\",\"descriptionEn\":\"Pure romantic floral sophistication. Opulent velvet Damascus rose petals lingering over powdery warm musk and cashmere.\",\"baseCost\":23,\"recommendedRetailPrice\":82,\"recommendedWholesalePrice\":49,\"tag\":\"relax\",\"vesselType\":\"Pahar Ceramic Roz Prăfuit 200ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-pro-001-recipe-10",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"recipe-10\",\"nameRo\":\"Sea Salt & Coconut Driftwood\",\"nameEn\":\"Sea Salt & Coconut Driftwood\",\"waxType\":\"Ceară Soia C3 + Ceară Cocos (70/30)\",\"netWeightGrams\":200,\"jarDiameterMm\":70,\"fragranceName\":\"Flori de Sare Marină & Lemn de Naufragiu\",\"fragrancePercentage\":9,\"waxGrams\":182,\"fragranceGrams\":18,\"wickType\":\"Eco 8 (Bumbac organic)\",\"meltTempC\":\"70°C - 75°C\",\"pourTempC\":\"52°C - 55°C\",\"cureDays\":10,\"burnTimeHours\":45,\"fragranceNotes\":{\"top\":\"Aerosoli marini, Sare de mare cristalizată, Salvie albă\",\"heart\":\"Apă de cocos proaspătă, Alge marine subtile, Frangipani\",\"base\":\"Lemn de plajă erodat de sare, Nisip cald, Ambră cenușie vegetală\"},\"clpWarningsRo\":\"Atenție. Conține Benzyl Salicylate, Hexyl Cinnamal, Linalool. Nociv pentru mediul acvatic cu efecte pe termen lung.\",\"clpWarningsEn\":\"Warning. Contains Benzyl Salicylate, Hexyl Cinnamal. May cause an allergic reaction.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Briza revigorantă a oceanului și lemnul spălat de valuri uscat sub soarele amiezii. O prospețime minerală, caldă și reconfortantă.\",\"descriptionEn\":\"Invigorating sea breeze and mineral ocean salt over sun-bleached coastal driftwood and hints of fresh coconut water.\",\"baseCost\":25,\"recommendedRetailPrice\":88,\"recommendedWholesalePrice\":52,\"tag\":\"fresh\",\"vesselType\":\"Borcan Sticlă Mată Albastră Marină 220ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-business-001-recipe-1",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"recipe-1\",\"nameRo\":\"Midnight Amber & Smoked Oud\",\"nameEn\":\"Midnight Amber & Smoked Oud\",\"waxType\":\"Ceară Soia Golden Wax 464 + 10% Cocos\",\"netWeightGrams\":220,\"jarDiameterMm\":74,\"fragranceName\":\"Ulei Premium Chihlimbar & Oud Afumat\",\"fragrancePercentage\":10,\"waxGrams\":198,\"fragranceGrams\":22,\"wickType\":\"TCR 27/16 (Bumbac cerat)\",\"meltTempC\":\"75°C - 80°C\",\"pourTempC\":\"54°C - 57°C\",\"cureDays\":14,\"burnTimeHours\":50,\"fragranceNotes\":{\"top\":\"Bergamotă afumată, Piper roz, Tămâie olibanum\",\"heart\":\"Chihlimbar negru, Lemn de cașmir, Rășină labdanum\",\"base\":\"Oud regal, Piele tăbăcită, Mușchi de stejar\"},\"clpWarningsRo\":\"Atenție. Conține Linalool, Cedrol, Ulei de Oud sintetizat. Poate provoca o reacție alergică cutanată. Nociv pentru mediul acvatic cu efecte pe termen lung.\",\"clpWarningsEn\":\"Warning. Contains Linalool, Cedrol, Oud accord. May cause an allergic skin reaction. Harmful to aquatic life with long lasting effects.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Un parfum aristocratic și misterios, ce îmbină notele balsamice de chihlimbar cu profunzimea somptuoasă a lemnului de oud. Ideal pentru seri sofisticate de toamnă și iarnă.\",\"descriptionEn\":\"An aristocratic, mysterious blend uniting balsamic amber facets with deep opulent agarwood. Ideal for intimate, sophisticated evenings.\",\"baseCost\":28.5,\"recommendedRetailPrice\":95,\"recommendedWholesalePrice\":58,\"tag\":\"luxury\",\"vesselType\":\"Borcan Sticlă Mată Neagră 250ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-business-001-recipe-2",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"recipe-2\",\"nameRo\":\"Warm Vanilla Bean & Cashmere\",\"nameEn\":\"Warm Vanilla Bean & Cashmere\",\"waxType\":\"Ceară Naturală Soia C3\",\"netWeightGrams\":200,\"jarDiameterMm\":70,\"fragranceName\":\"Vanilie de Madagascar & Cașmir Mătăsos\",\"fragrancePercentage\":9,\"waxGrams\":182,\"fragranceGrams\":18,\"wickType\":\"Eco 8 (Fitil plat din bumbac și in)\",\"meltTempC\":\"72°C - 78°C\",\"pourTempC\":\"52°C - 55°C\",\"cureDays\":12,\"burnTimeHours\":45,\"fragranceNotes\":{\"top\":\"Flori de heliotrop, Zahăr caramelizat, Nucșoară fină\",\"heart\":\"Păstăi de vanilie bourbon, Orhidee albă, Lapte de migdale\",\"base\":\"Cașmir catifelat, Lemn de santal cald, Mosc auriu\"},\"clpWarningsRo\":\"Atenție. Conține Vanilină, Cumarină, Piperonal. Poate provoca o reacție alergică. Nu lăsați lumânarea aprinsă nesupravegheată.\",\"clpWarningsEn\":\"Warning. Contains Vanillin, Coumarin, Piperonal. May produce an allergic reaction. Never leave a burning candle unattended.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Un cocon de căldură și confort dulce. Note gurmande cremoase învăluite într-o senzație mătăsoasă de cașmir. Best-seller absolut pentru relaxare acasă.\",\"descriptionEn\":\"A cocoon of comfort and sweet warmth. Creamy gourmand facets wrapped in silky cashmere sensations. Best-seller for home relaxation.\",\"baseCost\":24,\"recommendedRetailPrice\":85,\"recommendedWholesalePrice\":50,\"tag\":\"relax\",\"vesselType\":\"Pahar Ceramic Alb Mat 220ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-business-001-recipe-3",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"recipe-3\",\"nameRo\":\"Lavender Fields & Wild Honey\",\"nameEn\":\"Lavender Fields & Wild Honey\",\"waxType\":\"Blend Rapiță & Ceară Albine (85/15)\",\"netWeightGrams\":180,\"jarDiameterMm\":68,\"fragranceName\":\"Lavandă de Provence & Miere Polifloră\",\"fragrancePercentage\":8.5,\"waxGrams\":164.7,\"fragranceGrams\":15.3,\"wickType\":\"TCR 24/12 (Bumbac împletit strâns)\",\"meltTempC\":\"70°C - 75°C\",\"pourTempC\":\"58°C - 62°C\",\"cureDays\":10,\"burnTimeHours\":40,\"fragranceNotes\":{\"top\":\"Lavandă sălbatică proaspătă, Eucalipt mentolat, Bergamotă\",\"heart\":\"Miere aurie de câmp, Mușețel roman, Frunze de salvie\",\"base\":\"Ceară de albine naturală, Boabe de tonka, Lemn de cedru\"},\"clpWarningsRo\":\"Atenție. Conține Ulei esențial de Lavandula Angustifolia, Linalyl Acetate. Poate declanșa o alergie cutanată.\",\"clpWarningsEn\":\"Warning. Contains Lavender oil, Linalyl acetate. May produce an allergic skin reaction. Keep away from drafts.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"O călătorie olfactivă printre colinele înflorite ale Provence-ului, îmblânzită de dulceața mierii pure. Excelentă pentru inducerea somnului odihnitor.\",\"descriptionEn\":\"An olfactory stroll through blooming Provencal fields sweetened with raw floral honey. Ideal for evening wind-down.\",\"baseCost\":23.5,\"recommendedRetailPrice\":80,\"recommendedWholesalePrice\":48,\"tag\":\"relax\",\"vesselType\":\"Borcan Sticlă Chihlimbar (Amber Jar) 200ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-business-001-recipe-4",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"recipe-4\",\"nameRo\":\"Spiced Pumpkin & Cinnamon Bark\",\"nameEn\":\"Spiced Pumpkin & Cinnamon Bark\",\"waxType\":\"Ceară Soia Golden Wax 464\",\"netWeightGrams\":250,\"jarDiameterMm\":78,\"fragranceName\":\"Plăcintă de Dovleac & Scorțișoară de Ceylon\",\"fragrancePercentage\":10,\"waxGrams\":225,\"fragranceGrams\":25,\"wickType\":\"TCR 30/18 sau Fitil de Lemn 15mm Booster\",\"meltTempC\":\"75°C - 80°C\",\"pourTempC\":\"55°C - 58°C\",\"cureDays\":14,\"burnTimeHours\":55,\"fragranceNotes\":{\"top\":\"Miez de dovleac copt, Coajă de portocală confiată\",\"heart\":\"Băț de scorțișoară măcinat, Cuișoare întregi, Ghimbir proaspăt\",\"base\":\"Zahăr brun brunet, Unt sărat, Vanilie caldă\"},\"clpWarningsRo\":\"Atenție. Conține Cinnamaldehyde, Eugenol, Isoeugenol. Poate provoca alergii cutanate. A nu se lăsa la îndemâna copiilor.\",\"clpWarningsEn\":\"Warning. Contains Cinnamaldehyde, Eugenol. May cause skin allergy. Keep out of reach of children.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Aroma nostalgică a sărbătorilor de toamnă. Note picante vibrante de scorțișoară, dovleac rumenit și nucșoară prăjită. Aduce căldură instantă în cămin.\",\"descriptionEn\":\"Nostalgic cozy autumn holiday spirit. Vibrant Ceylon cinnamon, baked pumpkin purée, and toasted nutmeg fill the room.\",\"baseCost\":31,\"recommendedRetailPrice\":110,\"recommendedWholesalePrice\":65,\"tag\":\"seasonal\",\"vesselType\":\"Pahar de Cupru / Teracotă Glazurată 300ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-business-001-recipe-5",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"recipe-5\",\"nameRo\":\"Eucalyptus, Mint & White Pine\",\"nameEn\":\"Eucalyptus, Mint & White Pine\",\"waxType\":\"Ceară Soia C3 Pură\",\"netWeightGrams\":190,\"jarDiameterMm\":68,\"fragranceName\":\"Eucalipt Glacial, Mentă Sălbatică & Pin Alb\",\"fragrancePercentage\":8,\"waxGrams\":174.8,\"fragranceGrams\":15.2,\"wickType\":\"Eco 6 (Bumbac organic fără plumb)\",\"meltTempC\":\"72°C - 76°C\",\"pourTempC\":\"50°C - 53°C\",\"cureDays\":7,\"burnTimeHours\":42,\"fragranceNotes\":{\"top\":\"Frunze de eucalipt zdrobite, Mentă creață, Lămâie verde\",\"heart\":\"Ace de pin siberian, Rozmarin montan, Ienupăr\",\"base\":\"Lemn de mesteacăn, Lichen de pădure, Rășină curată\"},\"clpWarningsRo\":\"Atenție. Conține Eucalyptol, d-Limonene, Alpha-Pinene. Poate provoca reacții alergice. Păstrați lumânarea la distanță de curenți de aer.\",\"clpWarningsEn\":\"Warning. Contains Eucalyptol, d-Limonene, Alpha-Pinene. Toxic to aquatic life with long lasting effects.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"O gură de aer pur din inima unei păduri nordice. Senzație revitalizantă ce limpezește mintea, perfectă pentru spații de birou și aromaterapie matinală.\",\"descriptionEn\":\"A breath of pure arctic forest air. Crisp revitalizing blend that clears mental clutter, ideal for desk and morning mindfulness.\",\"baseCost\":22,\"recommendedRetailPrice\":78,\"recommendedWholesalePrice\":45,\"tag\":\"fresh\",\"vesselType\":\"Recipient Sticlă Mată Verde Smarald 200ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-business-001-recipe-6",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"recipe-6\",\"nameRo\":\"Roasted Espresso & Tonka Bean\",\"nameEn\":\"Roasted Espresso & Tonka Bean\",\"waxType\":\"Blend Soia 464 + 15% Ceară de Albine\",\"netWeightGrams\":210,\"jarDiameterMm\":72,\"fragranceName\":\"Cafea Arabica Prăjită & Boabe de Tonka\",\"fragrancePercentage\":9.5,\"waxGrams\":190.05,\"fragranceGrams\":19.95,\"wickType\":\"Fitil Lemn Natural 13mm (Sunet de foc de lemne)\",\"meltTempC\":\"76°C - 82°C\",\"pourTempC\":\"57°C - 60°C\",\"cureDays\":14,\"burnTimeHours\":48,\"fragranceNotes\":{\"top\":\"Boabe de cafea proaspăt râșnite, Lichior de alune\",\"heart\":\"Espresso italian intens, Cacao neagră amară, Scorțișoară\",\"base\":\"Boabe de tonka venezuelene, Vanilie afumată, Caramel brun\"},\"clpWarningsRo\":\"Atenție. Conține Benzyl Benzoate, Cumarină. Poate provoca o reacție alergică pe piele. Tăiați fitilul de lemn la 3mm înainte de fiecare aprindere.\",\"clpWarningsEn\":\"Warning. Contains Benzyl Benzoate, Coumarin. Trim wooden wick to 3mm before relighting.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Atmosfera unei cafenele artizanale vieneze. Fitilul de lemn trosnește delicat în timp ce notele profunde de cafea prăjită și tonka învăluie camera.\",\"descriptionEn\":\"The warm ambiance of an artisan Viennese coffeehouse. The wooden wick crackles gently as rich dark roast notes fill the space.\",\"baseCost\":29,\"recommendedRetailPrice\":98,\"recommendedWholesalePrice\":59,\"tag\":\"signature\",\"vesselType\":\"Recipient Sticlă Maro Fumuriu 230ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-business-001-recipe-7",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"recipe-7\",\"nameRo\":\"Citrus Blossom & Sunlit Fig\",\"nameEn\":\"Citrus Blossom & Sunlit Fig\",\"waxType\":\"Ceară Pură de Cocos (Coconut Wax Blend)\",\"netWeightGrams\":190,\"jarDiameterMm\":69,\"fragranceName\":\"Flori de Portocal Neroli & Smochine Coapte\",\"fragrancePercentage\":8.5,\"waxGrams\":173.85,\"fragranceGrams\":16.15,\"wickType\":\"TCR 24/14 (Fitil din bumbac tratat special)\",\"meltTempC\":\"65°C - 70°C\",\"pourTempC\":\"48°C - 52°C\",\"cureDays\":10,\"burnTimeHours\":44,\"fragranceNotes\":{\"top\":\"Clementine solare, Mandarină verde, Petale de Neroli\",\"heart\":\"Smochine coapte la soare, Frunze verzi de смоchin, Iasomie albă\",\"base\":\"Lemn de cedru alb, Lapte de cocos discret, Mosc pur\"},\"clpWarningsRo\":\"Atenție. Conține Limonene, Geraniol, Citral, Linalool. Toxic pentru mediul acvatic cu efecte pe termen lung.\",\"clpWarningsEn\":\"Warning. Contains Limonene, Geraniol, Citral. May produce an allergic reaction. Keep away from flammable materials.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Luminos și efervescent precum coasta mediteraneană la răsărit. Un echilibru sublim între aciditatea citricelor nobile și rotunjimea dulce a smochinelor.\",\"descriptionEn\":\"Bright and luminous as the Mediterranean coast at dawn. A sublime equilibrium between fine citrus zest and lush ripe fig pulp.\",\"baseCost\":26.5,\"recommendedRetailPrice\":89,\"recommendedWholesalePrice\":54,\"tag\":\"fresh\",\"vesselType\":\"Pahar Sticlă Transparentă Cristal 210ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-business-001-recipe-8",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"recipe-8\",\"nameRo\":\"Tobacco Leaf & Aged Bourbon\",\"nameEn\":\"Tobacco Leaf & Aged Bourbon\",\"waxType\":\"Blend Soia & Cocos 50/50\",\"netWeightGrams\":230,\"jarDiameterMm\":76,\"fragranceName\":\"Frunze de Tutun Nobil & Bourbon de Butoi\",\"fragrancePercentage\":10,\"waxGrams\":207,\"fragranceGrams\":23,\"wickType\":\"TCR 27/18 (Bumbac împletit)\",\"meltTempC\":\"72°C - 77°C\",\"pourTempC\":\"53°C - 56°C\",\"cureDays\":14,\"burnTimeHours\":52,\"fragranceNotes\":{\"top\":\"Coajă de portocală uscată, Boabe de coriandru, Cognac\",\"heart\":\"Frunze de tutun blond uscat, Piele fină, Zahăr brun\",\"base\":\"Bourbon învechit în butoi de stejar, Patchouli nobil, Rășină benzoică\"},\"clpWarningsRo\":\"Atenție. Conține Eugenol, Coumarin, Patchouli extract. Poate provoca alergii cutanate. Nu așezați direct pe suprafețe sensibile la căldură.\",\"clpWarningsEn\":\"Warning. Contains Eugenol, Coumarin, Patchouli extract. Burn within sight on a heat resistant surface.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Inspirat de cluburile clasice de lectură din Londra și butoaiele de stejar afumat. Note calde, masculine, catifelate și profund seducătoare.\",\"descriptionEn\":\"Inspired by gentleman’s reading lounges and charred oak barrels. Deep, velvet, intoxicating warmth with undeniable prestige.\",\"baseCost\":30,\"recommendedRetailPrice\":105,\"recommendedWholesalePrice\":64,\"tag\":\"luxury\",\"vesselType\":\"Recipient Sticlă Negru Lucios cu Capac Auriu 260ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-business-001-recipe-9",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"recipe-9\",\"nameRo\":\"Rose Petals & Velvet Musk\",\"nameEn\":\"Rose Petals & Velvet Musk\",\"waxType\":\"Ceară Soia Golden Wax 464\",\"netWeightGrams\":180,\"jarDiameterMm\":67,\"fragranceName\":\"Trandafiri de Damasc & Mosc Catifelat\",\"fragrancePercentage\":8.5,\"waxGrams\":164.7,\"fragranceGrams\":15.3,\"wickType\":\"Eco 6 (Bumbac cerat cu soia)\",\"meltTempC\":\"72°C - 76°C\",\"pourTempC\":\"51°C - 54°C\",\"cureDays\":10,\"burnTimeHours\":40,\"fragranceNotes\":{\"top\":\"Bujor roz proaspăt, Piper roz, Bergamotă delicată\",\"heart\":\"Petale de trandafir de Damasc, Violetă dulce, Magnolia\",\"base\":\"Mosc pudrat, Lemn de cașmir, Rădăcină de iris\"},\"clpWarningsRo\":\"Atenție. Conține Citronellol, Geraniol, Nerol. Poate provoca o reacție alergică pe piele. A nu se lăsa aprinsă lângă materiale inflamabile.\",\"clpWarningsEn\":\"Warning. Contains Citronellol, Geraniol. May cause allergic reaction. Keep away from anything that can catch fire.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Eleganță florală pură, romantică și pudrată. Petale catifelate de trandafir nobil așezate pe o bază mătăsoasă de mosc cald și cașmir.\",\"descriptionEn\":\"Pure romantic floral sophistication. Opulent velvet Damascus rose petals lingering over powdery warm musk and cashmere.\",\"baseCost\":23,\"recommendedRetailPrice\":82,\"recommendedWholesalePrice\":49,\"tag\":\"relax\",\"vesselType\":\"Pahar Ceramic Roz Prăfuit 200ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    },
+    {
+      "id": "user-business-001-recipe-10",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"recipe-10\",\"nameRo\":\"Sea Salt & Coconut Driftwood\",\"nameEn\":\"Sea Salt & Coconut Driftwood\",\"waxType\":\"Ceară Soia C3 + Ceară Cocos (70/30)\",\"netWeightGrams\":200,\"jarDiameterMm\":70,\"fragranceName\":\"Flori de Sare Marină & Lemn de Naufragiu\",\"fragrancePercentage\":9,\"waxGrams\":182,\"fragranceGrams\":18,\"wickType\":\"Eco 8 (Bumbac organic)\",\"meltTempC\":\"70°C - 75°C\",\"pourTempC\":\"52°C - 55°C\",\"cureDays\":10,\"burnTimeHours\":45,\"fragranceNotes\":{\"top\":\"Aerosoli marini, Sare de mare cristalizată, Salvie albă\",\"heart\":\"Apă de cocos proaspătă, Alge marine subtile, Frangipani\",\"base\":\"Lemn de plajă erodat de sare, Nisip cald, Ambră cenușie vegetală\"},\"clpWarningsRo\":\"Atenție. Conține Benzyl Salicylate, Hexyl Cinnamal, Linalool. Nociv pentru mediul acvatic cu efecte pe termen lung.\",\"clpWarningsEn\":\"Warning. Contains Benzyl Salicylate, Hexyl Cinnamal. May cause an allergic reaction.\",\"safetyIcons\":[\"flame-sight\",\"away-from-children\",\"trim-wick\",\"draft-free\"],\"descriptionRo\":\"Briza revigorantă a oceanului și lemnul spălat de valuri uscat sub soarele amiezii. O prospețime minerală, caldă și reconfortantă.\",\"descriptionEn\":\"Invigorating sea breeze and mineral ocean salt over sun-bleached coastal driftwood and hints of fresh coconut water.\",\"baseCost\":25,\"recommendedRetailPrice\":88,\"recommendedWholesalePrice\":52,\"tag\":\"fresh\",\"vesselType\":\"Borcan Sticlă Mată Albastră Marină 220ml\"}",
+      "created_at": "2026-10-29T05:58:03.465Z"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-wax-1",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-wax-1\",\"name\":\"Ceară de Soia Golden Wax 464 (AAK Suedia)\",\"nameRo\":\"Ceară de Soia Golden Wax 464 (AAK Suedia)\",\"nameEn\":\"Golden Wax 464 Soy Wax (AAK Sweden)\",\"nameFr\":\"Cire de Soja Golden Wax 464 (AAK Suède)\",\"nameDe\":\"Golden Wax 464 Sojawachs (AAK Schweden)\",\"nameIt\":\"Cera di Soia Golden Wax 464 (AAK Svezia)\",\"nameEs\":\"Cera de Soja Golden Wax 464 (AAK Suecia)\",\"category\":\"wax\",\"quantity\":4500,\"unit\":\"g\",\"minThreshold\":5000,\"costPerUnit\":0.048,\"supplier\":\"CandleWorks Europe\",\"lotNumber\":\"GW464-2026-B8\",\"lastRestocked\":\"2026-10-10\",\"notes\":\"Punct de topire 45-48°C. Aderență perfectă la borcane.\",\"notesRo\":\"Punct de topire 45-48°C. Aderență perfectă la borcane.\",\"notesEn\":\"Melt point 45-48°C. Outstanding glass container adhesion.\",\"notesFr\":\"Point de fusion 45-48°C. Excellente adhérence aux contenants en verre.\",\"notesDe\":\"Schmelzpunkt 45-48°C. Hervorragende Glaswandhaftung.\",\"notesIt\":\"Punto di fusione 45-48°C. Eccellente aderenza al vetro.\",\"notesEs\":\"Punto de fusión 45-48°C. Excelente adherencia al vidrio.\",\"weeklyConsumptionRate\":1600,\"leadTimeDays\":5}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-wax-2",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-wax-2\",\"name\":\"Ceară Naturală Soia NatureWax C3 (Cargill)\",\"nameRo\":\"Ceară Naturală Soia NatureWax C3 (Cargill)\",\"nameEn\":\"NatureWax C3 Pure Soy Wax (Cargill)\",\"nameFr\":\"Cire Naturelle de Soja NatureWax C3 (Cargill)\",\"nameDe\":\"NatureWax C3 Reines Sojawachs (Cargill)\",\"nameIt\":\"Cera Naturale di Soia NatureWax C3 (Cargill)\",\"nameEs\":\"Cera Natural de Soja NatureWax C3 (Cargill)\",\"category\":\"wax\",\"quantity\":12000,\"unit\":\"g\",\"minThreshold\":4000,\"costPerUnit\":0.052,\"supplier\":\"AromaCraft Supplies\",\"lotNumber\":\"C3-LOT-889\",\"lastRestocked\":\"2026-10-18\",\"notes\":\"Finish cremos mătăsos. Ideală pentru recipiente de sticlă.\",\"notesRo\":\"Finish cremos mătăsos. Ideală pentru recipiente de sticlă.\",\"notesEn\":\"Silky creamy finish. Ideal for premium container candles.\",\"notesFr\":\"Finition soyeuse et crémeuse. Idéale pour bougies en pot.\",\"notesDe\":\"Seidiges cremiges Finish. Perfekt für Behälterkerzen.\",\"notesIt\":\"Finitura cremosa e setosa. Ideale per candele in vasetto.\",\"notesEs\":\"Acabado suave y cremoso. Ideal para velas en vaso.\",\"weeklyConsumptionRate\":1800,\"leadTimeDays\":6}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-wax-3",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-wax-3\",\"name\":\"Ceară Pură de Cocos Organică\",\"nameRo\":\"Ceară Pură de Cocos Organică\",\"nameEn\":\"Organic Virgin Coconut Wax\",\"nameFr\":\"Cire Végétale Pure de Coco Bio\",\"nameDe\":\"Organisches Reines Kokoswachs\",\"nameIt\":\"Cera Pura di Cocco Biologica\",\"nameEs\":\"Cera Pura de Coco Orgánica\",\"category\":\"wax\",\"quantity\":3200,\"unit\":\"g\",\"minThreshold\":3000,\"costPerUnit\":0.068,\"supplier\":\"BioWax Organics\",\"lotNumber\":\"COC-2026-09\",\"lastRestocked\":\"2026-09-28\",\"notes\":\"Punct de topire scăzut, arde curat, excelent cold throw.\",\"notesRo\":\"Punct de topire scăzut, arde curat, excelent cold throw.\",\"notesEn\":\"Low melting point, clean burn, superb cold scent throw.\",\"notesFr\":\"Point de fusion bas, combustion propre, excellente diffusion à froid.\",\"notesDe\":\"Niedriger Schmelzpunkt, saubere Verbrennung, tolle Kaltabgabe.\",\"notesIt\":\"Punto di fusione basso, combustione pulita, ottima diffusione.\",\"notesEs\":\"Bajo punto de fusión, combustión limpia, gran difusión en frío.\",\"weeklyConsumptionRate\":650,\"leadTimeDays\":5}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-wax-4",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-wax-4\",\"name\":\"Ceară Naturală de Albine Galbenă (Calup)\",\"nameRo\":\"Ceară Naturală de Albine Galbenă (Calup)\",\"nameEn\":\"Natural Yellow Beeswax Block\",\"nameFr\":\"Pain de Cire d'Abeille Jaune Naturelle\",\"nameDe\":\"Natürliches Gelbes Bienenwachs (Block)\",\"nameIt\":\"Panetto di Cera d'Api Gialla Naturale\",\"nameEs\":\"Bloque de Cera de Abeja Amarilla Natural\",\"category\":\"wax\",\"quantity\":1800,\"unit\":\"g\",\"minThreshold\":2000,\"costPerUnit\":0.075,\"supplier\":\"Apicultura Românească SRL\",\"lotNumber\":\"AP-RO-442\",\"lastRestocked\":\"2026-10-02\",\"notes\":\"Miros natural subtil de miere și propolis.\",\"notesRo\":\"Miros natural subtil de miere și propolis.\",\"notesEn\":\"Subtle natural honey and propolis undertone.\",\"notesFr\":\"Subtile senteur naturelle de miel et de propolis.\",\"notesDe\":\"Dezenter natürlicher Duft nach Honig und Propolis.\",\"notesIt\":\"Sottile aroma naturale di miele e propoli.\",\"notesEs\":\"Aroma natural sutil a miel y propóleo.\",\"weeklyConsumptionRate\":350,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-wick-1",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-wick-1\",\"name\":\"Fitil Bumbac TCR 27/16 (pre-cerat 12cm)\",\"nameRo\":\"Fitil Bumbac TCR 27/16 (pre-cerat 12cm)\",\"nameEn\":\"TCR 27/16 Cotton Wick (Pre-waxed 12cm)\",\"nameFr\":\"Mèche en Coton TCR 27/16 (Pré-cirée 12cm)\",\"nameDe\":\"TCR 27/16 Baumwolldocht (Gewachst 12cm)\",\"nameIt\":\"Stoppino in Cotone TCR 27/16 (Pre-incerato 12cm)\",\"nameEs\":\"Mecha de Algodón TCR 27/16 (Pre-encerada 12cm)\",\"category\":\"wick\",\"quantity\":14,\"unit\":\"buc\",\"minThreshold\":50,\"costPerUnit\":0.95,\"supplier\":\"Wedo Wicks Germania\",\"lotNumber\":\"TCR-27-02\",\"lastRestocked\":\"2026-09-15\",\"notes\":\"Recomandat pentru borcane cu diametru 72-78mm.\",\"notesRo\":\"Recomandat pentru borcane cu diametru 72-78mm.\",\"notesEn\":\"Recommended for jars with 72-78mm diameter.\",\"notesFr\":\"Recommandée pour contenants de 72-78mm de diamètre.\",\"notesDe\":\"Empfohlen für Gefäße mit 72-78mm Durchmesser.\",\"notesIt\":\"Consigliato per vasetti con diametro 72-78mm.\",\"notesEs\":\"Recomendada para recipientes de 72-78mm de diámetro.\",\"weeklyConsumptionRate\":20,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-wick-2",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-wick-2\",\"name\":\"Fitil Eco 8 (Bumbac cu fire de hârtie)\",\"nameRo\":\"Fitil Eco 8 (Bumbac cu fire de hârtie)\",\"nameEn\":\"Eco 8 Wick (Cotton with Paper Filaments)\",\"nameFr\":\"Mèche Eco 8 (Coton & Filaments de Papier)\",\"nameDe\":\"Eco 8 Docht (Baumwolle mit Papierfäden)\",\"nameIt\":\"Stoppino Eco 8 (Cotone e Filamenti di Carta)\",\"nameEs\":\"Mecha Eco 8 (Algodón con Filamentos de Papel)\",\"category\":\"wick\",\"quantity\":85,\"unit\":\"buc\",\"minThreshold\":40,\"costPerUnit\":0.88,\"supplier\":\"Wedo Wicks Germania\",\"lotNumber\":\"ECO-8-11\",\"lastRestocked\":\"2026-10-12\",\"notes\":\"Fără fum, autotăietor în timpul arderii.\",\"notesRo\":\"Fără fum, autotăietor în timpul arderii.\",\"notesEn\":\"Smokeless, self-trimming burn profile.\",\"notesFr\":\"Sans fumée, profil auto-recourbant à la combustion.\",\"notesDe\":\"Rauchfrei, selbstkürzendes Abbrandverhalten.\",\"notesIt\":\"Senza fumo, auto-accorciante durante la combustione.\",\"notesEs\":\"Sin humo, perfil auto-recortable durante el quemado.\",\"weeklyConsumptionRate\":22,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-wick-3",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-wick-3\",\"name\":\"Fitil Eco 6 (Diametru 60-68mm)\",\"nameRo\":\"Fitil Eco 6 (Diametru 60-68mm)\",\"nameEn\":\"Eco 6 Wick (Diameter 60-68mm)\",\"nameFr\":\"Mèche Eco 6 (Diamètre 60-68mm)\",\"nameDe\":\"Eco 6 Docht (Durchmesser 60-68mm)\",\"nameIt\":\"Stoppino Eco 6 (Diametro 60-68mm)\",\"nameEs\":\"Mecha Eco 6 (Diámetro 60-68mm)\",\"category\":\"wick\",\"quantity\":110,\"unit\":\"buc\",\"minThreshold\":30,\"costPerUnit\":0.82,\"supplier\":\"Wedo Wicks Germania\",\"lotNumber\":\"ECO-6-09\",\"lastRestocked\":\"2026-10-12\",\"notes\":\"Pentru pahare medii și borcane de 200ml.\",\"notesRo\":\"Pentru pahare medii și borcane de 200ml.\",\"notesEn\":\"For medium votives and 200ml candle vessels.\",\"notesFr\":\"Pour verres moyens et pots à bougie de 200ml.\",\"notesDe\":\"Für mittlere Gläser und 200ml Kerzengefäße.\",\"notesIt\":\"Per bicchieri medi e vasetti da 200ml.\",\"notesEs\":\"Para vasos medianos y frascos de 200ml.\",\"weeklyConsumptionRate\":18,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-wick-4",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-wick-4\",\"name\":\"Fitil Lemn Natural 13mm cu Suport Metalic Booster\",\"nameRo\":\"Fitil Lemn Natural 13mm cu Suport Metalic Booster\",\"nameEn\":\"Natural Wooden Wick 13mm with Booster Clip\",\"nameFr\":\"Mèche en Bois Naturel 13mm avec Support Booster\",\"nameDe\":\"Naturholzdocht 13mm mit Booster-Metallclip\",\"nameIt\":\"Stoppino in Legno Naturale 13mm con Supporto Booster\",\"nameEs\":\"Mecha de Madera Natural 13mm con Clip Booster\",\"category\":\"wick\",\"quantity\":28,\"unit\":\"buc\",\"minThreshold\":35,\"costPerUnit\":2.2,\"supplier\":\"LumberCraft Artisan\",\"lotNumber\":\"WOOD-13-B\",\"lastRestocked\":\"2026-09-20\",\"notes\":\"Efect de șemineu (crackling sound).\",\"notesRo\":\"Efect de șemineu (crackling sound).\",\"notesEn\":\"Cozy fireplace crackling acoustic effect.\",\"notesFr\":\"Effet acoustique crépitant feu de cheminée.\",\"notesDe\":\"Gemütlicher Kaminfeuer-Knistereffekt.\",\"notesIt\":\"Effetto scoppiettante camino accogliente.\",\"notesEs\":\"Efecto crujiente acogedor estilo chimenea.\",\"weeklyConsumptionRate\":12,\"leadTimeDays\":7}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-frag-1",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-frag-1\",\"name\":\"Ulei Premium Chihlimbar & Oud Afumat (Grasse)\",\"nameRo\":\"Ulei Premium Chihlimbar & Oud Afumat (Grasse)\",\"nameEn\":\"Smoked Oud & Amber Fragrance Oil (Grasse)\",\"nameFr\":\"Huile Parfumée Oud Fumé & Ambre Impérial (Grasse)\",\"nameDe\":\"Geräucherter Oud & Bernstein Duftöl (Grasse)\",\"nameIt\":\"Olio Profumato Oud Affumicato & Ambra (Grasse)\",\"nameEs\":\"Aceite Esencial Oud Ahumado & Ámbar (Grasse)\",\"category\":\"fragrance\",\"quantity\":180,\"unit\":\"g\",\"minThreshold\":250,\"costPerUnit\":0.42,\"supplier\":\"Grasse Parfums Franța\",\"lotNumber\":\"AMB-OUD-991\",\"lastRestocked\":\"2026-09-10\",\"notes\":\"Flashpoint: 92°C. Încărcare recomandată 8-10%.\",\"notesRo\":\"Flashpoint: 92°C. Încărcare recomandată 8-10%.\",\"notesEn\":\"Flashpoint: 92°C. Recommended loading 8-10%.\",\"notesFr\":\"Point éclair: 92°C. Dosage recommandé 8-10%.\",\"notesDe\":\"Flammpunkt: 92°C. Empfohlene Dosierung 8-10%.\",\"notesIt\":\"Punto di infiammabilità: 92°C. Dosaggio 8-10%.\",\"notesEs\":\"Punto de inflamación: 92°C. Carga recomendada 8-10%.\",\"weeklyConsumptionRate\":120,\"leadTimeDays\":10}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-frag-2",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-frag-2\",\"name\":\"Ulei Vanilie de Madagascar & Cașmir Mătăsos\",\"nameRo\":\"Ulei Vanilie de Madagascar & Cașmir Mătăsos\",\"nameEn\":\"Madagascar Vanilla Bean & Silk Cashmere Oil\",\"nameFr\":\"Huile Vanille de Madagascar & Cachemire Soyeux\",\"nameDe\":\"Madagaskar-Vanilleschote & Kaschmir Duftöl\",\"nameIt\":\"Olio Bacca di Vaniglia del Madagascar & Cashmere\",\"nameEs\":\"Aceite Vainilla de Madagascar & Cachemira\",\"category\":\"fragrance\",\"quantity\":650,\"unit\":\"g\",\"minThreshold\":200,\"costPerUnit\":0.36,\"supplier\":\"Scents of Luxury UK\",\"lotNumber\":\"VAN-CASH-33\",\"lastRestocked\":\"2026-10-15\",\"notes\":\"Flashpoint: 88°C. Excelent hot throw în ceară soia.\",\"notesRo\":\"Flashpoint: 88°C. Excelent hot throw în ceară soia.\",\"notesEn\":\"Flashpoint: 88°C. Excellent hot scent throw in soy wax.\",\"notesFr\":\"Point éclair: 88°C. Excellente diffusion à chaud dans la cire de soja.\",\"notesDe\":\"Flammpunkt: 88°C. Hervorragende Heißduftabgabe in Sojawachs.\",\"notesIt\":\"Punto di infiammabilità: 88°C. Ottima diffusione a caldo.\",\"notesEs\":\"Punto de inflamación: 88°C. Excelente difusión en caliente.\",\"weeklyConsumptionRate\":140,\"leadTimeDays\":8}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-frag-3",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-frag-3\",\"name\":\"Ulei Lavandă de Provence & Miere Polifloră\",\"nameRo\":\"Ulei Lavandă de Provence & Miere Polifloră\",\"nameEn\":\"Provence Lavender & Wild Flower Honey Oil\",\"nameFr\":\"Huile Lavande de Provence & Miel Sauvage\",\"nameDe\":\"Provence-Lavendel & Wildblütenhonig Duftöl\",\"nameIt\":\"Olio Lavanda di Provenza & Miele Millefiori\",\"nameEs\":\"Aceite Lavanda de Provenza & Miel Silvestre\",\"category\":\"fragrance\",\"quantity\":420,\"unit\":\"g\",\"minThreshold\":150,\"costPerUnit\":0.38,\"supplier\":\"Grasse Parfums Franța\",\"lotNumber\":\"LAV-HON-12\",\"lastRestocked\":\"2026-10-05\",\"notes\":\"Conține ulei esențial pur de lavandă fină.\",\"notesRo\":\"Conține ulei esențial pur de lavandă fină.\",\"notesEn\":\"Infused with pure fine French lavender essential oil.\",\"notesFr\":\"Infusée d'huile essentielle pure de lavande fine de France.\",\"notesDe\":\"Mit reinem französischem Lavendelöl angereichert.\",\"notesIt\":\"Arricchito con olio essenziale puro di lavanda.\",\"notesEs\":\"Con aceite esencial puro de lavanda francesa.\",\"weeklyConsumptionRate\":90,\"leadTimeDays\":10}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-frag-4",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-frag-4\",\"name\":\"Ulei Frunze de Tutun Nobil & Bourbon Învechit\",\"nameRo\":\"Ulei Frunze de Tutun Nobil & Bourbon Învechit\",\"nameEn\":\"Aged Bourbon & Noble Tobacco Leaf Oil\",\"nameFr\":\"Huile Feuilles de Tabac Noble & Vieux Bourbon\",\"nameDe\":\"Gereifter Bourbon & Edles Tabakblatt Duftöl\",\"nameIt\":\"Olio Foglie di Tabacco Nobile & Bourbon Invecchiato\",\"nameEs\":\"Aceite Hojas de Tabaco Noble & Bourbon Añejo\",\"category\":\"fragrance\",\"quantity\":510,\"unit\":\"g\",\"minThreshold\":200,\"costPerUnit\":0.44,\"supplier\":\"Scents of Luxury UK\",\"lotNumber\":\"TOB-BRB-77\",\"lastRestocked\":\"2026-10-18\",\"notes\":\"Note calde, masculine, profunde.\",\"notesRo\":\"Note calde, masculine, profunde.\",\"notesEn\":\"Warm, masculine, sophisticated amber depth.\",\"notesFr\":\"Notes chaudes, masculines et sophistiquées.\",\"notesDe\":\"Warme, maskuline und elegante Dufttiefe.\",\"notesIt\":\"Note calde, maschili e raffinate.\",\"notesEs\":\"Notas cálidas, masculinas y elegantes.\",\"weeklyConsumptionRate\":130,\"leadTimeDays\":8}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-frag-5",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-frag-5\",\"name\":\"Ulei Cafea Arabica Prăjită & Boabe de Tonka\",\"nameRo\":\"Ulei Cafea Arabica Prăjită & Boabe de Tonka\",\"nameEn\":\"Dark Roasted Arabica & Sweet Tonka Bean Oil\",\"nameFr\":\"Huile Café Arabica Torréfié & Fève Tonka\",\"nameDe\":\"Dunkel Gerösteter Arabica & Tonkabohne Duftöl\",\"nameIt\":\"Olio Caffè Arabica Tostato & Fava Tonka\",\"nameEs\":\"Aceite Café Arábica Tostado & Haba Tonka\",\"category\":\"fragrance\",\"quantity\":80,\"unit\":\"g\",\"minThreshold\":150,\"costPerUnit\":0.39,\"supplier\":\"AromaCraft Supplies\",\"lotNumber\":\"COF-TNK-04\",\"lastRestocked\":\"2026-08-30\",\"notes\":\"Aromă gourmet extrem de intensă.\",\"notesRo\":\"Aromă gourmet extrem de intensă.\",\"notesEn\":\"Ultra-rich cozy gourmet espresso aroma.\",\"notesFr\":\"Arôme gourmand intense de café torréfié.\",\"notesDe\":\"Extrem intensives Gourmet-Kaffeearoma.\",\"notesIt\":\"Aroma gourmet intenso di caffè tostato.\",\"notesEs\":\"Aroma gourmet intenso de café recién tostado.\",\"weeklyConsumptionRate\":70,\"leadTimeDays\":7}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-vessel-1",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-vessel-1\",\"name\":\"Borcan Sticlă Mată Neagră 250ml (Ø 74mm)\",\"nameRo\":\"Borcan Sticlă Mată Neagră 250ml (Ø 74mm)\",\"nameEn\":\"Matte Black Glass Jar 250ml (Ø 74mm)\",\"nameFr\":\"Pot en Verre Noir Mat 250ml (Ø 74mm)\",\"nameDe\":\"Mattschwarzes Glasgefäß 250ml (Ø 74mm)\",\"nameIt\":\"Vasetto in Vetro Nero Opaco 250ml (Ø 74mm)\",\"nameEs\":\"Frasco de Vidrio Negro Mate 250ml (Ø 74mm)\",\"category\":\"vessel\",\"quantity\":64,\"unit\":\"buc\",\"minThreshold\":30,\"costPerUnit\":6.8,\"supplier\":\"Vetro Artisans Italia\",\"lotNumber\":\"JAR-BLK-250\",\"lastRestocked\":\"2026-10-14\",\"notes\":\"Sticlă termorezistentă, vopsită electrostatic mat.\",\"notesRo\":\"Sticlă termorezistentă, vopsită electrostatic mat.\",\"notesEn\":\"Thermal shock resistant, electrostatic powder-coated.\",\"notesFr\":\"Verre thermorésistant, finition poudrée mate.\",\"notesDe\":\"Hitzebeständiges Glas, elektrostatisch pulverbeschichtet.\",\"notesIt\":\"Vetro resistente al calore con verniciatura opaca.\",\"notesEs\":\"Vidrio térmico resistente con pintura mate electrostática.\",\"weeklyConsumptionRate\":16,\"leadTimeDays\":7}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-vessel-2",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-vessel-2\",\"name\":\"Borcan Sticlă Chihlimbar (Amber Jar) 200ml (Ø 68mm)\",\"nameRo\":\"Borcan Sticlă Chihlimbar (Amber Jar) 200ml (Ø 68mm)\",\"nameEn\":\"Amber Glass Apothecary Jar 200ml (Ø 68mm)\",\"nameFr\":\"Pot en Verre Ambré Apothicaire 200ml (Ø 68mm)\",\"nameDe\":\"Bernsteinglas-Apothekergefäß 200ml (Ø 68mm)\",\"nameIt\":\"Barattolo Farmacia in Vetro Ambrato 200ml (Ø 68mm)\",\"nameEs\":\"Tarro de Boticario Vidrio Ámbar 200ml (Ø 68mm)\",\"category\":\"vessel\",\"quantity\":18,\"unit\":\"buc\",\"minThreshold\":40,\"costPerUnit\":4.9,\"supplier\":\"Vetro Artisans Italia\",\"lotNumber\":\"AMB-200-L3\",\"lastRestocked\":\"2026-09-12\",\"notes\":\"Capac de aluminiu negru inclus.\",\"notesRo\":\"Capac de aluminiu negru inclus.\",\"notesEn\":\"Black aluminum screw lid included.\",\"notesFr\":\"Couvercle en aluminium noir inclus.\",\"notesDe\":\"Schwarzer Aluminium-Schraubdeckel inklusive.\",\"notesIt\":\"Tappo a vite in alluminio nero incluso.\",\"notesEs\":\"Tapa de rosca de aluminio negro incluida.\",\"weeklyConsumptionRate\":15,\"leadTimeDays\":6}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-vessel-3",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-vessel-3\",\"name\":\"Pahar Ceramic Alb Mat 220ml (Ø 70mm)\",\"nameRo\":\"Pahar Ceramic Alb Mat 220ml (Ø 70mm)\",\"nameEn\":\"Matte White Ceramic Cup 220ml (Ø 70mm)\",\"nameFr\":\"Tasse Céramique Blanche Mate 220ml (Ø 70mm)\",\"nameDe\":\"Mattweißer Keramikbecher 220ml (Ø 70mm)\",\"nameIt\":\"Tazza in Ceramica Bianca Opaca 220ml (Ø 70mm)\",\"nameEs\":\"Vaso Cerámica Blanco Mate 220ml (Ø 70mm)\",\"category\":\"vessel\",\"quantity\":45,\"unit\":\"buc\",\"minThreshold\":25,\"costPerUnit\":8.5,\"supplier\":\"Ceramica Atelier Brașov\",\"lotNumber\":\"CER-WHT-22\",\"lastRestocked\":\"2026-10-08\",\"notes\":\"Model minimalist scandinav, lucrat manual.\",\"notesRo\":\"Model minimalist scandinav, lucrat manual.\",\"notesEn\":\"Handmade Nordic minimalist stoneware cup.\",\"notesFr\":\"Grès artisanal au design scandinave épuré.\",\"notesDe\":\"Handgefertigte nordische Steinzeug-Keramik.\",\"notesIt\":\"Ceramica artigianale in stile nordico minimale.\",\"notesEs\":\"Cerámica artesanal de diseño nórdico minimalista.\",\"weeklyConsumptionRate\":8,\"leadTimeDays\":12}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-pack-1",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-pack-1\",\"name\":\"Cutie Cadou Lux Neagră cu Ștanță Aurie Wix & Wax\",\"nameRo\":\"Cutie Cadou Lux Neagră cu Ștanță Aurie Wix & Wax\",\"nameEn\":\"Luxury Black Gold-Foil Gift Box Wix & Wax\",\"nameFr\":\"Coffret Cadeau Luxe Noir & Dorure à Chaud Wix & Wax\",\"nameDe\":\"Luxus-Geschenkbox Schwarz mit Goldfolienprägung Wix & Wax\",\"nameIt\":\"Scatola Regalo Luxury Nera con Stampa Oro Wix & Wax\",\"nameEs\":\"Caja de Regalo de Lujo Negra con Estampado Dorado Wix & Wax\",\"category\":\"packaging\",\"quantity\":75,\"unit\":\"buc\",\"minThreshold\":50,\"costPerUnit\":4.2,\"supplier\":\"Artisan Packaging Cluj\",\"lotNumber\":\"BOX-GOLD-01\",\"lastRestocked\":\"2026-10-16\",\"notes\":\"Carton rigid 400g cu textură catifelată (soft-touch).\",\"notesRo\":\"Carton rigid 400g cu textură catifelată (soft-touch).\",\"notesEn\":\"Rigid 400gsm board with velvet soft-touch coating.\",\"notesFr\":\"Carton rigide 400g avec pelliculage doux au toucher.\",\"notesDe\":\"Stabile 400g-Kartonage mit Soft-Touch-Finish.\",\"notesIt\":\"Cartone rigido da 400g con finitura vellutata.\",\"notesEs\":\"Cartón rígido de 400g con acabado aterciopelado soft-touch.\",\"weeklyConsumptionRate\":20,\"leadTimeDays\":5}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-inv-pack-2",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"inv-pack-2\",\"name\":\"Etichete CLP Avertizare Siguranță Rotunde (Ø 50mm)\",\"nameRo\":\"Etichete CLP Avertizare Siguranță Rotunde (Ø 50mm)\",\"nameEn\":\"Round CLP Safety Warning Decals (Ø 50mm)\",\"nameFr\":\"Étiquettes Rondes Avertissement Sécurité CLP (Ø 50mm)\",\"nameDe\":\"Runde CLP-Sicherheitswarnaufkleber (Ø 50mm)\",\"nameIt\":\"Adesivi Rotondi Avvertenze di Sicurezza CLP (Ø 50mm)\",\"nameEs\":\"Etiquetas Circulares de Advertencia CLP (Ø 50mm)\",\"category\":\"accessory\",\"quantity\":120,\"unit\":\"buc\",\"minThreshold\":100,\"costPerUnit\":0.45,\"supplier\":\"Tipografie Digitală\",\"lotNumber\":\"CLP-50MM-RO\",\"lastRestocked\":\"2026-10-11\",\"notes\":\"Conforme cu standardele REACH/CLP UE.\",\"notesRo\":\"Conforme cu standardele REACH/CLP UE.\",\"notesEn\":\"EU REACH & CLP mandatory compliant print.\",\"notesFr\":\"Conformes aux normes européennes REACH/CLP.\",\"notesDe\":\"Konform mit den EU-REACH/CLP-Vorschriften.\",\"notesIt\":\"Conformi agli standard europei REACH/CLP.\",\"notesEs\":\"Cumple con la normativa europea REACH/CLP.\",\"weeklyConsumptionRate\":35,\"leadTimeDays\":3}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-wax-1",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-wax-1\",\"name\":\"Ceară de Soia Golden Wax 464 (AAK Suedia)\",\"nameRo\":\"Ceară de Soia Golden Wax 464 (AAK Suedia)\",\"nameEn\":\"Golden Wax 464 Soy Wax (AAK Sweden)\",\"nameFr\":\"Cire de Soja Golden Wax 464 (AAK Suède)\",\"nameDe\":\"Golden Wax 464 Sojawachs (AAK Schweden)\",\"nameIt\":\"Cera di Soia Golden Wax 464 (AAK Svezia)\",\"nameEs\":\"Cera de Soja Golden Wax 464 (AAK Suecia)\",\"category\":\"wax\",\"quantity\":4500,\"unit\":\"g\",\"minThreshold\":5000,\"costPerUnit\":0.048,\"supplier\":\"CandleWorks Europe\",\"lotNumber\":\"GW464-2026-B8\",\"lastRestocked\":\"2026-10-10\",\"notes\":\"Punct de topire 45-48°C. Aderență perfectă la borcane.\",\"notesRo\":\"Punct de topire 45-48°C. Aderență perfectă la borcane.\",\"notesEn\":\"Melt point 45-48°C. Outstanding glass container adhesion.\",\"notesFr\":\"Point de fusion 45-48°C. Excellente adhérence aux contenants en verre.\",\"notesDe\":\"Schmelzpunkt 45-48°C. Hervorragende Glaswandhaftung.\",\"notesIt\":\"Punto di fusione 45-48°C. Eccellente aderenza al vetro.\",\"notesEs\":\"Punto de fusión 45-48°C. Excelente adherencia al vidrio.\",\"weeklyConsumptionRate\":1600,\"leadTimeDays\":5}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-wax-2",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-wax-2\",\"name\":\"Ceară Naturală Soia NatureWax C3 (Cargill)\",\"nameRo\":\"Ceară Naturală Soia NatureWax C3 (Cargill)\",\"nameEn\":\"NatureWax C3 Pure Soy Wax (Cargill)\",\"nameFr\":\"Cire Naturelle de Soja NatureWax C3 (Cargill)\",\"nameDe\":\"NatureWax C3 Reines Sojawachs (Cargill)\",\"nameIt\":\"Cera Naturale di Soia NatureWax C3 (Cargill)\",\"nameEs\":\"Cera Natural de Soja NatureWax C3 (Cargill)\",\"category\":\"wax\",\"quantity\":12000,\"unit\":\"g\",\"minThreshold\":4000,\"costPerUnit\":0.052,\"supplier\":\"AromaCraft Supplies\",\"lotNumber\":\"C3-LOT-889\",\"lastRestocked\":\"2026-10-18\",\"notes\":\"Finish cremos mătăsos. Ideală pentru recipiente de sticlă.\",\"notesRo\":\"Finish cremos mătăsos. Ideală pentru recipiente de sticlă.\",\"notesEn\":\"Silky creamy finish. Ideal for premium container candles.\",\"notesFr\":\"Finition soyeuse et crémeuse. Idéale pour bougies en pot.\",\"notesDe\":\"Seidiges cremiges Finish. Perfekt für Behälterkerzen.\",\"notesIt\":\"Finitura cremosa e setosa. Ideale per candele in vasetto.\",\"notesEs\":\"Acabado suave y cremoso. Ideal para velas en vaso.\",\"weeklyConsumptionRate\":1800,\"leadTimeDays\":6}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-wax-3",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-wax-3\",\"name\":\"Ceară Pură de Cocos Organică\",\"nameRo\":\"Ceară Pură de Cocos Organică\",\"nameEn\":\"Organic Virgin Coconut Wax\",\"nameFr\":\"Cire Végétale Pure de Coco Bio\",\"nameDe\":\"Organisches Reines Kokoswachs\",\"nameIt\":\"Cera Pura di Cocco Biologica\",\"nameEs\":\"Cera Pura de Coco Orgánica\",\"category\":\"wax\",\"quantity\":3200,\"unit\":\"g\",\"minThreshold\":3000,\"costPerUnit\":0.068,\"supplier\":\"BioWax Organics\",\"lotNumber\":\"COC-2026-09\",\"lastRestocked\":\"2026-09-28\",\"notes\":\"Punct de topire scăzut, arde curat, excelent cold throw.\",\"notesRo\":\"Punct de topire scăzut, arde curat, excelent cold throw.\",\"notesEn\":\"Low melting point, clean burn, superb cold scent throw.\",\"notesFr\":\"Point de fusion bas, combustion propre, excellente diffusion à froid.\",\"notesDe\":\"Niedriger Schmelzpunkt, saubere Verbrennung, tolle Kaltabgabe.\",\"notesIt\":\"Punto di fusione basso, combustione pulita, ottima diffusione.\",\"notesEs\":\"Bajo punto de fusión, combustión limpia, gran difusión en frío.\",\"weeklyConsumptionRate\":650,\"leadTimeDays\":5}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-wax-4",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-wax-4\",\"name\":\"Ceară Naturală de Albine Galbenă (Calup)\",\"nameRo\":\"Ceară Naturală de Albine Galbenă (Calup)\",\"nameEn\":\"Natural Yellow Beeswax Block\",\"nameFr\":\"Pain de Cire d'Abeille Jaune Naturelle\",\"nameDe\":\"Natürliches Gelbes Bienenwachs (Block)\",\"nameIt\":\"Panetto di Cera d'Api Gialla Naturale\",\"nameEs\":\"Bloque de Cera de Abeja Amarilla Natural\",\"category\":\"wax\",\"quantity\":1800,\"unit\":\"g\",\"minThreshold\":2000,\"costPerUnit\":0.075,\"supplier\":\"Apicultura Românească SRL\",\"lotNumber\":\"AP-RO-442\",\"lastRestocked\":\"2026-10-02\",\"notes\":\"Miros natural subtil de miere și propolis.\",\"notesRo\":\"Miros natural subtil de miere și propolis.\",\"notesEn\":\"Subtle natural honey and propolis undertone.\",\"notesFr\":\"Subtile senteur naturelle de miel et de propolis.\",\"notesDe\":\"Dezenter natürlicher Duft nach Honig und Propolis.\",\"notesIt\":\"Sottile aroma naturale di miele e propoli.\",\"notesEs\":\"Aroma natural sutil a miel y propóleo.\",\"weeklyConsumptionRate\":350,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-wick-1",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-wick-1\",\"name\":\"Fitil Bumbac TCR 27/16 (pre-cerat 12cm)\",\"nameRo\":\"Fitil Bumbac TCR 27/16 (pre-cerat 12cm)\",\"nameEn\":\"TCR 27/16 Cotton Wick (Pre-waxed 12cm)\",\"nameFr\":\"Mèche en Coton TCR 27/16 (Pré-cirée 12cm)\",\"nameDe\":\"TCR 27/16 Baumwolldocht (Gewachst 12cm)\",\"nameIt\":\"Stoppino in Cotone TCR 27/16 (Pre-incerato 12cm)\",\"nameEs\":\"Mecha de Algodón TCR 27/16 (Pre-encerada 12cm)\",\"category\":\"wick\",\"quantity\":14,\"unit\":\"buc\",\"minThreshold\":50,\"costPerUnit\":0.95,\"supplier\":\"Wedo Wicks Germania\",\"lotNumber\":\"TCR-27-02\",\"lastRestocked\":\"2026-09-15\",\"notes\":\"Recomandat pentru borcane cu diametru 72-78mm.\",\"notesRo\":\"Recomandat pentru borcane cu diametru 72-78mm.\",\"notesEn\":\"Recommended for jars with 72-78mm diameter.\",\"notesFr\":\"Recommandée pour contenants de 72-78mm de diamètre.\",\"notesDe\":\"Empfohlen für Gefäße mit 72-78mm Durchmesser.\",\"notesIt\":\"Consigliato per vasetti con diametro 72-78mm.\",\"notesEs\":\"Recomendada para recipientes de 72-78mm de diámetro.\",\"weeklyConsumptionRate\":20,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-wick-2",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-wick-2\",\"name\":\"Fitil Eco 8 (Bumbac cu fire de hârtie)\",\"nameRo\":\"Fitil Eco 8 (Bumbac cu fire de hârtie)\",\"nameEn\":\"Eco 8 Wick (Cotton with Paper Filaments)\",\"nameFr\":\"Mèche Eco 8 (Coton & Filaments de Papier)\",\"nameDe\":\"Eco 8 Docht (Baumwolle mit Papierfäden)\",\"nameIt\":\"Stoppino Eco 8 (Cotone e Filamenti di Carta)\",\"nameEs\":\"Mecha Eco 8 (Algodón con Filamentos de Papel)\",\"category\":\"wick\",\"quantity\":85,\"unit\":\"buc\",\"minThreshold\":40,\"costPerUnit\":0.88,\"supplier\":\"Wedo Wicks Germania\",\"lotNumber\":\"ECO-8-11\",\"lastRestocked\":\"2026-10-12\",\"notes\":\"Fără fum, autotăietor în timpul arderii.\",\"notesRo\":\"Fără fum, autotăietor în timpul arderii.\",\"notesEn\":\"Smokeless, self-trimming burn profile.\",\"notesFr\":\"Sans fumée, profil auto-recourbant à la combustion.\",\"notesDe\":\"Rauchfrei, selbstkürzendes Abbrandverhalten.\",\"notesIt\":\"Senza fumo, auto-accorciante durante la combustione.\",\"notesEs\":\"Sin humo, perfil auto-recortable durante el quemado.\",\"weeklyConsumptionRate\":22,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-wick-3",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-wick-3\",\"name\":\"Fitil Eco 6 (Diametru 60-68mm)\",\"nameRo\":\"Fitil Eco 6 (Diametru 60-68mm)\",\"nameEn\":\"Eco 6 Wick (Diameter 60-68mm)\",\"nameFr\":\"Mèche Eco 6 (Diamètre 60-68mm)\",\"nameDe\":\"Eco 6 Docht (Durchmesser 60-68mm)\",\"nameIt\":\"Stoppino Eco 6 (Diametro 60-68mm)\",\"nameEs\":\"Mecha Eco 6 (Diámetro 60-68mm)\",\"category\":\"wick\",\"quantity\":110,\"unit\":\"buc\",\"minThreshold\":30,\"costPerUnit\":0.82,\"supplier\":\"Wedo Wicks Germania\",\"lotNumber\":\"ECO-6-09\",\"lastRestocked\":\"2026-10-12\",\"notes\":\"Pentru pahare medii și borcane de 200ml.\",\"notesRo\":\"Pentru pahare medii și borcane de 200ml.\",\"notesEn\":\"For medium votives and 200ml candle vessels.\",\"notesFr\":\"Pour verres moyens et pots à bougie de 200ml.\",\"notesDe\":\"Für mittlere Gläser und 200ml Kerzengefäße.\",\"notesIt\":\"Per bicchieri medi e vasetti da 200ml.\",\"notesEs\":\"Para vasos medianos y frascos de 200ml.\",\"weeklyConsumptionRate\":18,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-wick-4",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-wick-4\",\"name\":\"Fitil Lemn Natural 13mm cu Suport Metalic Booster\",\"nameRo\":\"Fitil Lemn Natural 13mm cu Suport Metalic Booster\",\"nameEn\":\"Natural Wooden Wick 13mm with Booster Clip\",\"nameFr\":\"Mèche en Bois Naturel 13mm avec Support Booster\",\"nameDe\":\"Naturholzdocht 13mm mit Booster-Metallclip\",\"nameIt\":\"Stoppino in Legno Naturale 13mm con Supporto Booster\",\"nameEs\":\"Mecha de Madera Natural 13mm con Clip Booster\",\"category\":\"wick\",\"quantity\":28,\"unit\":\"buc\",\"minThreshold\":35,\"costPerUnit\":2.2,\"supplier\":\"LumberCraft Artisan\",\"lotNumber\":\"WOOD-13-B\",\"lastRestocked\":\"2026-09-20\",\"notes\":\"Efect de șemineu (crackling sound).\",\"notesRo\":\"Efect de șemineu (crackling sound).\",\"notesEn\":\"Cozy fireplace crackling acoustic effect.\",\"notesFr\":\"Effet acoustique crépitant feu de cheminée.\",\"notesDe\":\"Gemütlicher Kaminfeuer-Knistereffekt.\",\"notesIt\":\"Effetto scoppiettante camino accogliente.\",\"notesEs\":\"Efecto crujiente acogedor estilo chimenea.\",\"weeklyConsumptionRate\":12,\"leadTimeDays\":7}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-frag-1",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-frag-1\",\"name\":\"Ulei Premium Chihlimbar & Oud Afumat (Grasse)\",\"nameRo\":\"Ulei Premium Chihlimbar & Oud Afumat (Grasse)\",\"nameEn\":\"Smoked Oud & Amber Fragrance Oil (Grasse)\",\"nameFr\":\"Huile Parfumée Oud Fumé & Ambre Impérial (Grasse)\",\"nameDe\":\"Geräucherter Oud & Bernstein Duftöl (Grasse)\",\"nameIt\":\"Olio Profumato Oud Affumicato & Ambra (Grasse)\",\"nameEs\":\"Aceite Esencial Oud Ahumado & Ámbar (Grasse)\",\"category\":\"fragrance\",\"quantity\":180,\"unit\":\"g\",\"minThreshold\":250,\"costPerUnit\":0.42,\"supplier\":\"Grasse Parfums Franța\",\"lotNumber\":\"AMB-OUD-991\",\"lastRestocked\":\"2026-09-10\",\"notes\":\"Flashpoint: 92°C. Încărcare recomandată 8-10%.\",\"notesRo\":\"Flashpoint: 92°C. Încărcare recomandată 8-10%.\",\"notesEn\":\"Flashpoint: 92°C. Recommended loading 8-10%.\",\"notesFr\":\"Point éclair: 92°C. Dosage recommandé 8-10%.\",\"notesDe\":\"Flammpunkt: 92°C. Empfohlene Dosierung 8-10%.\",\"notesIt\":\"Punto di infiammabilità: 92°C. Dosaggio 8-10%.\",\"notesEs\":\"Punto de inflamación: 92°C. Carga recomendada 8-10%.\",\"weeklyConsumptionRate\":120,\"leadTimeDays\":10}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-frag-2",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-frag-2\",\"name\":\"Ulei Vanilie de Madagascar & Cașmir Mătăsos\",\"nameRo\":\"Ulei Vanilie de Madagascar & Cașmir Mătăsos\",\"nameEn\":\"Madagascar Vanilla Bean & Silk Cashmere Oil\",\"nameFr\":\"Huile Vanille de Madagascar & Cachemire Soyeux\",\"nameDe\":\"Madagaskar-Vanilleschote & Kaschmir Duftöl\",\"nameIt\":\"Olio Bacca di Vaniglia del Madagascar & Cashmere\",\"nameEs\":\"Aceite Vainilla de Madagascar & Cachemira\",\"category\":\"fragrance\",\"quantity\":650,\"unit\":\"g\",\"minThreshold\":200,\"costPerUnit\":0.36,\"supplier\":\"Scents of Luxury UK\",\"lotNumber\":\"VAN-CASH-33\",\"lastRestocked\":\"2026-10-15\",\"notes\":\"Flashpoint: 88°C. Excelent hot throw în ceară soia.\",\"notesRo\":\"Flashpoint: 88°C. Excelent hot throw în ceară soia.\",\"notesEn\":\"Flashpoint: 88°C. Excellent hot scent throw in soy wax.\",\"notesFr\":\"Point éclair: 88°C. Excellente diffusion à chaud dans la cire de soja.\",\"notesDe\":\"Flammpunkt: 88°C. Hervorragende Heißduftabgabe in Sojawachs.\",\"notesIt\":\"Punto di infiammabilità: 88°C. Ottima diffusione a caldo.\",\"notesEs\":\"Punto de inflamación: 88°C. Excelente difusión en caliente.\",\"weeklyConsumptionRate\":140,\"leadTimeDays\":8}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-frag-3",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-frag-3\",\"name\":\"Ulei Lavandă de Provence & Miere Polifloră\",\"nameRo\":\"Ulei Lavandă de Provence & Miere Polifloră\",\"nameEn\":\"Provence Lavender & Wild Flower Honey Oil\",\"nameFr\":\"Huile Lavande de Provence & Miel Sauvage\",\"nameDe\":\"Provence-Lavendel & Wildblütenhonig Duftöl\",\"nameIt\":\"Olio Lavanda di Provenza & Miele Millefiori\",\"nameEs\":\"Aceite Lavanda de Provenza & Miel Silvestre\",\"category\":\"fragrance\",\"quantity\":420,\"unit\":\"g\",\"minThreshold\":150,\"costPerUnit\":0.38,\"supplier\":\"Grasse Parfums Franța\",\"lotNumber\":\"LAV-HON-12\",\"lastRestocked\":\"2026-10-05\",\"notes\":\"Conține ulei esențial pur de lavandă fină.\",\"notesRo\":\"Conține ulei esențial pur de lavandă fină.\",\"notesEn\":\"Infused with pure fine French lavender essential oil.\",\"notesFr\":\"Infusée d'huile essentielle pure de lavande fine de France.\",\"notesDe\":\"Mit reinem französischem Lavendelöl angereichert.\",\"notesIt\":\"Arricchito con olio essenziale puro di lavanda.\",\"notesEs\":\"Con aceite esencial puro de lavanda francesa.\",\"weeklyConsumptionRate\":90,\"leadTimeDays\":10}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-frag-4",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-frag-4\",\"name\":\"Ulei Frunze de Tutun Nobil & Bourbon Învechit\",\"nameRo\":\"Ulei Frunze de Tutun Nobil & Bourbon Învechit\",\"nameEn\":\"Aged Bourbon & Noble Tobacco Leaf Oil\",\"nameFr\":\"Huile Feuilles de Tabac Noble & Vieux Bourbon\",\"nameDe\":\"Gereifter Bourbon & Edles Tabakblatt Duftöl\",\"nameIt\":\"Olio Foglie di Tabacco Nobile & Bourbon Invecchiato\",\"nameEs\":\"Aceite Hojas de Tabaco Noble & Bourbon Añejo\",\"category\":\"fragrance\",\"quantity\":510,\"unit\":\"g\",\"minThreshold\":200,\"costPerUnit\":0.44,\"supplier\":\"Scents of Luxury UK\",\"lotNumber\":\"TOB-BRB-77\",\"lastRestocked\":\"2026-10-18\",\"notes\":\"Note calde, masculine, profunde.\",\"notesRo\":\"Note calde, masculine, profunde.\",\"notesEn\":\"Warm, masculine, sophisticated amber depth.\",\"notesFr\":\"Notes chaudes, masculines et sophistiquées.\",\"notesDe\":\"Warme, maskuline und elegante Dufttiefe.\",\"notesIt\":\"Note calde, maschili e raffinate.\",\"notesEs\":\"Notas cálidas, masculinas y elegantes.\",\"weeklyConsumptionRate\":130,\"leadTimeDays\":8}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-frag-5",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-frag-5\",\"name\":\"Ulei Cafea Arabica Prăjită & Boabe de Tonka\",\"nameRo\":\"Ulei Cafea Arabica Prăjită & Boabe de Tonka\",\"nameEn\":\"Dark Roasted Arabica & Sweet Tonka Bean Oil\",\"nameFr\":\"Huile Café Arabica Torréfié & Fève Tonka\",\"nameDe\":\"Dunkel Gerösteter Arabica & Tonkabohne Duftöl\",\"nameIt\":\"Olio Caffè Arabica Tostato & Fava Tonka\",\"nameEs\":\"Aceite Café Arábica Tostado & Haba Tonka\",\"category\":\"fragrance\",\"quantity\":80,\"unit\":\"g\",\"minThreshold\":150,\"costPerUnit\":0.39,\"supplier\":\"AromaCraft Supplies\",\"lotNumber\":\"COF-TNK-04\",\"lastRestocked\":\"2026-08-30\",\"notes\":\"Aromă gourmet extrem de intensă.\",\"notesRo\":\"Aromă gourmet extrem de intensă.\",\"notesEn\":\"Ultra-rich cozy gourmet espresso aroma.\",\"notesFr\":\"Arôme gourmand intense de café torréfié.\",\"notesDe\":\"Extrem intensives Gourmet-Kaffeearoma.\",\"notesIt\":\"Aroma gourmet intenso di caffè tostato.\",\"notesEs\":\"Aroma gourmet intenso de café recién tostado.\",\"weeklyConsumptionRate\":70,\"leadTimeDays\":7}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-vessel-1",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-vessel-1\",\"name\":\"Borcan Sticlă Mată Neagră 250ml (Ø 74mm)\",\"nameRo\":\"Borcan Sticlă Mată Neagră 250ml (Ø 74mm)\",\"nameEn\":\"Matte Black Glass Jar 250ml (Ø 74mm)\",\"nameFr\":\"Pot en Verre Noir Mat 250ml (Ø 74mm)\",\"nameDe\":\"Mattschwarzes Glasgefäß 250ml (Ø 74mm)\",\"nameIt\":\"Vasetto in Vetro Nero Opaco 250ml (Ø 74mm)\",\"nameEs\":\"Frasco de Vidrio Negro Mate 250ml (Ø 74mm)\",\"category\":\"vessel\",\"quantity\":64,\"unit\":\"buc\",\"minThreshold\":30,\"costPerUnit\":6.8,\"supplier\":\"Vetro Artisans Italia\",\"lotNumber\":\"JAR-BLK-250\",\"lastRestocked\":\"2026-10-14\",\"notes\":\"Sticlă termorezistentă, vopsită electrostatic mat.\",\"notesRo\":\"Sticlă termorezistentă, vopsită electrostatic mat.\",\"notesEn\":\"Thermal shock resistant, electrostatic powder-coated.\",\"notesFr\":\"Verre thermorésistant, finition poudrée mate.\",\"notesDe\":\"Hitzebeständiges Glas, elektrostatisch pulverbeschichtet.\",\"notesIt\":\"Vetro resistente al calore con verniciatura opaca.\",\"notesEs\":\"Vidrio térmico resistente con pintura mate electrostática.\",\"weeklyConsumptionRate\":16,\"leadTimeDays\":7}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-vessel-2",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-vessel-2\",\"name\":\"Borcan Sticlă Chihlimbar (Amber Jar) 200ml (Ø 68mm)\",\"nameRo\":\"Borcan Sticlă Chihlimbar (Amber Jar) 200ml (Ø 68mm)\",\"nameEn\":\"Amber Glass Apothecary Jar 200ml (Ø 68mm)\",\"nameFr\":\"Pot en Verre Ambré Apothicaire 200ml (Ø 68mm)\",\"nameDe\":\"Bernsteinglas-Apothekergefäß 200ml (Ø 68mm)\",\"nameIt\":\"Barattolo Farmacia in Vetro Ambrato 200ml (Ø 68mm)\",\"nameEs\":\"Tarro de Boticario Vidrio Ámbar 200ml (Ø 68mm)\",\"category\":\"vessel\",\"quantity\":18,\"unit\":\"buc\",\"minThreshold\":40,\"costPerUnit\":4.9,\"supplier\":\"Vetro Artisans Italia\",\"lotNumber\":\"AMB-200-L3\",\"lastRestocked\":\"2026-09-12\",\"notes\":\"Capac de aluminiu negru inclus.\",\"notesRo\":\"Capac de aluminiu negru inclus.\",\"notesEn\":\"Black aluminum screw lid included.\",\"notesFr\":\"Couvercle en aluminium noir inclus.\",\"notesDe\":\"Schwarzer Aluminium-Schraubdeckel inklusive.\",\"notesIt\":\"Tappo a vite in alluminio nero incluso.\",\"notesEs\":\"Tapa de rosca de aluminio negro incluida.\",\"weeklyConsumptionRate\":15,\"leadTimeDays\":6}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-vessel-3",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-vessel-3\",\"name\":\"Pahar Ceramic Alb Mat 220ml (Ø 70mm)\",\"nameRo\":\"Pahar Ceramic Alb Mat 220ml (Ø 70mm)\",\"nameEn\":\"Matte White Ceramic Cup 220ml (Ø 70mm)\",\"nameFr\":\"Tasse Céramique Blanche Mate 220ml (Ø 70mm)\",\"nameDe\":\"Mattweißer Keramikbecher 220ml (Ø 70mm)\",\"nameIt\":\"Tazza in Ceramica Bianca Opaca 220ml (Ø 70mm)\",\"nameEs\":\"Vaso Cerámica Blanco Mate 220ml (Ø 70mm)\",\"category\":\"vessel\",\"quantity\":45,\"unit\":\"buc\",\"minThreshold\":25,\"costPerUnit\":8.5,\"supplier\":\"Ceramica Atelier Brașov\",\"lotNumber\":\"CER-WHT-22\",\"lastRestocked\":\"2026-10-08\",\"notes\":\"Model minimalist scandinav, lucrat manual.\",\"notesRo\":\"Model minimalist scandinav, lucrat manual.\",\"notesEn\":\"Handmade Nordic minimalist stoneware cup.\",\"notesFr\":\"Grès artisanal au design scandinave épuré.\",\"notesDe\":\"Handgefertigte nordische Steinzeug-Keramik.\",\"notesIt\":\"Ceramica artigianale in stile nordico minimale.\",\"notesEs\":\"Cerámica artesanal de diseño nórdico minimalista.\",\"weeklyConsumptionRate\":8,\"leadTimeDays\":12}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-pack-1",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-pack-1\",\"name\":\"Cutie Cadou Lux Neagră cu Ștanță Aurie Wix & Wax\",\"nameRo\":\"Cutie Cadou Lux Neagră cu Ștanță Aurie Wix & Wax\",\"nameEn\":\"Luxury Black Gold-Foil Gift Box Wix & Wax\",\"nameFr\":\"Coffret Cadeau Luxe Noir & Dorure à Chaud Wix & Wax\",\"nameDe\":\"Luxus-Geschenkbox Schwarz mit Goldfolienprägung Wix & Wax\",\"nameIt\":\"Scatola Regalo Luxury Nera con Stampa Oro Wix & Wax\",\"nameEs\":\"Caja de Regalo de Lujo Negra con Estampado Dorado Wix & Wax\",\"category\":\"packaging\",\"quantity\":75,\"unit\":\"buc\",\"minThreshold\":50,\"costPerUnit\":4.2,\"supplier\":\"Artisan Packaging Cluj\",\"lotNumber\":\"BOX-GOLD-01\",\"lastRestocked\":\"2026-10-16\",\"notes\":\"Carton rigid 400g cu textură catifelată (soft-touch).\",\"notesRo\":\"Carton rigid 400g cu textură catifelată (soft-touch).\",\"notesEn\":\"Rigid 400gsm board with velvet soft-touch coating.\",\"notesFr\":\"Carton rigide 400g avec pelliculage doux au toucher.\",\"notesDe\":\"Stabile 400g-Kartonage mit Soft-Touch-Finish.\",\"notesIt\":\"Cartone rigido da 400g con finitura vellutata.\",\"notesEs\":\"Cartón rígido de 400g con acabado aterciopelado soft-touch.\",\"weeklyConsumptionRate\":20,\"leadTimeDays\":5}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-free-001-inv-pack-2",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"inv-pack-2\",\"name\":\"Etichete CLP Avertizare Siguranță Rotunde (Ø 50mm)\",\"nameRo\":\"Etichete CLP Avertizare Siguranță Rotunde (Ø 50mm)\",\"nameEn\":\"Round CLP Safety Warning Decals (Ø 50mm)\",\"nameFr\":\"Étiquettes Rondes Avertissement Sécurité CLP (Ø 50mm)\",\"nameDe\":\"Runde CLP-Sicherheitswarnaufkleber (Ø 50mm)\",\"nameIt\":\"Adesivi Rotondi Avvertenze di Sicurezza CLP (Ø 50mm)\",\"nameEs\":\"Etiquetas Circulares de Advertencia CLP (Ø 50mm)\",\"category\":\"accessory\",\"quantity\":120,\"unit\":\"buc\",\"minThreshold\":100,\"costPerUnit\":0.45,\"supplier\":\"Tipografie Digitală\",\"lotNumber\":\"CLP-50MM-RO\",\"lastRestocked\":\"2026-10-11\",\"notes\":\"Conforme cu standardele REACH/CLP UE.\",\"notesRo\":\"Conforme cu standardele REACH/CLP UE.\",\"notesEn\":\"EU REACH & CLP mandatory compliant print.\",\"notesFr\":\"Conformes aux normes européennes REACH/CLP.\",\"notesDe\":\"Konform mit den EU-REACH/CLP-Vorschriften.\",\"notesIt\":\"Conformi agli standard europei REACH/CLP.\",\"notesEs\":\"Cumple con la normativa europea REACH/CLP.\",\"weeklyConsumptionRate\":35,\"leadTimeDays\":3}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-wax-1",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-wax-1\",\"name\":\"Ceară de Soia Golden Wax 464 (AAK Suedia)\",\"nameRo\":\"Ceară de Soia Golden Wax 464 (AAK Suedia)\",\"nameEn\":\"Golden Wax 464 Soy Wax (AAK Sweden)\",\"nameFr\":\"Cire de Soja Golden Wax 464 (AAK Suède)\",\"nameDe\":\"Golden Wax 464 Sojawachs (AAK Schweden)\",\"nameIt\":\"Cera di Soia Golden Wax 464 (AAK Svezia)\",\"nameEs\":\"Cera de Soja Golden Wax 464 (AAK Suecia)\",\"category\":\"wax\",\"quantity\":4500,\"unit\":\"g\",\"minThreshold\":5000,\"costPerUnit\":0.048,\"supplier\":\"CandleWorks Europe\",\"lotNumber\":\"GW464-2026-B8\",\"lastRestocked\":\"2026-10-10\",\"notes\":\"Punct de topire 45-48°C. Aderență perfectă la borcane.\",\"notesRo\":\"Punct de topire 45-48°C. Aderență perfectă la borcane.\",\"notesEn\":\"Melt point 45-48°C. Outstanding glass container adhesion.\",\"notesFr\":\"Point de fusion 45-48°C. Excellente adhérence aux contenants en verre.\",\"notesDe\":\"Schmelzpunkt 45-48°C. Hervorragende Glaswandhaftung.\",\"notesIt\":\"Punto di fusione 45-48°C. Eccellente aderenza al vetro.\",\"notesEs\":\"Punto de fusión 45-48°C. Excelente adherencia al vidrio.\",\"weeklyConsumptionRate\":1600,\"leadTimeDays\":5}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-wax-2",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-wax-2\",\"name\":\"Ceară Naturală Soia NatureWax C3 (Cargill)\",\"nameRo\":\"Ceară Naturală Soia NatureWax C3 (Cargill)\",\"nameEn\":\"NatureWax C3 Pure Soy Wax (Cargill)\",\"nameFr\":\"Cire Naturelle de Soja NatureWax C3 (Cargill)\",\"nameDe\":\"NatureWax C3 Reines Sojawachs (Cargill)\",\"nameIt\":\"Cera Naturale di Soia NatureWax C3 (Cargill)\",\"nameEs\":\"Cera Natural de Soja NatureWax C3 (Cargill)\",\"category\":\"wax\",\"quantity\":12000,\"unit\":\"g\",\"minThreshold\":4000,\"costPerUnit\":0.052,\"supplier\":\"AromaCraft Supplies\",\"lotNumber\":\"C3-LOT-889\",\"lastRestocked\":\"2026-10-18\",\"notes\":\"Finish cremos mătăsos. Ideală pentru recipiente de sticlă.\",\"notesRo\":\"Finish cremos mătăsos. Ideală pentru recipiente de sticlă.\",\"notesEn\":\"Silky creamy finish. Ideal for premium container candles.\",\"notesFr\":\"Finition soyeuse et crémeuse. Idéale pour bougies en pot.\",\"notesDe\":\"Seidiges cremiges Finish. Perfekt für Behälterkerzen.\",\"notesIt\":\"Finitura cremosa e setosa. Ideale per candele in vasetto.\",\"notesEs\":\"Acabado suave y cremoso. Ideal para velas en vaso.\",\"weeklyConsumptionRate\":1800,\"leadTimeDays\":6}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-wax-3",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-wax-3\",\"name\":\"Ceară Pură de Cocos Organică\",\"nameRo\":\"Ceară Pură de Cocos Organică\",\"nameEn\":\"Organic Virgin Coconut Wax\",\"nameFr\":\"Cire Végétale Pure de Coco Bio\",\"nameDe\":\"Organisches Reines Kokoswachs\",\"nameIt\":\"Cera Pura di Cocco Biologica\",\"nameEs\":\"Cera Pura de Coco Orgánica\",\"category\":\"wax\",\"quantity\":3200,\"unit\":\"g\",\"minThreshold\":3000,\"costPerUnit\":0.068,\"supplier\":\"BioWax Organics\",\"lotNumber\":\"COC-2026-09\",\"lastRestocked\":\"2026-09-28\",\"notes\":\"Punct de topire scăzut, arde curat, excelent cold throw.\",\"notesRo\":\"Punct de topire scăzut, arde curat, excelent cold throw.\",\"notesEn\":\"Low melting point, clean burn, superb cold scent throw.\",\"notesFr\":\"Point de fusion bas, combustion propre, excellente diffusion à froid.\",\"notesDe\":\"Niedriger Schmelzpunkt, saubere Verbrennung, tolle Kaltabgabe.\",\"notesIt\":\"Punto di fusione basso, combustione pulita, ottima diffusione.\",\"notesEs\":\"Bajo punto de fusión, combustión limpia, gran difusión en frío.\",\"weeklyConsumptionRate\":650,\"leadTimeDays\":5}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-wax-4",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-wax-4\",\"name\":\"Ceară Naturală de Albine Galbenă (Calup)\",\"nameRo\":\"Ceară Naturală de Albine Galbenă (Calup)\",\"nameEn\":\"Natural Yellow Beeswax Block\",\"nameFr\":\"Pain de Cire d'Abeille Jaune Naturelle\",\"nameDe\":\"Natürliches Gelbes Bienenwachs (Block)\",\"nameIt\":\"Panetto di Cera d'Api Gialla Naturale\",\"nameEs\":\"Bloque de Cera de Abeja Amarilla Natural\",\"category\":\"wax\",\"quantity\":1800,\"unit\":\"g\",\"minThreshold\":2000,\"costPerUnit\":0.075,\"supplier\":\"Apicultura Românească SRL\",\"lotNumber\":\"AP-RO-442\",\"lastRestocked\":\"2026-10-02\",\"notes\":\"Miros natural subtil de miere și propolis.\",\"notesRo\":\"Miros natural subtil de miere și propolis.\",\"notesEn\":\"Subtle natural honey and propolis undertone.\",\"notesFr\":\"Subtile senteur naturelle de miel et de propolis.\",\"notesDe\":\"Dezenter natürlicher Duft nach Honig und Propolis.\",\"notesIt\":\"Sottile aroma naturale di miele e propoli.\",\"notesEs\":\"Aroma natural sutil a miel y propóleo.\",\"weeklyConsumptionRate\":350,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-wick-1",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-wick-1\",\"name\":\"Fitil Bumbac TCR 27/16 (pre-cerat 12cm)\",\"nameRo\":\"Fitil Bumbac TCR 27/16 (pre-cerat 12cm)\",\"nameEn\":\"TCR 27/16 Cotton Wick (Pre-waxed 12cm)\",\"nameFr\":\"Mèche en Coton TCR 27/16 (Pré-cirée 12cm)\",\"nameDe\":\"TCR 27/16 Baumwolldocht (Gewachst 12cm)\",\"nameIt\":\"Stoppino in Cotone TCR 27/16 (Pre-incerato 12cm)\",\"nameEs\":\"Mecha de Algodón TCR 27/16 (Pre-encerada 12cm)\",\"category\":\"wick\",\"quantity\":14,\"unit\":\"buc\",\"minThreshold\":50,\"costPerUnit\":0.95,\"supplier\":\"Wedo Wicks Germania\",\"lotNumber\":\"TCR-27-02\",\"lastRestocked\":\"2026-09-15\",\"notes\":\"Recomandat pentru borcane cu diametru 72-78mm.\",\"notesRo\":\"Recomandat pentru borcane cu diametru 72-78mm.\",\"notesEn\":\"Recommended for jars with 72-78mm diameter.\",\"notesFr\":\"Recommandée pour contenants de 72-78mm de diamètre.\",\"notesDe\":\"Empfohlen für Gefäße mit 72-78mm Durchmesser.\",\"notesIt\":\"Consigliato per vasetti con diametro 72-78mm.\",\"notesEs\":\"Recomendada para recipientes de 72-78mm de diámetro.\",\"weeklyConsumptionRate\":20,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-wick-2",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-wick-2\",\"name\":\"Fitil Eco 8 (Bumbac cu fire de hârtie)\",\"nameRo\":\"Fitil Eco 8 (Bumbac cu fire de hârtie)\",\"nameEn\":\"Eco 8 Wick (Cotton with Paper Filaments)\",\"nameFr\":\"Mèche Eco 8 (Coton & Filaments de Papier)\",\"nameDe\":\"Eco 8 Docht (Baumwolle mit Papierfäden)\",\"nameIt\":\"Stoppino Eco 8 (Cotone e Filamenti di Carta)\",\"nameEs\":\"Mecha Eco 8 (Algodón con Filamentos de Papel)\",\"category\":\"wick\",\"quantity\":85,\"unit\":\"buc\",\"minThreshold\":40,\"costPerUnit\":0.88,\"supplier\":\"Wedo Wicks Germania\",\"lotNumber\":\"ECO-8-11\",\"lastRestocked\":\"2026-10-12\",\"notes\":\"Fără fum, autotăietor în timpul arderii.\",\"notesRo\":\"Fără fum, autotăietor în timpul arderii.\",\"notesEn\":\"Smokeless, self-trimming burn profile.\",\"notesFr\":\"Sans fumée, profil auto-recourbant à la combustion.\",\"notesDe\":\"Rauchfrei, selbstkürzendes Abbrandverhalten.\",\"notesIt\":\"Senza fumo, auto-accorciante durante la combustione.\",\"notesEs\":\"Sin humo, perfil auto-recortable durante el quemado.\",\"weeklyConsumptionRate\":22,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-wick-3",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-wick-3\",\"name\":\"Fitil Eco 6 (Diametru 60-68mm)\",\"nameRo\":\"Fitil Eco 6 (Diametru 60-68mm)\",\"nameEn\":\"Eco 6 Wick (Diameter 60-68mm)\",\"nameFr\":\"Mèche Eco 6 (Diamètre 60-68mm)\",\"nameDe\":\"Eco 6 Docht (Durchmesser 60-68mm)\",\"nameIt\":\"Stoppino Eco 6 (Diametro 60-68mm)\",\"nameEs\":\"Mecha Eco 6 (Diámetro 60-68mm)\",\"category\":\"wick\",\"quantity\":110,\"unit\":\"buc\",\"minThreshold\":30,\"costPerUnit\":0.82,\"supplier\":\"Wedo Wicks Germania\",\"lotNumber\":\"ECO-6-09\",\"lastRestocked\":\"2026-10-12\",\"notes\":\"Pentru pahare medii și borcane de 200ml.\",\"notesRo\":\"Pentru pahare medii și borcane de 200ml.\",\"notesEn\":\"For medium votives and 200ml candle vessels.\",\"notesFr\":\"Pour verres moyens et pots à bougie de 200ml.\",\"notesDe\":\"Für mittlere Gläser und 200ml Kerzengefäße.\",\"notesIt\":\"Per bicchieri medi e vasetti da 200ml.\",\"notesEs\":\"Para vasos medianos y frascos de 200ml.\",\"weeklyConsumptionRate\":18,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-wick-4",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-wick-4\",\"name\":\"Fitil Lemn Natural 13mm cu Suport Metalic Booster\",\"nameRo\":\"Fitil Lemn Natural 13mm cu Suport Metalic Booster\",\"nameEn\":\"Natural Wooden Wick 13mm with Booster Clip\",\"nameFr\":\"Mèche en Bois Naturel 13mm avec Support Booster\",\"nameDe\":\"Naturholzdocht 13mm mit Booster-Metallclip\",\"nameIt\":\"Stoppino in Legno Naturale 13mm con Supporto Booster\",\"nameEs\":\"Mecha de Madera Natural 13mm con Clip Booster\",\"category\":\"wick\",\"quantity\":28,\"unit\":\"buc\",\"minThreshold\":35,\"costPerUnit\":2.2,\"supplier\":\"LumberCraft Artisan\",\"lotNumber\":\"WOOD-13-B\",\"lastRestocked\":\"2026-09-20\",\"notes\":\"Efect de șemineu (crackling sound).\",\"notesRo\":\"Efect de șemineu (crackling sound).\",\"notesEn\":\"Cozy fireplace crackling acoustic effect.\",\"notesFr\":\"Effet acoustique crépitant feu de cheminée.\",\"notesDe\":\"Gemütlicher Kaminfeuer-Knistereffekt.\",\"notesIt\":\"Effetto scoppiettante camino accogliente.\",\"notesEs\":\"Efecto crujiente acogedor estilo chimenea.\",\"weeklyConsumptionRate\":12,\"leadTimeDays\":7}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-frag-1",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-frag-1\",\"name\":\"Ulei Premium Chihlimbar & Oud Afumat (Grasse)\",\"nameRo\":\"Ulei Premium Chihlimbar & Oud Afumat (Grasse)\",\"nameEn\":\"Smoked Oud & Amber Fragrance Oil (Grasse)\",\"nameFr\":\"Huile Parfumée Oud Fumé & Ambre Impérial (Grasse)\",\"nameDe\":\"Geräucherter Oud & Bernstein Duftöl (Grasse)\",\"nameIt\":\"Olio Profumato Oud Affumicato & Ambra (Grasse)\",\"nameEs\":\"Aceite Esencial Oud Ahumado & Ámbar (Grasse)\",\"category\":\"fragrance\",\"quantity\":180,\"unit\":\"g\",\"minThreshold\":250,\"costPerUnit\":0.42,\"supplier\":\"Grasse Parfums Franța\",\"lotNumber\":\"AMB-OUD-991\",\"lastRestocked\":\"2026-09-10\",\"notes\":\"Flashpoint: 92°C. Încărcare recomandată 8-10%.\",\"notesRo\":\"Flashpoint: 92°C. Încărcare recomandată 8-10%.\",\"notesEn\":\"Flashpoint: 92°C. Recommended loading 8-10%.\",\"notesFr\":\"Point éclair: 92°C. Dosage recommandé 8-10%.\",\"notesDe\":\"Flammpunkt: 92°C. Empfohlene Dosierung 8-10%.\",\"notesIt\":\"Punto di infiammabilità: 92°C. Dosaggio 8-10%.\",\"notesEs\":\"Punto de inflamación: 92°C. Carga recomendada 8-10%.\",\"weeklyConsumptionRate\":120,\"leadTimeDays\":10}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-frag-2",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-frag-2\",\"name\":\"Ulei Vanilie de Madagascar & Cașmir Mătăsos\",\"nameRo\":\"Ulei Vanilie de Madagascar & Cașmir Mătăsos\",\"nameEn\":\"Madagascar Vanilla Bean & Silk Cashmere Oil\",\"nameFr\":\"Huile Vanille de Madagascar & Cachemire Soyeux\",\"nameDe\":\"Madagaskar-Vanilleschote & Kaschmir Duftöl\",\"nameIt\":\"Olio Bacca di Vaniglia del Madagascar & Cashmere\",\"nameEs\":\"Aceite Vainilla de Madagascar & Cachemira\",\"category\":\"fragrance\",\"quantity\":650,\"unit\":\"g\",\"minThreshold\":200,\"costPerUnit\":0.36,\"supplier\":\"Scents of Luxury UK\",\"lotNumber\":\"VAN-CASH-33\",\"lastRestocked\":\"2026-10-15\",\"notes\":\"Flashpoint: 88°C. Excelent hot throw în ceară soia.\",\"notesRo\":\"Flashpoint: 88°C. Excelent hot throw în ceară soia.\",\"notesEn\":\"Flashpoint: 88°C. Excellent hot scent throw in soy wax.\",\"notesFr\":\"Point éclair: 88°C. Excellente diffusion à chaud dans la cire de soja.\",\"notesDe\":\"Flammpunkt: 88°C. Hervorragende Heißduftabgabe in Sojawachs.\",\"notesIt\":\"Punto di infiammabilità: 88°C. Ottima diffusione a caldo.\",\"notesEs\":\"Punto de inflamación: 88°C. Excelente difusión en caliente.\",\"weeklyConsumptionRate\":140,\"leadTimeDays\":8}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-frag-3",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-frag-3\",\"name\":\"Ulei Lavandă de Provence & Miere Polifloră\",\"nameRo\":\"Ulei Lavandă de Provence & Miere Polifloră\",\"nameEn\":\"Provence Lavender & Wild Flower Honey Oil\",\"nameFr\":\"Huile Lavande de Provence & Miel Sauvage\",\"nameDe\":\"Provence-Lavendel & Wildblütenhonig Duftöl\",\"nameIt\":\"Olio Lavanda di Provenza & Miele Millefiori\",\"nameEs\":\"Aceite Lavanda de Provenza & Miel Silvestre\",\"category\":\"fragrance\",\"quantity\":420,\"unit\":\"g\",\"minThreshold\":150,\"costPerUnit\":0.38,\"supplier\":\"Grasse Parfums Franța\",\"lotNumber\":\"LAV-HON-12\",\"lastRestocked\":\"2026-10-05\",\"notes\":\"Conține ulei esențial pur de lavandă fină.\",\"notesRo\":\"Conține ulei esențial pur de lavandă fină.\",\"notesEn\":\"Infused with pure fine French lavender essential oil.\",\"notesFr\":\"Infusée d'huile essentielle pure de lavande fine de France.\",\"notesDe\":\"Mit reinem französischem Lavendelöl angereichert.\",\"notesIt\":\"Arricchito con olio essenziale puro di lavanda.\",\"notesEs\":\"Con aceite esencial puro de lavanda francesa.\",\"weeklyConsumptionRate\":90,\"leadTimeDays\":10}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-frag-4",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-frag-4\",\"name\":\"Ulei Frunze de Tutun Nobil & Bourbon Învechit\",\"nameRo\":\"Ulei Frunze de Tutun Nobil & Bourbon Învechit\",\"nameEn\":\"Aged Bourbon & Noble Tobacco Leaf Oil\",\"nameFr\":\"Huile Feuilles de Tabac Noble & Vieux Bourbon\",\"nameDe\":\"Gereifter Bourbon & Edles Tabakblatt Duftöl\",\"nameIt\":\"Olio Foglie di Tabacco Nobile & Bourbon Invecchiato\",\"nameEs\":\"Aceite Hojas de Tabaco Noble & Bourbon Añejo\",\"category\":\"fragrance\",\"quantity\":510,\"unit\":\"g\",\"minThreshold\":200,\"costPerUnit\":0.44,\"supplier\":\"Scents of Luxury UK\",\"lotNumber\":\"TOB-BRB-77\",\"lastRestocked\":\"2026-10-18\",\"notes\":\"Note calde, masculine, profunde.\",\"notesRo\":\"Note calde, masculine, profunde.\",\"notesEn\":\"Warm, masculine, sophisticated amber depth.\",\"notesFr\":\"Notes chaudes, masculines et sophistiquées.\",\"notesDe\":\"Warme, maskuline und elegante Dufttiefe.\",\"notesIt\":\"Note calde, maschili e raffinate.\",\"notesEs\":\"Notas cálidas, masculinas y elegantes.\",\"weeklyConsumptionRate\":130,\"leadTimeDays\":8}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-frag-5",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-frag-5\",\"name\":\"Ulei Cafea Arabica Prăjită & Boabe de Tonka\",\"nameRo\":\"Ulei Cafea Arabica Prăjită & Boabe de Tonka\",\"nameEn\":\"Dark Roasted Arabica & Sweet Tonka Bean Oil\",\"nameFr\":\"Huile Café Arabica Torréfié & Fève Tonka\",\"nameDe\":\"Dunkel Gerösteter Arabica & Tonkabohne Duftöl\",\"nameIt\":\"Olio Caffè Arabica Tostato & Fava Tonka\",\"nameEs\":\"Aceite Café Arábica Tostado & Haba Tonka\",\"category\":\"fragrance\",\"quantity\":80,\"unit\":\"g\",\"minThreshold\":150,\"costPerUnit\":0.39,\"supplier\":\"AromaCraft Supplies\",\"lotNumber\":\"COF-TNK-04\",\"lastRestocked\":\"2026-08-30\",\"notes\":\"Aromă gourmet extrem de intensă.\",\"notesRo\":\"Aromă gourmet extrem de intensă.\",\"notesEn\":\"Ultra-rich cozy gourmet espresso aroma.\",\"notesFr\":\"Arôme gourmand intense de café torréfié.\",\"notesDe\":\"Extrem intensives Gourmet-Kaffeearoma.\",\"notesIt\":\"Aroma gourmet intenso di caffè tostato.\",\"notesEs\":\"Aroma gourmet intenso de café recién tostado.\",\"weeklyConsumptionRate\":70,\"leadTimeDays\":7}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-vessel-1",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-vessel-1\",\"name\":\"Borcan Sticlă Mată Neagră 250ml (Ø 74mm)\",\"nameRo\":\"Borcan Sticlă Mată Neagră 250ml (Ø 74mm)\",\"nameEn\":\"Matte Black Glass Jar 250ml (Ø 74mm)\",\"nameFr\":\"Pot en Verre Noir Mat 250ml (Ø 74mm)\",\"nameDe\":\"Mattschwarzes Glasgefäß 250ml (Ø 74mm)\",\"nameIt\":\"Vasetto in Vetro Nero Opaco 250ml (Ø 74mm)\",\"nameEs\":\"Frasco de Vidrio Negro Mate 250ml (Ø 74mm)\",\"category\":\"vessel\",\"quantity\":64,\"unit\":\"buc\",\"minThreshold\":30,\"costPerUnit\":6.8,\"supplier\":\"Vetro Artisans Italia\",\"lotNumber\":\"JAR-BLK-250\",\"lastRestocked\":\"2026-10-14\",\"notes\":\"Sticlă termorezistentă, vopsită electrostatic mat.\",\"notesRo\":\"Sticlă termorezistentă, vopsită electrostatic mat.\",\"notesEn\":\"Thermal shock resistant, electrostatic powder-coated.\",\"notesFr\":\"Verre thermorésistant, finition poudrée mate.\",\"notesDe\":\"Hitzebeständiges Glas, elektrostatisch pulverbeschichtet.\",\"notesIt\":\"Vetro resistente al calore con verniciatura opaca.\",\"notesEs\":\"Vidrio térmico resistente con pintura mate electrostática.\",\"weeklyConsumptionRate\":16,\"leadTimeDays\":7}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-vessel-2",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-vessel-2\",\"name\":\"Borcan Sticlă Chihlimbar (Amber Jar) 200ml (Ø 68mm)\",\"nameRo\":\"Borcan Sticlă Chihlimbar (Amber Jar) 200ml (Ø 68mm)\",\"nameEn\":\"Amber Glass Apothecary Jar 200ml (Ø 68mm)\",\"nameFr\":\"Pot en Verre Ambré Apothicaire 200ml (Ø 68mm)\",\"nameDe\":\"Bernsteinglas-Apothekergefäß 200ml (Ø 68mm)\",\"nameIt\":\"Barattolo Farmacia in Vetro Ambrato 200ml (Ø 68mm)\",\"nameEs\":\"Tarro de Boticario Vidrio Ámbar 200ml (Ø 68mm)\",\"category\":\"vessel\",\"quantity\":18,\"unit\":\"buc\",\"minThreshold\":40,\"costPerUnit\":4.9,\"supplier\":\"Vetro Artisans Italia\",\"lotNumber\":\"AMB-200-L3\",\"lastRestocked\":\"2026-09-12\",\"notes\":\"Capac de aluminiu negru inclus.\",\"notesRo\":\"Capac de aluminiu negru inclus.\",\"notesEn\":\"Black aluminum screw lid included.\",\"notesFr\":\"Couvercle en aluminium noir inclus.\",\"notesDe\":\"Schwarzer Aluminium-Schraubdeckel inklusive.\",\"notesIt\":\"Tappo a vite in alluminio nero incluso.\",\"notesEs\":\"Tapa de rosca de aluminio negro incluida.\",\"weeklyConsumptionRate\":15,\"leadTimeDays\":6}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-vessel-3",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-vessel-3\",\"name\":\"Pahar Ceramic Alb Mat 220ml (Ø 70mm)\",\"nameRo\":\"Pahar Ceramic Alb Mat 220ml (Ø 70mm)\",\"nameEn\":\"Matte White Ceramic Cup 220ml (Ø 70mm)\",\"nameFr\":\"Tasse Céramique Blanche Mate 220ml (Ø 70mm)\",\"nameDe\":\"Mattweißer Keramikbecher 220ml (Ø 70mm)\",\"nameIt\":\"Tazza in Ceramica Bianca Opaca 220ml (Ø 70mm)\",\"nameEs\":\"Vaso Cerámica Blanco Mate 220ml (Ø 70mm)\",\"category\":\"vessel\",\"quantity\":45,\"unit\":\"buc\",\"minThreshold\":25,\"costPerUnit\":8.5,\"supplier\":\"Ceramica Atelier Brașov\",\"lotNumber\":\"CER-WHT-22\",\"lastRestocked\":\"2026-10-08\",\"notes\":\"Model minimalist scandinav, lucrat manual.\",\"notesRo\":\"Model minimalist scandinav, lucrat manual.\",\"notesEn\":\"Handmade Nordic minimalist stoneware cup.\",\"notesFr\":\"Grès artisanal au design scandinave épuré.\",\"notesDe\":\"Handgefertigte nordische Steinzeug-Keramik.\",\"notesIt\":\"Ceramica artigianale in stile nordico minimale.\",\"notesEs\":\"Cerámica artesanal de diseño nórdico minimalista.\",\"weeklyConsumptionRate\":8,\"leadTimeDays\":12}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-pack-1",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-pack-1\",\"name\":\"Cutie Cadou Lux Neagră cu Ștanță Aurie Wix & Wax\",\"nameRo\":\"Cutie Cadou Lux Neagră cu Ștanță Aurie Wix & Wax\",\"nameEn\":\"Luxury Black Gold-Foil Gift Box Wix & Wax\",\"nameFr\":\"Coffret Cadeau Luxe Noir & Dorure à Chaud Wix & Wax\",\"nameDe\":\"Luxus-Geschenkbox Schwarz mit Goldfolienprägung Wix & Wax\",\"nameIt\":\"Scatola Regalo Luxury Nera con Stampa Oro Wix & Wax\",\"nameEs\":\"Caja de Regalo de Lujo Negra con Estampado Dorado Wix & Wax\",\"category\":\"packaging\",\"quantity\":75,\"unit\":\"buc\",\"minThreshold\":50,\"costPerUnit\":4.2,\"supplier\":\"Artisan Packaging Cluj\",\"lotNumber\":\"BOX-GOLD-01\",\"lastRestocked\":\"2026-10-16\",\"notes\":\"Carton rigid 400g cu textură catifelată (soft-touch).\",\"notesRo\":\"Carton rigid 400g cu textură catifelată (soft-touch).\",\"notesEn\":\"Rigid 400gsm board with velvet soft-touch coating.\",\"notesFr\":\"Carton rigide 400g avec pelliculage doux au toucher.\",\"notesDe\":\"Stabile 400g-Kartonage mit Soft-Touch-Finish.\",\"notesIt\":\"Cartone rigido da 400g con finitura vellutata.\",\"notesEs\":\"Cartón rígido de 400g con acabado aterciopelado soft-touch.\",\"weeklyConsumptionRate\":20,\"leadTimeDays\":5}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-pro-001-inv-pack-2",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"inv-pack-2\",\"name\":\"Etichete CLP Avertizare Siguranță Rotunde (Ø 50mm)\",\"nameRo\":\"Etichete CLP Avertizare Siguranță Rotunde (Ø 50mm)\",\"nameEn\":\"Round CLP Safety Warning Decals (Ø 50mm)\",\"nameFr\":\"Étiquettes Rondes Avertissement Sécurité CLP (Ø 50mm)\",\"nameDe\":\"Runde CLP-Sicherheitswarnaufkleber (Ø 50mm)\",\"nameIt\":\"Adesivi Rotondi Avvertenze di Sicurezza CLP (Ø 50mm)\",\"nameEs\":\"Etiquetas Circulares de Advertencia CLP (Ø 50mm)\",\"category\":\"accessory\",\"quantity\":120,\"unit\":\"buc\",\"minThreshold\":100,\"costPerUnit\":0.45,\"supplier\":\"Tipografie Digitală\",\"lotNumber\":\"CLP-50MM-RO\",\"lastRestocked\":\"2026-10-11\",\"notes\":\"Conforme cu standardele REACH/CLP UE.\",\"notesRo\":\"Conforme cu standardele REACH/CLP UE.\",\"notesEn\":\"EU REACH & CLP mandatory compliant print.\",\"notesFr\":\"Conformes aux normes européennes REACH/CLP.\",\"notesDe\":\"Konform mit den EU-REACH/CLP-Vorschriften.\",\"notesIt\":\"Conformi agli standard europei REACH/CLP.\",\"notesEs\":\"Cumple con la normativa europea REACH/CLP.\",\"weeklyConsumptionRate\":35,\"leadTimeDays\":3}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-wax-1",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-wax-1\",\"name\":\"Ceară de Soia Golden Wax 464 (AAK Suedia)\",\"nameRo\":\"Ceară de Soia Golden Wax 464 (AAK Suedia)\",\"nameEn\":\"Golden Wax 464 Soy Wax (AAK Sweden)\",\"nameFr\":\"Cire de Soja Golden Wax 464 (AAK Suède)\",\"nameDe\":\"Golden Wax 464 Sojawachs (AAK Schweden)\",\"nameIt\":\"Cera di Soia Golden Wax 464 (AAK Svezia)\",\"nameEs\":\"Cera de Soja Golden Wax 464 (AAK Suecia)\",\"category\":\"wax\",\"quantity\":4500,\"unit\":\"g\",\"minThreshold\":5000,\"costPerUnit\":0.048,\"supplier\":\"CandleWorks Europe\",\"lotNumber\":\"GW464-2026-B8\",\"lastRestocked\":\"2026-10-10\",\"notes\":\"Punct de topire 45-48°C. Aderență perfectă la borcane.\",\"notesRo\":\"Punct de topire 45-48°C. Aderență perfectă la borcane.\",\"notesEn\":\"Melt point 45-48°C. Outstanding glass container adhesion.\",\"notesFr\":\"Point de fusion 45-48°C. Excellente adhérence aux contenants en verre.\",\"notesDe\":\"Schmelzpunkt 45-48°C. Hervorragende Glaswandhaftung.\",\"notesIt\":\"Punto di fusione 45-48°C. Eccellente aderenza al vetro.\",\"notesEs\":\"Punto de fusión 45-48°C. Excelente adherencia al vidrio.\",\"weeklyConsumptionRate\":1600,\"leadTimeDays\":5}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-wax-2",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-wax-2\",\"name\":\"Ceară Naturală Soia NatureWax C3 (Cargill)\",\"nameRo\":\"Ceară Naturală Soia NatureWax C3 (Cargill)\",\"nameEn\":\"NatureWax C3 Pure Soy Wax (Cargill)\",\"nameFr\":\"Cire Naturelle de Soja NatureWax C3 (Cargill)\",\"nameDe\":\"NatureWax C3 Reines Sojawachs (Cargill)\",\"nameIt\":\"Cera Naturale di Soia NatureWax C3 (Cargill)\",\"nameEs\":\"Cera Natural de Soja NatureWax C3 (Cargill)\",\"category\":\"wax\",\"quantity\":12000,\"unit\":\"g\",\"minThreshold\":4000,\"costPerUnit\":0.052,\"supplier\":\"AromaCraft Supplies\",\"lotNumber\":\"C3-LOT-889\",\"lastRestocked\":\"2026-10-18\",\"notes\":\"Finish cremos mătăsos. Ideală pentru recipiente de sticlă.\",\"notesRo\":\"Finish cremos mătăsos. Ideală pentru recipiente de sticlă.\",\"notesEn\":\"Silky creamy finish. Ideal for premium container candles.\",\"notesFr\":\"Finition soyeuse et crémeuse. Idéale pour bougies en pot.\",\"notesDe\":\"Seidiges cremiges Finish. Perfekt für Behälterkerzen.\",\"notesIt\":\"Finitura cremosa e setosa. Ideale per candele in vasetto.\",\"notesEs\":\"Acabado suave y cremoso. Ideal para velas en vaso.\",\"weeklyConsumptionRate\":1800,\"leadTimeDays\":6}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-wax-3",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-wax-3\",\"name\":\"Ceară Pură de Cocos Organică\",\"nameRo\":\"Ceară Pură de Cocos Organică\",\"nameEn\":\"Organic Virgin Coconut Wax\",\"nameFr\":\"Cire Végétale Pure de Coco Bio\",\"nameDe\":\"Organisches Reines Kokoswachs\",\"nameIt\":\"Cera Pura di Cocco Biologica\",\"nameEs\":\"Cera Pura de Coco Orgánica\",\"category\":\"wax\",\"quantity\":3200,\"unit\":\"g\",\"minThreshold\":3000,\"costPerUnit\":0.068,\"supplier\":\"BioWax Organics\",\"lotNumber\":\"COC-2026-09\",\"lastRestocked\":\"2026-09-28\",\"notes\":\"Punct de topire scăzut, arde curat, excelent cold throw.\",\"notesRo\":\"Punct de topire scăzut, arde curat, excelent cold throw.\",\"notesEn\":\"Low melting point, clean burn, superb cold scent throw.\",\"notesFr\":\"Point de fusion bas, combustion propre, excellente diffusion à froid.\",\"notesDe\":\"Niedriger Schmelzpunkt, saubere Verbrennung, tolle Kaltabgabe.\",\"notesIt\":\"Punto di fusione basso, combustione pulita, ottima diffusione.\",\"notesEs\":\"Bajo punto de fusión, combustión limpia, gran difusión en frío.\",\"weeklyConsumptionRate\":650,\"leadTimeDays\":5}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-wax-4",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-wax-4\",\"name\":\"Ceară Naturală de Albine Galbenă (Calup)\",\"nameRo\":\"Ceară Naturală de Albine Galbenă (Calup)\",\"nameEn\":\"Natural Yellow Beeswax Block\",\"nameFr\":\"Pain de Cire d'Abeille Jaune Naturelle\",\"nameDe\":\"Natürliches Gelbes Bienenwachs (Block)\",\"nameIt\":\"Panetto di Cera d'Api Gialla Naturale\",\"nameEs\":\"Bloque de Cera de Abeja Amarilla Natural\",\"category\":\"wax\",\"quantity\":1800,\"unit\":\"g\",\"minThreshold\":2000,\"costPerUnit\":0.075,\"supplier\":\"Apicultura Românească SRL\",\"lotNumber\":\"AP-RO-442\",\"lastRestocked\":\"2026-10-02\",\"notes\":\"Miros natural subtil de miere și propolis.\",\"notesRo\":\"Miros natural subtil de miere și propolis.\",\"notesEn\":\"Subtle natural honey and propolis undertone.\",\"notesFr\":\"Subtile senteur naturelle de miel et de propolis.\",\"notesDe\":\"Dezenter natürlicher Duft nach Honig und Propolis.\",\"notesIt\":\"Sottile aroma naturale di miele e propoli.\",\"notesEs\":\"Aroma natural sutil a miel y propóleo.\",\"weeklyConsumptionRate\":350,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-wick-1",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-wick-1\",\"name\":\"Fitil Bumbac TCR 27/16 (pre-cerat 12cm)\",\"nameRo\":\"Fitil Bumbac TCR 27/16 (pre-cerat 12cm)\",\"nameEn\":\"TCR 27/16 Cotton Wick (Pre-waxed 12cm)\",\"nameFr\":\"Mèche en Coton TCR 27/16 (Pré-cirée 12cm)\",\"nameDe\":\"TCR 27/16 Baumwolldocht (Gewachst 12cm)\",\"nameIt\":\"Stoppino in Cotone TCR 27/16 (Pre-incerato 12cm)\",\"nameEs\":\"Mecha de Algodón TCR 27/16 (Pre-encerada 12cm)\",\"category\":\"wick\",\"quantity\":14,\"unit\":\"buc\",\"minThreshold\":50,\"costPerUnit\":0.95,\"supplier\":\"Wedo Wicks Germania\",\"lotNumber\":\"TCR-27-02\",\"lastRestocked\":\"2026-09-15\",\"notes\":\"Recomandat pentru borcane cu diametru 72-78mm.\",\"notesRo\":\"Recomandat pentru borcane cu diametru 72-78mm.\",\"notesEn\":\"Recommended for jars with 72-78mm diameter.\",\"notesFr\":\"Recommandée pour contenants de 72-78mm de diamètre.\",\"notesDe\":\"Empfohlen für Gefäße mit 72-78mm Durchmesser.\",\"notesIt\":\"Consigliato per vasetti con diametro 72-78mm.\",\"notesEs\":\"Recomendada para recipientes de 72-78mm de diámetro.\",\"weeklyConsumptionRate\":20,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-wick-2",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-wick-2\",\"name\":\"Fitil Eco 8 (Bumbac cu fire de hârtie)\",\"nameRo\":\"Fitil Eco 8 (Bumbac cu fire de hârtie)\",\"nameEn\":\"Eco 8 Wick (Cotton with Paper Filaments)\",\"nameFr\":\"Mèche Eco 8 (Coton & Filaments de Papier)\",\"nameDe\":\"Eco 8 Docht (Baumwolle mit Papierfäden)\",\"nameIt\":\"Stoppino Eco 8 (Cotone e Filamenti di Carta)\",\"nameEs\":\"Mecha Eco 8 (Algodón con Filamentos de Papel)\",\"category\":\"wick\",\"quantity\":85,\"unit\":\"buc\",\"minThreshold\":40,\"costPerUnit\":0.88,\"supplier\":\"Wedo Wicks Germania\",\"lotNumber\":\"ECO-8-11\",\"lastRestocked\":\"2026-10-12\",\"notes\":\"Fără fum, autotăietor în timpul arderii.\",\"notesRo\":\"Fără fum, autotăietor în timpul arderii.\",\"notesEn\":\"Smokeless, self-trimming burn profile.\",\"notesFr\":\"Sans fumée, profil auto-recourbant à la combustion.\",\"notesDe\":\"Rauchfrei, selbstkürzendes Abbrandverhalten.\",\"notesIt\":\"Senza fumo, auto-accorciante durante la combustione.\",\"notesEs\":\"Sin humo, perfil auto-recortable durante el quemado.\",\"weeklyConsumptionRate\":22,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-wick-3",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-wick-3\",\"name\":\"Fitil Eco 6 (Diametru 60-68mm)\",\"nameRo\":\"Fitil Eco 6 (Diametru 60-68mm)\",\"nameEn\":\"Eco 6 Wick (Diameter 60-68mm)\",\"nameFr\":\"Mèche Eco 6 (Diamètre 60-68mm)\",\"nameDe\":\"Eco 6 Docht (Durchmesser 60-68mm)\",\"nameIt\":\"Stoppino Eco 6 (Diametro 60-68mm)\",\"nameEs\":\"Mecha Eco 6 (Diámetro 60-68mm)\",\"category\":\"wick\",\"quantity\":110,\"unit\":\"buc\",\"minThreshold\":30,\"costPerUnit\":0.82,\"supplier\":\"Wedo Wicks Germania\",\"lotNumber\":\"ECO-6-09\",\"lastRestocked\":\"2026-10-12\",\"notes\":\"Pentru pahare medii și borcane de 200ml.\",\"notesRo\":\"Pentru pahare medii și borcane de 200ml.\",\"notesEn\":\"For medium votives and 200ml candle vessels.\",\"notesFr\":\"Pour verres moyens et pots à bougie de 200ml.\",\"notesDe\":\"Für mittlere Gläser und 200ml Kerzengefäße.\",\"notesIt\":\"Per bicchieri medi e vasetti da 200ml.\",\"notesEs\":\"Para vasos medianos y frascos de 200ml.\",\"weeklyConsumptionRate\":18,\"leadTimeDays\":4}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-wick-4",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-wick-4\",\"name\":\"Fitil Lemn Natural 13mm cu Suport Metalic Booster\",\"nameRo\":\"Fitil Lemn Natural 13mm cu Suport Metalic Booster\",\"nameEn\":\"Natural Wooden Wick 13mm with Booster Clip\",\"nameFr\":\"Mèche en Bois Naturel 13mm avec Support Booster\",\"nameDe\":\"Naturholzdocht 13mm mit Booster-Metallclip\",\"nameIt\":\"Stoppino in Legno Naturale 13mm con Supporto Booster\",\"nameEs\":\"Mecha de Madera Natural 13mm con Clip Booster\",\"category\":\"wick\",\"quantity\":28,\"unit\":\"buc\",\"minThreshold\":35,\"costPerUnit\":2.2,\"supplier\":\"LumberCraft Artisan\",\"lotNumber\":\"WOOD-13-B\",\"lastRestocked\":\"2026-09-20\",\"notes\":\"Efect de șemineu (crackling sound).\",\"notesRo\":\"Efect de șemineu (crackling sound).\",\"notesEn\":\"Cozy fireplace crackling acoustic effect.\",\"notesFr\":\"Effet acoustique crépitant feu de cheminée.\",\"notesDe\":\"Gemütlicher Kaminfeuer-Knistereffekt.\",\"notesIt\":\"Effetto scoppiettante camino accogliente.\",\"notesEs\":\"Efecto crujiente acogedor estilo chimenea.\",\"weeklyConsumptionRate\":12,\"leadTimeDays\":7}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-frag-1",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-frag-1\",\"name\":\"Ulei Premium Chihlimbar & Oud Afumat (Grasse)\",\"nameRo\":\"Ulei Premium Chihlimbar & Oud Afumat (Grasse)\",\"nameEn\":\"Smoked Oud & Amber Fragrance Oil (Grasse)\",\"nameFr\":\"Huile Parfumée Oud Fumé & Ambre Impérial (Grasse)\",\"nameDe\":\"Geräucherter Oud & Bernstein Duftöl (Grasse)\",\"nameIt\":\"Olio Profumato Oud Affumicato & Ambra (Grasse)\",\"nameEs\":\"Aceite Esencial Oud Ahumado & Ámbar (Grasse)\",\"category\":\"fragrance\",\"quantity\":180,\"unit\":\"g\",\"minThreshold\":250,\"costPerUnit\":0.42,\"supplier\":\"Grasse Parfums Franța\",\"lotNumber\":\"AMB-OUD-991\",\"lastRestocked\":\"2026-09-10\",\"notes\":\"Flashpoint: 92°C. Încărcare recomandată 8-10%.\",\"notesRo\":\"Flashpoint: 92°C. Încărcare recomandată 8-10%.\",\"notesEn\":\"Flashpoint: 92°C. Recommended loading 8-10%.\",\"notesFr\":\"Point éclair: 92°C. Dosage recommandé 8-10%.\",\"notesDe\":\"Flammpunkt: 92°C. Empfohlene Dosierung 8-10%.\",\"notesIt\":\"Punto di infiammabilità: 92°C. Dosaggio 8-10%.\",\"notesEs\":\"Punto de inflamación: 92°C. Carga recomendada 8-10%.\",\"weeklyConsumptionRate\":120,\"leadTimeDays\":10}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-frag-2",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-frag-2\",\"name\":\"Ulei Vanilie de Madagascar & Cașmir Mătăsos\",\"nameRo\":\"Ulei Vanilie de Madagascar & Cașmir Mătăsos\",\"nameEn\":\"Madagascar Vanilla Bean & Silk Cashmere Oil\",\"nameFr\":\"Huile Vanille de Madagascar & Cachemire Soyeux\",\"nameDe\":\"Madagaskar-Vanilleschote & Kaschmir Duftöl\",\"nameIt\":\"Olio Bacca di Vaniglia del Madagascar & Cashmere\",\"nameEs\":\"Aceite Vainilla de Madagascar & Cachemira\",\"category\":\"fragrance\",\"quantity\":650,\"unit\":\"g\",\"minThreshold\":200,\"costPerUnit\":0.36,\"supplier\":\"Scents of Luxury UK\",\"lotNumber\":\"VAN-CASH-33\",\"lastRestocked\":\"2026-10-15\",\"notes\":\"Flashpoint: 88°C. Excelent hot throw în ceară soia.\",\"notesRo\":\"Flashpoint: 88°C. Excelent hot throw în ceară soia.\",\"notesEn\":\"Flashpoint: 88°C. Excellent hot scent throw in soy wax.\",\"notesFr\":\"Point éclair: 88°C. Excellente diffusion à chaud dans la cire de soja.\",\"notesDe\":\"Flammpunkt: 88°C. Hervorragende Heißduftabgabe in Sojawachs.\",\"notesIt\":\"Punto di infiammabilità: 88°C. Ottima diffusione a caldo.\",\"notesEs\":\"Punto de inflamación: 88°C. Excelente difusión en caliente.\",\"weeklyConsumptionRate\":140,\"leadTimeDays\":8}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-frag-3",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-frag-3\",\"name\":\"Ulei Lavandă de Provence & Miere Polifloră\",\"nameRo\":\"Ulei Lavandă de Provence & Miere Polifloră\",\"nameEn\":\"Provence Lavender & Wild Flower Honey Oil\",\"nameFr\":\"Huile Lavande de Provence & Miel Sauvage\",\"nameDe\":\"Provence-Lavendel & Wildblütenhonig Duftöl\",\"nameIt\":\"Olio Lavanda di Provenza & Miele Millefiori\",\"nameEs\":\"Aceite Lavanda de Provenza & Miel Silvestre\",\"category\":\"fragrance\",\"quantity\":420,\"unit\":\"g\",\"minThreshold\":150,\"costPerUnit\":0.38,\"supplier\":\"Grasse Parfums Franța\",\"lotNumber\":\"LAV-HON-12\",\"lastRestocked\":\"2026-10-05\",\"notes\":\"Conține ulei esențial pur de lavandă fină.\",\"notesRo\":\"Conține ulei esențial pur de lavandă fină.\",\"notesEn\":\"Infused with pure fine French lavender essential oil.\",\"notesFr\":\"Infusée d'huile essentielle pure de lavande fine de France.\",\"notesDe\":\"Mit reinem französischem Lavendelöl angereichert.\",\"notesIt\":\"Arricchito con olio essenziale puro di lavanda.\",\"notesEs\":\"Con aceite esencial puro de lavanda francesa.\",\"weeklyConsumptionRate\":90,\"leadTimeDays\":10}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-frag-4",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-frag-4\",\"name\":\"Ulei Frunze de Tutun Nobil & Bourbon Învechit\",\"nameRo\":\"Ulei Frunze de Tutun Nobil & Bourbon Învechit\",\"nameEn\":\"Aged Bourbon & Noble Tobacco Leaf Oil\",\"nameFr\":\"Huile Feuilles de Tabac Noble & Vieux Bourbon\",\"nameDe\":\"Gereifter Bourbon & Edles Tabakblatt Duftöl\",\"nameIt\":\"Olio Foglie di Tabacco Nobile & Bourbon Invecchiato\",\"nameEs\":\"Aceite Hojas de Tabaco Noble & Bourbon Añejo\",\"category\":\"fragrance\",\"quantity\":510,\"unit\":\"g\",\"minThreshold\":200,\"costPerUnit\":0.44,\"supplier\":\"Scents of Luxury UK\",\"lotNumber\":\"TOB-BRB-77\",\"lastRestocked\":\"2026-10-18\",\"notes\":\"Note calde, masculine, profunde.\",\"notesRo\":\"Note calde, masculine, profunde.\",\"notesEn\":\"Warm, masculine, sophisticated amber depth.\",\"notesFr\":\"Notes chaudes, masculines et sophistiquées.\",\"notesDe\":\"Warme, maskuline und elegante Dufttiefe.\",\"notesIt\":\"Note calde, maschili e raffinate.\",\"notesEs\":\"Notas cálidas, masculinas y elegantes.\",\"weeklyConsumptionRate\":130,\"leadTimeDays\":8}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-frag-5",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-frag-5\",\"name\":\"Ulei Cafea Arabica Prăjită & Boabe de Tonka\",\"nameRo\":\"Ulei Cafea Arabica Prăjită & Boabe de Tonka\",\"nameEn\":\"Dark Roasted Arabica & Sweet Tonka Bean Oil\",\"nameFr\":\"Huile Café Arabica Torréfié & Fève Tonka\",\"nameDe\":\"Dunkel Gerösteter Arabica & Tonkabohne Duftöl\",\"nameIt\":\"Olio Caffè Arabica Tostato & Fava Tonka\",\"nameEs\":\"Aceite Café Arábica Tostado & Haba Tonka\",\"category\":\"fragrance\",\"quantity\":80,\"unit\":\"g\",\"minThreshold\":150,\"costPerUnit\":0.39,\"supplier\":\"AromaCraft Supplies\",\"lotNumber\":\"COF-TNK-04\",\"lastRestocked\":\"2026-08-30\",\"notes\":\"Aromă gourmet extrem de intensă.\",\"notesRo\":\"Aromă gourmet extrem de intensă.\",\"notesEn\":\"Ultra-rich cozy gourmet espresso aroma.\",\"notesFr\":\"Arôme gourmand intense de café torréfié.\",\"notesDe\":\"Extrem intensives Gourmet-Kaffeearoma.\",\"notesIt\":\"Aroma gourmet intenso di caffè tostato.\",\"notesEs\":\"Aroma gourmet intenso de café recién tostado.\",\"weeklyConsumptionRate\":70,\"leadTimeDays\":7}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-vessel-1",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-vessel-1\",\"name\":\"Borcan Sticlă Mată Neagră 250ml (Ø 74mm)\",\"nameRo\":\"Borcan Sticlă Mată Neagră 250ml (Ø 74mm)\",\"nameEn\":\"Matte Black Glass Jar 250ml (Ø 74mm)\",\"nameFr\":\"Pot en Verre Noir Mat 250ml (Ø 74mm)\",\"nameDe\":\"Mattschwarzes Glasgefäß 250ml (Ø 74mm)\",\"nameIt\":\"Vasetto in Vetro Nero Opaco 250ml (Ø 74mm)\",\"nameEs\":\"Frasco de Vidrio Negro Mate 250ml (Ø 74mm)\",\"category\":\"vessel\",\"quantity\":64,\"unit\":\"buc\",\"minThreshold\":30,\"costPerUnit\":6.8,\"supplier\":\"Vetro Artisans Italia\",\"lotNumber\":\"JAR-BLK-250\",\"lastRestocked\":\"2026-10-14\",\"notes\":\"Sticlă termorezistentă, vopsită electrostatic mat.\",\"notesRo\":\"Sticlă termorezistentă, vopsită electrostatic mat.\",\"notesEn\":\"Thermal shock resistant, electrostatic powder-coated.\",\"notesFr\":\"Verre thermorésistant, finition poudrée mate.\",\"notesDe\":\"Hitzebeständiges Glas, elektrostatisch pulverbeschichtet.\",\"notesIt\":\"Vetro resistente al calore con verniciatura opaca.\",\"notesEs\":\"Vidrio térmico resistente con pintura mate electrostática.\",\"weeklyConsumptionRate\":16,\"leadTimeDays\":7}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-vessel-2",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-vessel-2\",\"name\":\"Borcan Sticlă Chihlimbar (Amber Jar) 200ml (Ø 68mm)\",\"nameRo\":\"Borcan Sticlă Chihlimbar (Amber Jar) 200ml (Ø 68mm)\",\"nameEn\":\"Amber Glass Apothecary Jar 200ml (Ø 68mm)\",\"nameFr\":\"Pot en Verre Ambré Apothicaire 200ml (Ø 68mm)\",\"nameDe\":\"Bernsteinglas-Apothekergefäß 200ml (Ø 68mm)\",\"nameIt\":\"Barattolo Farmacia in Vetro Ambrato 200ml (Ø 68mm)\",\"nameEs\":\"Tarro de Boticario Vidrio Ámbar 200ml (Ø 68mm)\",\"category\":\"vessel\",\"quantity\":18,\"unit\":\"buc\",\"minThreshold\":40,\"costPerUnit\":4.9,\"supplier\":\"Vetro Artisans Italia\",\"lotNumber\":\"AMB-200-L3\",\"lastRestocked\":\"2026-09-12\",\"notes\":\"Capac de aluminiu negru inclus.\",\"notesRo\":\"Capac de aluminiu negru inclus.\",\"notesEn\":\"Black aluminum screw lid included.\",\"notesFr\":\"Couvercle en aluminium noir inclus.\",\"notesDe\":\"Schwarzer Aluminium-Schraubdeckel inklusive.\",\"notesIt\":\"Tappo a vite in alluminio nero incluso.\",\"notesEs\":\"Tapa de rosca de aluminio negro incluida.\",\"weeklyConsumptionRate\":15,\"leadTimeDays\":6}",
+      "created_at": "2026-10-29T05:58:03.474Z"
+    },
+    {
+      "id": "user-business-001-inv-vessel-3",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-vessel-3\",\"name\":\"Pahar Ceramic Alb Mat 220ml (Ø 70mm)\",\"nameRo\":\"Pahar Ceramic Alb Mat 220ml (Ø 70mm)\",\"nameEn\":\"Matte White Ceramic Cup 220ml (Ø 70mm)\",\"nameFr\":\"Tasse Céramique Blanche Mate 220ml (Ø 70mm)\",\"nameDe\":\"Mattweißer Keramikbecher 220ml (Ø 70mm)\",\"nameIt\":\"Tazza in Ceramica Bianca Opaca 220ml (Ø 70mm)\",\"nameEs\":\"Vaso Cerámica Blanco Mate 220ml (Ø 70mm)\",\"category\":\"vessel\",\"quantity\":45,\"unit\":\"buc\",\"minThreshold\":25,\"costPerUnit\":8.5,\"supplier\":\"Ceramica Atelier Brașov\",\"lotNumber\":\"CER-WHT-22\",\"lastRestocked\":\"2026-10-08\",\"notes\":\"Model minimalist scandinav, lucrat manual.\",\"notesRo\":\"Model minimalist scandinav, lucrat manual.\",\"notesEn\":\"Handmade Nordic minimalist stoneware cup.\",\"notesFr\":\"Grès artisanal au design scandinave épuré.\",\"notesDe\":\"Handgefertigte nordische Steinzeug-Keramik.\",\"notesIt\":\"Ceramica artigianale in stile nordico minimale.\",\"notesEs\":\"Cerámica artesanal de diseño nórdico minimalista.\",\"weeklyConsumptionRate\":8,\"leadTimeDays\":12}",
+      "created_at": "2026-10-29T05:58:03.475Z"
+    },
+    {
+      "id": "user-business-001-inv-pack-1",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-pack-1\",\"name\":\"Cutie Cadou Lux Neagră cu Ștanță Aurie Wix & Wax\",\"nameRo\":\"Cutie Cadou Lux Neagră cu Ștanță Aurie Wix & Wax\",\"nameEn\":\"Luxury Black Gold-Foil Gift Box Wix & Wax\",\"nameFr\":\"Coffret Cadeau Luxe Noir & Dorure à Chaud Wix & Wax\",\"nameDe\":\"Luxus-Geschenkbox Schwarz mit Goldfolienprägung Wix & Wax\",\"nameIt\":\"Scatola Regalo Luxury Nera con Stampa Oro Wix & Wax\",\"nameEs\":\"Caja de Regalo de Lujo Negra con Estampado Dorado Wix & Wax\",\"category\":\"packaging\",\"quantity\":75,\"unit\":\"buc\",\"minThreshold\":50,\"costPerUnit\":4.2,\"supplier\":\"Artisan Packaging Cluj\",\"lotNumber\":\"BOX-GOLD-01\",\"lastRestocked\":\"2026-10-16\",\"notes\":\"Carton rigid 400g cu textură catifelată (soft-touch).\",\"notesRo\":\"Carton rigid 400g cu textură catifelată (soft-touch).\",\"notesEn\":\"Rigid 400gsm board with velvet soft-touch coating.\",\"notesFr\":\"Carton rigide 400g avec pelliculage doux au toucher.\",\"notesDe\":\"Stabile 400g-Kartonage mit Soft-Touch-Finish.\",\"notesIt\":\"Cartone rigido da 400g con finitura vellutata.\",\"notesEs\":\"Cartón rígido de 400g con acabado aterciopelado soft-touch.\",\"weeklyConsumptionRate\":20,\"leadTimeDays\":5}",
+      "created_at": "2026-10-29T05:58:03.475Z"
+    },
+    {
+      "id": "user-business-001-inv-pack-2",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"inv-pack-2\",\"name\":\"Etichete CLP Avertizare Siguranță Rotunde (Ø 50mm)\",\"nameRo\":\"Etichete CLP Avertizare Siguranță Rotunde (Ø 50mm)\",\"nameEn\":\"Round CLP Safety Warning Decals (Ø 50mm)\",\"nameFr\":\"Étiquettes Rondes Avertissement Sécurité CLP (Ø 50mm)\",\"nameDe\":\"Runde CLP-Sicherheitswarnaufkleber (Ø 50mm)\",\"nameIt\":\"Adesivi Rotondi Avvertenze di Sicurezza CLP (Ø 50mm)\",\"nameEs\":\"Etiquetas Circulares de Advertencia CLP (Ø 50mm)\",\"category\":\"accessory\",\"quantity\":120,\"unit\":\"buc\",\"minThreshold\":100,\"costPerUnit\":0.45,\"supplier\":\"Tipografie Digitală\",\"lotNumber\":\"CLP-50MM-RO\",\"lastRestocked\":\"2026-10-11\",\"notes\":\"Conforme cu standardele REACH/CLP UE.\",\"notesRo\":\"Conforme cu standardele REACH/CLP UE.\",\"notesEn\":\"EU REACH & CLP mandatory compliant print.\",\"notesFr\":\"Conformes aux normes européennes REACH/CLP.\",\"notesDe\":\"Konform mit den EU-REACH/CLP-Vorschriften.\",\"notesIt\":\"Conformi agli standard europei REACH/CLP.\",\"notesEs\":\"Cumple con la normativa europea REACH/CLP.\",\"weeklyConsumptionRate\":35,\"leadTimeDays\":3}",
+      "created_at": "2026-10-29T05:58:03.475Z"
+    }
+  ],
+  "orders": [],
+  "stores": [],
+  "purchaseOrders": [],
+  "suppliers": [
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-sup-1",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"sup-1\",\"name\":\"CandleWorks Europe\",\"contactName\":\"Hans Mueller\",\"email\":\"orders@candleworks.eu\",\"phone\":\"+49 30 12345678\",\"address\":\"Industriestr. 45, Berlin, Germany\",\"country\":\"DE\",\"paymentTerms\":\"Net 30\",\"leadTimeDays\":5,\"notes\":\"Furnizor principal ceară și ambalaje\",\"rating\":4.5,\"categories\":[\"wax\",\"packaging\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.722Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-sup-2",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"sup-2\",\"name\":\"Wedo Wicks Germania\",\"contactName\":\"Klaus Weber\",\"email\":\"verkauf@wedo-wicks.de\",\"phone\":\"+49 721 98765432\",\"address\":\"Mühlweg 12, Baden-Württemberg, Germany\",\"country\":\"DE\",\"paymentTerms\":\"Net 14\",\"leadTimeDays\":4,\"notes\":\"Fitiluri premium pentru lumânări de lux\",\"rating\":5,\"categories\":[\"wick\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.723Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-sup-3",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"sup-3\",\"name\":\"Grasse Parfums Franța\",\"contactName\":\"Marie Dubois\",\"email\":\"contact@grasseparfums.fr\",\"phone\":\"+33 4 93 12 34 56\",\"address\":\"42 Blvd. Victor Hugo, Grasse, France\",\"country\":\"FR\",\"paymentTerms\":\"Net 30\",\"leadTimeDays\":10,\"notes\":\"Uleiuri parfumate premium din Grasse\",\"rating\":5,\"categories\":[\"fragrance\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "0bf0f777-3697-495c-b8c8-94b1a81a7937-sup-4",
+      "user_id": "0bf0f777-3697-495c-b8c8-94b1a81a7937",
+      "data": "{\"id\":\"sup-4\",\"name\":\"Vetro Artisans Italia\",\"contactName\":\"Marco Rossi\",\"email\":\"info@vetroartisans.it\",\"phone\":\"+39 02 1234567\",\"address\":\"Via della Ceramica 8, Murano, Venice, Italy\",\"country\":\"IT\",\"paymentTerms\":\"Net 30\",\"leadTimeDays\":7,\"notes\":\"Borcane artizanale din sticlă Venetiană\",\"rating\":4,\"categories\":[\"vessel\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "user-free-001-sup-1",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"sup-1\",\"name\":\"CandleWorks Europe\",\"contactName\":\"Hans Mueller\",\"email\":\"orders@candleworks.eu\",\"phone\":\"+49 30 12345678\",\"address\":\"Industriestr. 45, Berlin, Germany\",\"country\":\"DE\",\"paymentTerms\":\"Net 30\",\"leadTimeDays\":5,\"notes\":\"Furnizor principal ceară și ambalaje\",\"rating\":4.5,\"categories\":[\"wax\",\"packaging\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "user-free-001-sup-2",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"sup-2\",\"name\":\"Wedo Wicks Germania\",\"contactName\":\"Klaus Weber\",\"email\":\"verkauf@wedo-wicks.de\",\"phone\":\"+49 721 98765432\",\"address\":\"Mühlweg 12, Baden-Württemberg, Germany\",\"country\":\"DE\",\"paymentTerms\":\"Net 14\",\"leadTimeDays\":4,\"notes\":\"Fitiluri premium pentru lumânări de lux\",\"rating\":5,\"categories\":[\"wick\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "user-free-001-sup-3",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"sup-3\",\"name\":\"Grasse Parfums Franța\",\"contactName\":\"Marie Dubois\",\"email\":\"contact@grasseparfums.fr\",\"phone\":\"+33 4 93 12 34 56\",\"address\":\"42 Blvd. Victor Hugo, Grasse, France\",\"country\":\"FR\",\"paymentTerms\":\"Net 30\",\"leadTimeDays\":10,\"notes\":\"Uleiuri parfumate premium din Grasse\",\"rating\":5,\"categories\":[\"fragrance\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "user-free-001-sup-4",
+      "user_id": "user-free-001",
+      "data": "{\"id\":\"sup-4\",\"name\":\"Vetro Artisans Italia\",\"contactName\":\"Marco Rossi\",\"email\":\"info@vetroartisans.it\",\"phone\":\"+39 02 1234567\",\"address\":\"Via della Ceramica 8, Murano, Venice, Italy\",\"country\":\"IT\",\"paymentTerms\":\"Net 30\",\"leadTimeDays\":7,\"notes\":\"Borcane artizanale din sticlă Venetiană\",\"rating\":4,\"categories\":[\"vessel\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "user-pro-001-sup-1",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"sup-1\",\"name\":\"CandleWorks Europe\",\"contactName\":\"Hans Mueller\",\"email\":\"orders@candleworks.eu\",\"phone\":\"+49 30 12345678\",\"address\":\"Industriestr. 45, Berlin, Germany\",\"country\":\"DE\",\"paymentTerms\":\"Net 30\",\"leadTimeDays\":5,\"notes\":\"Furnizor principal ceară și ambalaje\",\"rating\":4.5,\"categories\":[\"wax\",\"packaging\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "user-pro-001-sup-2",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"sup-2\",\"name\":\"Wedo Wicks Germania\",\"contactName\":\"Klaus Weber\",\"email\":\"verkauf@wedo-wicks.de\",\"phone\":\"+49 721 98765432\",\"address\":\"Mühlweg 12, Baden-Württemberg, Germany\",\"country\":\"DE\",\"paymentTerms\":\"Net 14\",\"leadTimeDays\":4,\"notes\":\"Fitiluri premium pentru lumânări de lux\",\"rating\":5,\"categories\":[\"wick\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "user-pro-001-sup-3",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"sup-3\",\"name\":\"Grasse Parfums Franța\",\"contactName\":\"Marie Dubois\",\"email\":\"contact@grasseparfums.fr\",\"phone\":\"+33 4 93 12 34 56\",\"address\":\"42 Blvd. Victor Hugo, Grasse, France\",\"country\":\"FR\",\"paymentTerms\":\"Net 30\",\"leadTimeDays\":10,\"notes\":\"Uleiuri parfumate premium din Grasse\",\"rating\":5,\"categories\":[\"fragrance\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "user-pro-001-sup-4",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"sup-4\",\"name\":\"Vetro Artisans Italia\",\"contactName\":\"Marco Rossi\",\"email\":\"info@vetroartisans.it\",\"phone\":\"+39 02 1234567\",\"address\":\"Via della Ceramica 8, Murano, Venice, Italy\",\"country\":\"IT\",\"paymentTerms\":\"Net 30\",\"leadTimeDays\":7,\"notes\":\"Borcane artizanale din sticlă Venetiană\",\"rating\":4,\"categories\":[\"vessel\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "user-business-001-sup-1",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"sup-1\",\"name\":\"CandleWorks Europe\",\"contactName\":\"Hans Mueller\",\"email\":\"orders@candleworks.eu\",\"phone\":\"+49 30 12345678\",\"address\":\"Industriestr. 45, Berlin, Germany\",\"country\":\"DE\",\"paymentTerms\":\"Net 30\",\"leadTimeDays\":5,\"notes\":\"Furnizor principal ceară și ambalaje\",\"rating\":4.5,\"categories\":[\"wax\",\"packaging\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "user-business-001-sup-2",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"sup-2\",\"name\":\"Wedo Wicks Germania\",\"contactName\":\"Klaus Weber\",\"email\":\"verkauf@wedo-wicks.de\",\"phone\":\"+49 721 98765432\",\"address\":\"Mühlweg 12, Baden-Württemberg, Germany\",\"country\":\"DE\",\"paymentTerms\":\"Net 14\",\"leadTimeDays\":4,\"notes\":\"Fitiluri premium pentru lumânări de lux\",\"rating\":5,\"categories\":[\"wick\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "user-business-001-sup-3",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"sup-3\",\"name\":\"Grasse Parfums Franța\",\"contactName\":\"Marie Dubois\",\"email\":\"contact@grasseparfums.fr\",\"phone\":\"+33 4 93 12 34 56\",\"address\":\"42 Blvd. Victor Hugo, Grasse, France\",\"country\":\"FR\",\"paymentTerms\":\"Net 30\",\"leadTimeDays\":10,\"notes\":\"Uleiuri parfumate premium din Grasse\",\"rating\":5,\"categories\":[\"fragrance\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    },
+    {
+      "id": "user-business-001-sup-4",
+      "user_id": "user-business-001",
+      "data": "{\"id\":\"sup-4\",\"name\":\"Vetro Artisans Italia\",\"contactName\":\"Marco Rossi\",\"email\":\"info@vetroartisans.it\",\"phone\":\"+39 02 1234567\",\"address\":\"Via della Ceramica 8, Murano, Venice, Italy\",\"country\":\"IT\",\"paymentTerms\":\"Net 30\",\"leadTimeDays\":7,\"notes\":\"Borcane artizanale din sticlă Venetiană\",\"rating\":4,\"categories\":[\"vessel\"],\"isActive\":true}",
+      "created_at": "2026-10-29T05:59:17.724Z"
+    }
+  ],
+  "calendarEvents": [],
+  "labels": [],
+  "batches": [
+    {
+      "id": "batch-1793301294986",
+      "user_id": "user-pro-001",
+      "data": "{\"recipeId\":\"recipe-1\",\"recipeName\":\"Soy Candle\",\"quantity\":10,\"status\":\"planned\",\"notes\":\"Test batch\"}",
+      "created_at": "2026-10-29T19:14:54.986Z"
+    },
+    {
+      "id": "batch-1793302780515",
+      "user_id": "user-pro-001",
+      "data": "{\"recipeId\":\"recipe-1\",\"recipeName\":\"Soy Candle\",\"quantity\":10,\"status\":\"planned\",\"notes\":\"Test batch from API\"}",
+      "created_at": "2026-10-29T19:39:40.515Z"
+    }
+  ],
+  "burnTests": [
+    {
+      "id": "burn-1793387033147",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"burn-1793387033147\",\"recipeId\":\"recipe-1\",\"wickType\":\"\",\"vessel\":\"\",\"date\":\"2026-10-30\",\"observations\":{\"meltPool\":\"\",\"throw\":\"both\",\"flameHeight\":\"\",\"sooting\":false,\"frosting\":true,\"tunneling\":false},\"rating\":3,\"result\":\"fail\",\"notes\":\"\",\"photos\":[],\"createdAt\":\"2026-10-30T19:03:53.147Z\"}",
+      "created_at": "2026-10-30T19:03:53.157Z"
+    }
+  ],
+  "ledger": [
+    {
+      "id": "ledger-1793302805580",
+      "user_id": "user-business-001",
+      "data": "{\"type\":\"expense\",\"category\":\"Materials\",\"amount\":150,\"date\":\"2026-10-29\",\"description\":\"Wax and fragrance purchase\",\"taxCategory\":\"Deductible\"}",
+      "created_at": "2026-10-29T19:40:05.580Z"
+    }
+  ],
+  "events": [],
+  "recipeVersions": [],
+  "skuBarcodes": [
+    {
+      "id": "sku-1793387331241",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"sku-1793387331241\",\"recipeId\":\"recipe-2\",\"sku\":\"WW-WAR-8-001\",\"barcodeFormat\":\"code128\",\"variant\":\"8\",\"batchNumber\":\"001\",\"includeRecipeName\":true,\"includePrice\":true,\"labelSize\":\"medium\"}",
+      "created_at": "2026-10-30T19:08:51.254Z"
+    },
+    {
+      "id": "sku-1793387342224",
+      "user_id": "user-pro-001",
+      "data": "{\"id\":\"sku-1793387342224\",\"recipeId\":\"recipe-2\",\"sku\":\"WW-WAR\",\"barcodeFormat\":\"code128\",\"includeRecipeName\":true,\"includePrice\":true,\"labelSize\":\"medium\"}",
+      "created_at": "2026-10-30T19:09:02.229Z"
+    }
+  ]
+}

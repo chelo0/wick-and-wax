@@ -1,0 +1,8 @@
+{
+  "name": "Wix & Wax - Candle Artisan Studio",
+  "description": "Aplicație dedicată creatorilor de lumânări: inventar intuitiv, 10 rețete preinstalate, calculator cost & preț recomandat, alertă stocuri critice, generator de etichete PDF, sincronizare Google Calendar și asistent AI meșteșugar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

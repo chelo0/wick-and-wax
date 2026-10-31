@@ -1,0 +1,934 @@
+import express from "express";
+import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
+import cors from "cors";
+import jwt from "jsonwebtoken";
+import bcrypt from "bcryptjs";
+import { v4 as uuidv4 } from "uuid";
+import { GoogleGenAI } from "@google/genai";
+import { readFileSync, writeFileSync, existsSync } from "fs";
+
+dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const app = express();
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+const JWT_SECRET = process.env.JWT_SECRET || "wick-and-wax-secret-key-change-in-production";
+
+// Middleware
+app.use(cors());
+app.use(express.json({ limit: "5mb" }));
+app.use(express.urlencoded({ extended: true }));
+
+// JSON file-based storage
+const DB_FILE = path.join(__dirname, "wickandwax.json");
+
+interface User {
+  id: string;
+  email: string;
+  password: string;
+  full_name: string | null;
+  plan: string;
+  is_active: boolean;
+  created_at: string;
+}
+
+interface Recipe {
+  id: string;
+  user_id: string;
+  name: string;
+  data: string;
+  created_at: string;
+}
+
+interface InventoryItem {
+  id: string;
+  user_id: string;
+  data: string;
+  created_at: string;
+}
+
+interface Order {
+  id: string;
+  user_id: string;
+  data: string;
+  created_at: string;
+}
+
+interface Database {
+  users: User[];
+  recipes: Recipe[];
+  inventory: InventoryItem[];
+  orders: Order[];
+}
+
+let db: Database = { users: [], recipes: [], inventory: [], orders: [] };
+
+function loadDb() {
+  try {
+    if (existsSync(DB_FILE)) {
+      db = JSON.parse(readFileSync(DB_FILE, "utf-8"));
+    }
+  } catch (e) {
+    console.error("Failed to load database:", e);
+    db = { users: [], recipes: [], inventory: [], orders: [] };
+  }
+}
+
+function saveDb() {
+  try {
+    writeFileSync(DB_FILE, JSON.stringify(db, null, 2));
+  } catch (e) {
+    console.error("Failed to save database:", e);
+  }
+}
+
+loadDb();
+
+// Payment Plans
+const PLANS = [
+  {
+    id: "free",
+    name: "Free",
+    price: 0,
+    currency: "EUR",
+    features: [
+      "10 rețete preinstalate",
+      "Inventar basic",
+      "Etichete standard",
+      "AI Copilot limitat",
+      "Export Excel"
+    ],
+    limits: {
+      recipes: 10,
+      inventory: 50,
+      labels: 10,
+      aiRequests: 5
+    }
+  },
+  {
+    id: "pro",
+    name: "Pro",
+    price: 9.99,
+    currency: "EUR",
+    features: [
+      "Rețete illimitate",
+      "Inventar avansat",
+      "Etichete personalizate",
+      "AI Copilot nelimitat",
+      "Export Excel + PDF",
+      "Prioritate suport"
+    ],
+    limits: {
+      recipes: -1,
+      inventory: -1,
+      labels: -1,
+      aiRequests: -1
+    }
+  },
+  {
+    id: "business",
+    name: "Business",
+    price: 24.99,
+    currency: "EUR",
+    features: [
+      "Tot din Pro",
+      "Utilizatori multipli",
+      "API access",
+      "White-label",
+      "Suport dedicat",
+      "SLA garantat"
+    ],
+    limits: {
+      recipes: -1,
+      inventory: -1,
+      labels: -1,
+      aiRequests: -1
+    }
+  }
+];
+
+// Auth middleware
+const authenticateToken = (req: any, res: any, next: any) => {
+  const authHeader = req.headers.authorization;
+  const token = authHeader && authHeader.split(" ")[1];
+
+  if (!token) {
+    return res.status(401).json({ detail: "Token lipsă" });
+  }
+
+  jwt.verify(token, JWT_SECRET, (err: any, user: any) => {
+    if (err) return res.status(403).json({ detail: "Token invalid" });
+    req.user = user;
+    next();
+  });
+};
+
+const PLAN_RANK: Record<string, number> = { free: 0, pro: 1, business: 2 };
+
+const requirePlan = (required: string) => {
+  return (req: any, res: any, next: any) => {
+    try {
+      const user = db.users.find((u) => u.id === req.user.userId);
+      if (!user) return res.status(404).json({ detail: "Utilizator negăsit" });
+      const userRank = PLAN_RANK[user.plan] ?? 0;
+      const requiredRank = PLAN_RANK[required] ?? 0;
+      if (userRank < requiredRank) {
+        return res.status(403).json({ detail: `Plan necesar: ${required}` });
+      }
+      next();
+    } catch (err: any) {
+      res.status(500).json({ detail: err.message });
+    }
+  };
+};
+
+const aiUsage = new Map<string, { count: number; resetAt: number }>();
+
+const requireAiAccess = (req: any, res: any, next: any) => {
+  try {
+    const user = db.users.find((u) => u.id === req.user.userId);
+    if (!user) return res.status(404).json({ detail: "Utilizator negăsit" });
+    if (user.plan === "pro" || user.plan === "business") {
+      return next();
+    }
+    const now = Date.now();
+    const record = aiUsage.get(req.user.userId);
+    if (!record || now > record.resetAt) {
+      aiUsage.set(req.user.userId, { count: 1, resetAt: now + 30 * 24 * 60 * 60 * 1000 });
+      return next();
+    }
+    if (record.count >= 5) {
+      return res.status(429).json({ detail: "Limita lunară de cereri AI atinsă (5/lună). Upgradează la Pro pentru AI nelimitat." });
+    }
+    record.count += 1;
+    next();
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+};
+
+// Auth endpoints
+app.post("/api/auth/register", (req, res) => {
+  try {
+    const { email, password, full_name } = req.body;
+    
+    if (!email || !password) {
+      return res.status(400).json({ detail: "Email și parolă sunt obligatorii" });
+    }
+
+    const existingUser = db.users.find((u) => u.email === email);
+    if (existingUser) {
+      return res.status(400).json({ detail: "Email deja înregistrat" });
+    }
+
+    const userId = uuidv4();
+    const hashedPassword = bcrypt.hashSync(password, 10);
+    
+    const newUser: User = {
+      id: userId,
+      email,
+      password: hashedPassword,
+      full_name: full_name || null,
+      plan: "free",
+      is_active: true,
+      created_at: new Date().toISOString(),
+    };
+
+    db.users.push(newUser);
+    saveDb();
+
+    const token = jwt.sign({ userId, email }, JWT_SECRET, { expiresIn: "7d" });
+    
+    res.json({
+      access_token: token,
+      user: {
+        id: userId,
+        email,
+        full_name: full_name || null,
+        plan: "free",
+        is_active: true
+      }
+    });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+app.post("/api/auth/login", (req, res) => {
+  try {
+    // Support both JSON and form-urlencoded
+    const email = req.body.email || req.body.username;
+    const password = req.body.password;
+    
+    const user = db.users.find((u) => u.email === email);
+    if (!user || !bcrypt.compareSync(password, user.password)) {
+      return res.status(401).json({ detail: "Email sau parolă incorectă" });
+    }
+
+    const token = jwt.sign({ userId: user.id, email: user.email }, JWT_SECRET, { expiresIn: "7d" });
+    
+    res.json({
+      access_token: token,
+      user: {
+        id: user.id,
+        email: user.email,
+        full_name: user.full_name,
+        plan: user.plan,
+        is_active: user.is_active
+      }
+    });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+app.get("/api/auth/me", authenticateToken, (req: any, res) => {
+  try {
+    const user = db.users.find((u) => u.id === req.user.userId);
+    
+    if (!user) {
+      return res.status(404).json({ detail: "Utilizator negăsit" });
+    }
+
+    res.json({
+      id: user.id,
+      email: user.email,
+      full_name: user.full_name,
+      plan: user.plan,
+      is_active: user.is_active
+    });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+// Plans endpoint
+app.get("/api/plans", (req, res) => {
+  res.json({ plans: PLANS });
+});
+
+// Stripe payment integration
+// Mock payment endpoint (replace with Stripe in production)
+app.post("/api/create-checkout-session", authenticateToken, async (req: any, res) => {
+  try {
+    const { planId } = req.body;
+    const plan = PLANS.find((p) => p.id === planId);
+    
+    if (!plan) {
+      return res.status(400).json({ detail: "Plan invalid" });
+    }
+
+    // Update user plan directly (mock payment)
+    const user = db.users.find((u) => u.id === req.user.userId);
+    if (user) {
+      user.plan = planId;
+      saveDb();
+    }
+
+    res.json({ 
+      success: true, 
+      planId,
+      message: `Planul ${plan.name} a fost activat cu succes!` 
+    });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message || "Eroare la actualizarea planului" });
+  }
+});
+
+// Initialize Gemini AI
+const apiKey = process.env.GEMINI_API_KEY || "";
+const ai = apiKey
+  ? new GoogleGenAI({
+      apiKey,
+      httpOptions: {
+        headers: {
+          "User-Agent": "aistudio-build",
+        },
+      },
+    })
+  : null;
+
+// Heuristic fallback for candle composition
+function calculateFallbackComposition(data: any) {
+  const waxType = data.waxType || "Soy (C3 / Golden Wax 464)";
+  const capacityGrams = Number(data.capacityGrams) || 200;
+  const jarDiameterMm = Number(data.jarDiameterMm) || 70;
+  const throwIntensity = data.throwIntensity || "strong";
+
+  let fragrancePercent = 8;
+  if (throwIntensity === "delicate") fragrancePercent = 6;
+  else if (throwIntensity === "medium") fragrancePercent = 8;
+  else if (throwIntensity === "strong") fragrancePercent = 10;
+  else if (throwIntensity === "room-filling") fragrancePercent = 11;
+
+  if (waxType.toLowerCase().includes("beeswax") || waxType.toLowerCase().includes("ceara albine")) {
+    fragrancePercent = Math.min(fragrancePercent, 7);
+  }
+
+  const fragranceGrams = Math.round((capacityGrams * fragrancePercent) / 100 * 10) / 10;
+  const waxGrams = Math.round((capacityGrams - fragranceGrams) * 10) / 10;
+
+  let wick = "TCR 27/16 sau Eco 8 (Bumbac împletit)";
+  if (jarDiameterMm < 55) wick = "Eco 4 sau TCR 18/10";
+  else if (jarDiameterMm <= 65) wick = "Eco 6 sau TCR 24/12";
+  else if (jarDiameterMm <= 75) wick = "Eco 8 sau TCR 27/16";
+  else if (jarDiameterMm <= 85) wick = "Eco 10 sau TCR 30/18";
+  else if (jarDiameterMm <= 95) wick = "Eco 12 sau Fitil Dublu TCR 21/12";
+  else wick = "Fitil Dublu Eco 6 (Multi-wick, spațiu 3.5cm între fitiluri)";
+
+  let meltTemp = "75°C - 80°C";
+  let addFragranceTemp = "68°C - 70°C";
+  let pourTemp = "52°C - 58°C";
+  let cureDays = 14;
+
+  if (waxType.toLowerCase().includes("coconut") || waxType.toLowerCase().includes("cocos")) {
+    pourTemp = "48°C - 52°C";
+    cureDays = 10;
+  } else if (waxType.toLowerCase().includes("beeswax") || waxType.toLowerCase().includes("albine")) {
+    pourTemp = "65°C - 70°C";
+    cureDays = 7;
+  } else if (waxType.toLowerCase().includes("rapeseed") || waxType.toLowerCase().includes("rapita")) {
+    pourTemp = "55°C - 60°C";
+    cureDays = 12;
+  }
+
+  return {
+    waxGrams,
+    fragranceGrams,
+    fragrancePercentage: fragrancePercent,
+    recommendedWick: wick,
+    meltingTemperature: meltTemp,
+    fragranceAddTemperature: addFragranceTemp,
+    pourTemperature: pourTemp,
+    cureDays,
+    fragranceNotes: {
+      top: data.topNote || "Citrice proaspete, Bergamotă, Cardamom",
+      heart: data.heartNote || "Floare de Portocal, Chihlimbar cald, Lavandă",
+      base: data.baseNote || "Lemn de Cedru, Vanilie fină, Mosc alb"
+    },
+    clpWarnings: "Atenție: Conține substanțe parfumante concentrate. Poate provoca o reacție alergică cutanată. Nociv pentru mediul acvatic cu efecte pe termen lung. Respectați distanța de siguranță de 10cm.",
+    safetyIcons: ["flame-sight", "away-from-children", "trim-wick", "draft-free"],
+    artisanAdvice: "Preîncălziți ușor borcanul de sticlă la 35°C înainte de turnare pentru a preveni aderența imperfectă și petele de cristalizare (frosting). Asigurați o răcire lentă la temperatura camerei (21-23°C)."
+  };
+}
+
+function generateFallbackRecipe(data: any): any {
+  const inputStr = ((data.prompt || data.scentTheme || "") + " " + (data.tag || "")).toLowerCase();
+  const waxType = data.waxType || "Ceară Soia Golden Wax 464";
+  const netWeight = Number(data.capacityGrams || data.netWeightGrams) || 220;
+  const tag = data.tag || "luxury";
+  const jarDiameter = netWeight >= 250 ? 78 : (netWeight <= 160 ? 64 : 72);
+  const fragrancePercent = waxType.toLowerCase().includes("beeswax") || waxType.toLowerCase().includes("albine") ? 7 : 10;
+  const fragranceGrams = Math.round((netWeight * fragrancePercent) / 100 * 10) / 10;
+  const waxGrams = Math.round((netWeight - fragranceGrams) * 10) / 10;
+
+  let nameRo = "Ambră & Rășini de Santal";
+  let nameEn = "Amber & Sandalwood Resins";
+  let top = "Bergamotă de Calabria, Piper Roz, Cardamom";
+  let heart = "Floare de Portocal, Rășină de Smirnă, Nucșoară";
+  let base = "Lemn de Santal Indian, Ambră caldă, Mosc alb";
+
+  if (inputStr.includes("craciun") || inputStr.includes("scortisoar") || inputStr.includes("cinnamon") || inputStr.includes("portocal")) {
+    nameRo = "Seară de Crăciun & Scorțișoară";
+    nameEn = "Christmas Eve & Ceylon Cinnamon";
+    top = "Coajă de Portocală confiată, Mandarină însorită";
+    heart = "Batoane de Scorțișoară de Ceylon, Cuișoare aromate";
+    base = "Măr copt, Lemn de Brad siberian, Păstăi de Vanilie";
+  } else if (inputStr.includes("lavand") || inputStr.includes("spa") || inputStr.includes("relax")) {
+    nameRo = "Sanctuar de Lavandă & Mușețel";
+    nameEn = "Lavender Sanctuary & Roman Chamomile";
+    top = "Lavandă sălbatică de Grasse, Frunze de Salvie";
+    heart = "Mușețel alb roman, Miere pură de tei";
+    base = "Lemn de Cedru nobil, Mosc curat, Boabe de Tonka";
+  } else if (inputStr.includes("cafea") || inputStr.includes("espresso") || inputStr.includes("bourbon")) {
+    nameRo = "Espresso Velvet & Bourbon Învechit";
+    nameEn = "Espresso Velvet & Aged Bourbon";
+    top = "Boabe prăjite de Cafea Arabica, Nucă de Macadamia";
+    heart = "Bourbon învechit în butoi de stejar, Ciocolată neagră";
+    base = "Păstaie de Vanilie bourbon, Caramel sărat, Boabe de Tonka";
+  }
+
+  return {
+    id: `recipe-${Date.now()}`,
+    nameRo,
+    nameEn,
+    descriptionRo: `O formă regală creată cu rețetă pur vegetală. Notele de ${top.split(",")[0].toLowerCase()} și ${base.split(",")[0].toLowerCase()} învăluie încăperea într-o atmosferă intimă, caldă și catifelată.`,
+    descriptionEn: `A royal formulation crafted with pure botanical wax. Notes of ${top.split(",")[0].toLowerCase()} and ${base.split(",")[0].toLowerCase()} wrap the room in an intimate, warm, and velvety atmosphere.`,
+    waxType,
+    vesselType: netWeight > 230 ? "Borcan Sticlă Mată Neagră 300ml" : "Borcan Sticlă Mată Neagră 250ml",
+    netWeightGrams: netWeight,
+    jarDiameterMm: jarDiameter,
+    burnTimeHours: Math.round(netWeight * 0.22),
+    fragranceName: `Esență Concentrată: ${nameRo}`,
+    fragrancePercentage: fragrancePercent,
+    waxGrams,
+    fragranceGrams,
+    wickType: "TCR 27/16 (Bumbac împletit)",
+    meltTempC: "75°C - 80°C",
+    pourTempC: "52°C - 56°C",
+    cureDays: 14,
+    fragranceNotes: { top, heart, base },
+    clpWarningsRo: "Conține: Linalool, Coumarin, Benzyl Benzoate, Eugenol. Poate provoca o reacție alergică a pielii. Nociv pentru mediul acvatic cu efecte pe termen lung.",
+    clpWarningsEn: "Contains: Linalool, Coumarin, Benzyl Benzoate, Eugenol. May cause an allergic skin reaction. Harmful to aquatic life with long lasting effects.",
+    safetyIcons: ["flame-sight", "away-from-children", "trim-wick", "draft-free"],
+    tag,
+    baseCost: 26.5,
+    recommendedWholesalePrice: 58.0,
+    recommendedRetailPrice: 89.0
+  };
+}
+
+// AI Recipe Generation
+app.post("/api/gemini/generate-recipe", requireAiAccess, async (req, res) => {
+  try {
+    const { prompt = "", scentTheme = "", waxType = "Ceară Soia Golden Wax 464", netWeightGrams = 220, tag = "luxury", language = "ro" } = req.body;
+
+    if (!ai) {
+      return res.json(generateFallbackRecipe(req.body));
+    }
+
+    const systemPrompt = `You are an elite master candlemaker and perfumer (Maître Cirier & Parfumeur) for the luxury brand "Wix & Wax".
+Design a complete, scientifically accurate and opulent luxury scented candle recipe.
+Theme / Inspiration: "${prompt || scentTheme || 'Warm Amber, Smoked Cedar & Cashmere'}"
+Target Wax: "${waxType}"
+Net Candle Weight: ${netWeightGrams}g
+Tag: "${tag}" (one of: 'signature', 'seasonal', 'relax', 'luxury', 'fresh')
+User UI Language: "${language}"
+
+Return ONLY a valid JSON object strictly matching this schema:
+{
+  "nameRo": "string luxury evocative name in Romanian",
+  "nameEn": "string luxury evocative name in English",
+  "nameFr": "string luxury name in French",
+  "nameDe": "string luxury name in German",
+  "nameIt": "string luxury name in Italian",
+  "nameEs": "string luxury name in Spanish",
+  "descriptionRo": "string 2-3 poetic sentences describing the olfactory experience in Romanian",
+  "descriptionEn": "string 2-3 poetic sentences in English",
+  "descriptionFr": "string 2 sentences in French",
+  "descriptionDe": "string 2 sentences in German",
+  "descriptionIt": "string 2 sentences in Italian",
+  "descriptionEs": "string 2 sentences in Spanish",
+  "waxType": "${waxType}",
+  "vesselType": "string luxury vessel type (e.g. Borcan Sticlă Mată Neagră 250ml)",
+  "netWeightGrams": ${netWeightGrams},
+  "jarDiameterMm": number (typically 70-82mm for this weight),
+  "burnTimeHours": number (approx 0.2-0.24 hours per gram),
+  "fragranceName": "string fine fragrance oil name",
+  "fragrancePercentage": number (8-11 depending on wax load limit),
+  "waxGrams": number,
+  "fragranceGrams": number,
+  "wickType": "string exact wick code (e.g. TCR 27/16, Eco 8, or Fitil Dublu TCR 21/12)",
+  "meltTempC": "string e.g. 75°C - 80°C",
+  "pourTempC": "string e.g. 52°C - 56°C",
+  "cureDays": number (typically 12-14 for soy, 7-10 for coconut/beeswax),
+  "fragranceNotes": {
+    "top": "string 2-3 top notes",
+    "heart": "string 2-3 middle/heart notes",
+    "base": "string 2-3 lingering base notes"
+  },
+  "clpWarningsRo": "string CLP regulatory statement mentioning allergen components in Romanian",
+  "clpWarningsEn": "string CLP regulatory statement in English",
+  "safetyIcons": ["flame-sight", "away-from-children", "trim-wick", "draft-free"],
+  "tag": "${tag}",
+  "baseCost": number (calculated production cost, around 24-32 RON),
+  "recommendedWholesalePrice": number (around 52-68 RON),
+  "recommendedRetailPrice": number (around 85-115 RON)
+}`;
+
+    const generatePromise = ai.models.generateContent({
+      model: "gemini-3.8-flash",
+      contents: systemPrompt,
+      config: {
+        responseMimeType: "application/json",
+      },
+    });
+
+    const response = await generatePromise;
+    const parsed = JSON.parse(response.text || "{}");
+    const recipeId = `recipe-${Date.now()}`;
+    const fragrancePct = parsed.fragrancePercentage || 10;
+    const fragranceGrams = Math.round((netWeightGrams * fragrancePct) / 100 * 10) / 10;
+    const waxGrams = Math.round((netWeightGrams - fragranceGrams) * 10) / 10;
+
+    const completeRecipe = {
+      ...parsed,
+      id: recipeId,
+      netWeightGrams,
+      waxGrams,
+      fragranceGrams,
+      fragrancePercentage: fragrancePct,
+      safetyIcons: parsed.safetyIcons || ["flame-sight", "away-from-children", "trim-wick", "draft-free"],
+    };
+
+    res.json(completeRecipe);
+  } catch (err: any) {
+    console.error("Gemini recipe generation (using fallback):", err?.message || err);
+    res.json(generateFallbackRecipe(req.body));
+  }
+});
+
+// AI Composition Suggestion
+app.post("/api/gemini/suggest-composition", requireAiAccess, async (req, res) => {
+  try {
+    const { waxType, capacityGrams, jarDiameterMm, throwIntensity, scentTheme, language = "ro" } = req.body;
+
+    if (!ai) {
+      return res.json(calculateFallbackComposition(req.body));
+    }
+
+    const prompt = `You are a world-class master candle artisan (maître cirier) for the luxury brand "Wix & Wax".
+Suggest an exact scientific and sensory candle formulation for:
+- Wax: ${waxType || "Soy Wax 464"}
+- Total Net Candle Vessel Weight: ${capacityGrams || 200}g
+- Jar Inner Diameter: ${jarDiameterMm || 70}mm
+- Desired Scent Throw: ${throwIntensity || "strong"}
+- Target Scent Theme / Notes: ${scentTheme || "Warm Amber & Cashmere"}
+- Preferred Language for output: ${language === "ro" ? "Romanian" : "English"}
+
+Return ONLY a valid JSON object matching this schema:
+{
+  "waxGrams": number,
+  "fragranceGrams": number,
+  "fragrancePercentage": number,
+  "recommendedWick": "string with specific wick model (e.g. TCR 27/16 or Eco 8 or Wooden Wick 13mm)",
+  "meltingTemperature": "string with °C",
+  "fragranceAddTemperature": "string with °C (flash point awareness)",
+  "pourTemperature": "string with °C",
+  "cureDays": number,
+  "fragranceNotes": {
+    "top": "string",
+    "heart": "string",
+    "base": "string"
+  },
+  "clpWarnings": "string CLP regulatory safety statement for label",
+  "safetyIcons": ["flame-sight", "away-from-children", "trim-wick", "draft-free"],
+  "artisanAdvice": "string 2-3 sentences of expert master-chandler secret for glass adhesion and scent throw"
+}`;
+
+    const response = await ai.models.generateContent({
+      model: "gemini-3.8-flash",
+      contents: prompt,
+      config: {
+        responseMimeType: "application/json",
+      },
+    });
+
+    const responseText = response.text || "{}";
+    const parsed = JSON.parse(responseText);
+    res.json(parsed);
+  } catch (err: any) {
+    console.error("Gemini formulation error (using fallback):", err?.message || err);
+    res.json(calculateFallbackComposition(req.body));
+  }
+});
+
+// AI Pricing Suggestion
+app.post("/api/gemini/suggest-pricing", requireAiAccess, async (req, res) => {
+  try {
+    const { unitCost, breakdown, targetMargin = 60, marketPosition = "artisan-luxury", candleName = "Artisan Candle", currency = "RON", language = "ro" } = req.body;
+
+    const baseCost = Number(unitCost) || 25;
+    const fallbackWholesale = Math.round(baseCost * 2.1 * 10) / 10;
+    const fallbackRetail = Math.round(baseCost * (marketPosition.includes("luxury") ? 3.8 : 3.0) * 10) / 10;
+
+    if (!ai) {
+      return res.json({
+        recommendedWholesalePrice: fallbackWholesale,
+        recommendedRetailPrice: fallbackRetail,
+        recommendedDirectToConsumerPrice: Math.round(fallbackRetail * 0.95),
+        grossMarginPercent: Math.round(((fallbackRetail - baseCost) / fallbackRetail) * 100),
+        breakEvenUnits: Math.ceil(400 / (fallbackRetail - baseCost)),
+        marketPositioning: marketPosition,
+        strategyTip: language === "ro"
+          ? "Prețul de retail recomandat asigură o marjă sănătoasă de peste 65%, permițând reduceri promoționale sezoniere fără a eroda profitabilitatea."
+          : "Recommended retail pricing ensures a healthy 65%+ gross margin, permitting promotional seasonal campaigns without eroding profit.",
+        bundleIdea: language === "ro"
+          ? "Pachet 'Duo Lumini & Bețe de Chibrit Elegante' la preț promoțional cu marjă combinată de 72%."
+          : "Bundle 'Duo Candles + Luxury Matches' at a promo gift price with 72% blended margin."
+      });
+    }
+
+    const prompt = `You are a high-end luxury retail pricing strategist for handcrafted boutique candles ("Wix & Wax").
+Given:
+- Candle Name: ${candleName}
+- Total Unit Production Cost: ${baseCost} ${currency}
+- Cost Breakdown: ${JSON.stringify(breakdown || {})}
+- Target Margin: ${targetMargin}%
+- Market Segment: ${marketPosition} (e.g., luxury-niche, artisan-market, clean-eco)
+- Language: ${language === "ro" ? "Romanian" : "English"}
+
+Provide structured pricing intelligence. Return ONLY a valid JSON object:
+{
+  "recommendedWholesalePrice": number,
+  "recommendedRetailPrice": number,
+  "recommendedDirectToConsumerPrice": number,
+  "grossMarginPercent": number,
+  "breakEvenUnits": number,
+  "marketPositioning": "string",
+  "strategyTip": "string with concrete retail psychology advice",
+  "bundleIdea": "string gift set or upsell idea"
+}`;
+
+    const response = await ai.models.generateContent({
+      model: "gemini-3.8-flash",
+      contents: prompt,
+      config: {
+        responseMimeType: "application/json",
+      },
+    });
+
+    const parsed = JSON.parse(response.text || "{}");
+    res.json(parsed);
+  } catch (err: any) {
+    console.error("Gemini pricing error:", err);
+    const baseCost = Number(req.body.unitCost) || 25;
+    res.json({
+      recommendedWholesalePrice: Math.round(baseCost * 2.1),
+      recommendedRetailPrice: Math.round(baseCost * 3.4),
+      recommendedDirectToConsumerPrice: Math.round(baseCost * 3.2),
+      grossMarginPercent: 68,
+      breakEvenUnits: 15,
+      marketPositioning: "Artisan Boutique",
+      strategyTip: "Prețul reflectă valoarea materiilor prime naturale și manopera de atelier.",
+      bundleIdea: "Set cadou de 2 lumânări în cutie cu panglică aurie."
+    });
+  }
+});
+
+// AI Co-Pilot
+app.post("/api/gemini/craft-copilot", requireAiAccess, async (req, res) => {
+  try {
+    const { query, currentRecipe, currentInventory, language = "ro" } = req.body;
+
+    if (!ai) {
+      return res.json({
+        reply: language === "ro"
+          ? "Salutare! Sunt Maestrul Tău Meșteșugar Wix & Wax. Pentru a obține cea mai bună aderență a cerii pe sticlă și un parfum uniform, asigură-te că torni la 52-56°C și păstrezi fitilul tăiat la 5mm. Îți pot ajusta orice rețetă sau calcula costurile de producție!"
+          : "Greetings! I am your Wix & Wax Master Chandler Assistant. For optimal glass adhesion and smooth scent throw, pour at 52-56°C and keep wicks trimmed to 5mm. I can optimize any recipe or cost structure for you!"
+      });
+    }
+
+    const prompt = `You are the master resident artisan and technical chemist for "Wix & Wax", a high-end candle crafting atelier.
+Respond to the candle artisan's inquiry with deep, practical, expert candle-making knowledge (wax melting points, wick sizing, curing times, frosting avoidance, hot & cold throw maximization, IFRA limits, CLP labeling, cost optimization).
+Context:
+- Current Recipe In Progress: ${JSON.stringify(currentRecipe || {})}
+- Current Inventory Highlights: ${JSON.stringify(currentInventory || {})}
+- Language: ${language === "ro" ? "Romanian" : "English"}
+
+User Query: "${query}"
+
+Guidelines:
+- Tone: Warm, refined, encouraging, highly professional, artisanal luxury.
+- Keep the answer structured, actionable, and clear.
+- Include concrete numbers (°C, mm, %, days) whenever relevant.`;
+
+    const response = await ai.models.generateContent({
+      model: "gemini-3.8-flash",
+      contents: prompt,
+    });
+
+    res.json({ reply: response.text });
+  } catch (err: any) {
+    console.error("Gemini copilot error:", err);
+    res.json({
+      reply: req.body.language === "en"
+        ? "To improve scent throw and prevent tunneling, ensure the melt pool reaches the container edge during burn tests (approx. 1 hour per 25mm diameter), and allow soy wax candles to cure for at least 14 days."
+        : "Pentru a maximiza difuzia parfumului și a evita efectul de tunel, asigură-te că bazinul de ceară topită atinge marginile borcanului la primul test de ardere (cca. 1 oră per 25mm diametru), și lasă lumânările din ceară de soia la maturat minim 14 zile."
+    });
+  }
+});
+
+// Store Connections, Suppliers, Purchase Orders
+
+interface StoreConnectionRecord {
+  id: string;
+  user_id: string;
+  data: string;
+  created_at: string;
+}
+
+interface SupplierRecord {
+  id: string;
+  user_id: string;
+  data: string;
+  created_at: string;
+}
+
+interface PurchaseOrderRecord {
+  id: string;
+  user_id: string;
+  data: string;
+  created_at: string;
+}
+
+// Store Connections
+app.get("/api/stores", authenticateToken, requirePlan("pro"), (req: any, res) => {
+  try {
+    const stores = db.inventory.filter((item) => item.user_id === req.user.userId);
+    res.json({ stores: stores.map(s => JSON.parse(s.data)) });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+app.post("/api/stores", authenticateToken, requirePlan("pro"), (req: any, res) => {
+  try {
+    const storeData = req.body;
+    const record: StoreConnectionRecord = {
+      id: `store-${Date.now()}`,
+      user_id: req.user.userId,
+      data: JSON.stringify(storeData),
+      created_at: new Date().toISOString(),
+    };
+    db.inventory.push(record as any);
+    saveDb();
+    res.json({ success: true, store: storeData });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+app.put("/api/stores/:id", authenticateToken, requirePlan("pro"), (req: any, res) => {
+  try {
+    const { id } = req.params;
+    const storeData = req.body;
+    const record = db.inventory.find((item) => item.id === id && item.user_id === req.user.userId);
+    if (!record) return res.status(404).json({ detail: "Magazin negăsit" });
+    record.data = JSON.stringify(storeData);
+    saveDb();
+    res.json({ success: true, store: storeData });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+app.delete("/api/stores/:id", authenticateToken, requirePlan("pro"), (req: any, res) => {
+  try {
+    const { id } = req.params;
+    const index = db.inventory.findIndex((item) => item.id === id && item.user_id === req.user.userId);
+    if (index === -1) return res.status(404).json({ detail: "Magazin negăsit" });
+    db.inventory.splice(index, 1);
+    saveDb();
+    res.json({ success: true });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+// Suppliers
+app.get("/api/suppliers", authenticateToken, requirePlan("pro"), (req: any, res) => {
+  try {
+    const records = db.inventory.filter((item) => item.user_id === req.user.userId && item.id.startsWith("supplier-"));
+    res.json({ suppliers: records.map(r => JSON.parse(r.data)) });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+app.post("/api/suppliers", authenticateToken, requirePlan("pro"), (req: any, res) => {
+  try {
+    const supplierData = req.body;
+    const record: SupplierRecord = {
+      id: supplierData.id || `supplier-${Date.now()}`,
+      user_id: req.user.userId,
+      data: JSON.stringify(supplierData),
+      created_at: new Date().toISOString(),
+    };
+    db.inventory.push(record as any);
+    saveDb();
+    res.json({ success: true, supplier: supplierData });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+// Purchase Orders
+app.get("/api/purchase-orders", authenticateToken, requirePlan("pro"), (req: any, res) => {
+  try {
+    const records = db.orders.filter((item) => item.user_id === req.user.userId);
+    res.json({ purchaseOrders: records.map(r => JSON.parse(r.data)) });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+app.post("/api/purchase-orders", authenticateToken, requirePlan("pro"), (req: any, res) => {
+  try {
+    const poData = req.body;
+    const record: PurchaseOrderRecord = {
+      id: poData.id || `po-${Date.now()}`,
+      user_id: req.user.userId,
+      data: JSON.stringify(poData),
+      created_at: new Date().toISOString(),
+    };
+    db.orders.push(record as any);
+    saveDb();
+    res.json({ success: true, purchaseOrder: poData });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+app.put("/api/purchase-orders/:id", authenticateToken, requirePlan("pro"), (req: any, res) => {
+  try {
+    const { id } = req.params;
+    const poData = req.body;
+    const record = db.orders.find((item) => item.id === id && item.user_id === req.user.userId);
+    if (!record) return res.status(404).json({ detail: "Comandă de achiziție negăsită" });
+    record.data = JSON.stringify(poData);
+    saveDb();
+    res.json({ success: true, purchaseOrder: poData });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+app.delete("/api/purchase-orders/:id", authenticateToken, requirePlan("pro"), (req: any, res) => {
+  try {
+    const { id } = req.params;
+    const index = db.orders.findIndex((item) => item.id === id && item.user_id === req.user.userId);
+    if (index === -1) return res.status(404).json({ detail: "Comandă de achiziție negăsită" });
+    db.orders.splice(index, 1);
+    saveDb();
+    res.json({ success: true });
+  } catch (err: any) {
+    res.status(500).json({ detail: err.message });
+  }
+});
+
+// Health check
+app.get("/health", (req, res) => {
+  res.json({ status: "ok" });
+});
+
+// Vite Middleware
+async function startServer() {
+  const isProd = process.env.NODE_ENV === "production";
+
+  if (!isProd) {
+    const { createServer: createViteServer } = await import("vite");
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: "spa",
+    });
+    app.use(vite.middlewares);
+  } else {
+    app.use(express.static(path.resolve(__dirname, "dist")));
+    app.get("*", (_req, res) => {
+      res.sendFile(path.resolve(__dirname, "dist", "index.html"));
+    });
+  }
+
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`🕯️ Wix & Wax Studio server running at http://0.0.0.0:${PORT}`);
+  });
+}
+
+startServer().catch((err) => {
+  console.error("Failed to start Wix & Wax server:", err);
+});
